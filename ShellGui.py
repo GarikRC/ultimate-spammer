@@ -11,7 +11,6 @@ systemOS = platform.system()
 
 if systemOS == 'Windows':
     clearCommand = 'cls'
-    print
 else:
     clearCommand = 'clear'
 
