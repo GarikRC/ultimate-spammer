@@ -1,9 +1,16 @@
-import os
-import platform
+try:
+    import os
+    import platforms
 
-from SkypeFunctions import *
-from SocialPlattformFunctions import *
-from EmailFunctions import *
+    from SkypeFunctions import *
+    from SocialPlattformFunctions import *
+    from EmailFunctions import *
+
+except ImportError, error:
+    import sys
+    print "[-] Import error: " + str(error)
+    raw_input("Press any key to continue...")
+    sys.exit(1)
 
 __author__ = 'Qubasa'
 
