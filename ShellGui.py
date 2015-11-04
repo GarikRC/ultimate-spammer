@@ -4,7 +4,7 @@ import platform
 from SkypeFunctions import *
 from SocialPlattformFunctions import *
 from EmailFunctions import *
-asdasd
+
 __author__ = 'Qubasa'
 
 systemOS = platform.system()
