@@ -19,6 +19,13 @@ OS X needs the pyobjc-core and pyobjc module installed (in that order).
 
 Linux needs the python3-Xlib (or python-Xlib for Python 2) module installed.
 
+# Note
+The spam attack "skype upload text" does work only on online targets. 
+
+The same thing applies on harvesting the Ip of a skype friend.
+
+The automated typing attack works on everyone ^^.
+
 # GUI Preview 
 [+] ULTIMATE SPAMMER 2.0 [+]
 
