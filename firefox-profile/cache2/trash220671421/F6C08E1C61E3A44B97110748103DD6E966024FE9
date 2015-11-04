@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+            <title>Selenium Expert (Selenium IDE) :: Bewertungen :: Add-ons für Firefox</title>
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href="https://addons.cdn.mozilla.net/static/img/favicon.ico">
+
+        <link  rel="alternate" type="application/rss+xml"
+         title="RSS" href="/de/firefox/addon/selenium-expert-selenium-ide/reviews/format:rss">
+  
+        <link title="Firefox Add-ons"
+          rel="search" type="application/opensearchdescription+xml"
+          href="/de/firefox/opensearch.xml" />
+
+          <link href="https://addons.cdn.mozilla.net/static/css/tabzilla/tabzilla.css" rel="stylesheet" />
+              <link rel="stylesheet" media="all" href="https://addons.cdn.mozilla.net/static/css/zamboni/impala-min.css?build=241655d" />
+      <!--[if lt IE 9]>
+        <script src="https://addons.cdn.mozilla.net/static/js/lib/iepp.min.js?b=f1c80fb-561847ce"></script>
+      <![endif]-->
+      <!--[if lte IE 9]>
+        <link rel="stylesheet" href="https://addons.cdn.mozilla.net/static/css/legacy/ie9.css?b=f1c80fb-561847ce">
+      <![endif]-->
+    
+        <noscript><link rel="stylesheet" href="https://addons.cdn.mozilla.net/static/css/impala/nojs.css?b=f1c80fb-561847ce"></noscript>
+
+    
+    
+    <script src="https://cdn.optimizely.com/js/2006260574.js"></script>
+    <script src="https://addons.cdn.mozilla.net/static/js/preload-min.js?build=f1c80fb-561847ce"></script>
+  </head>
+  <body class="html-ltr firefox moz-header-slim reviews gutter is-impala"
+        data-app="firefox"
+        data-appname="Firefox"
+        data-appid="1"
+        data-min-beta-version="3.7"
+        data-nightly-version="41.0"
+        data-anonymous="true"
+        data-readonly="false"
+        data-media-url="https://addons.cdn.mozilla.net/user-media/"
+        data-static-url="https://addons.cdn.mozilla.net/static/"
+        data-collect-timings="/services/timing/record:0.1"
+        >
+
+    <div id="main-wrapper">
+      <div id="page" class="c">
+                  <div id="tabzilla">
+    <a href="https://www.mozilla.org/">Mozilla</a>
+</div>          <div class="amo-header">
+            <nav id="aux-nav" role="navigation" class="menu-nav c">
+              <ul>
+                                    <li class="account anonymous nomenu login legacy">
+    <a href="/de/firefox/users/register">Neu registrieren</a> oder <a href="/de/firefox/users/login?to=%2Fde%2Ffirefox%2Faddon%2Fselenium-expert-selenium-ide%2Freviews%2F">anmelden</a>  </li>
+
+                                                  <li>
+                    <a href="#" id="other-apps" title="Add-ons für andere Anwendungen finden">Andere Anwendungen</a>
+                    <ul class="other-apps">
+                                                                                                                      <li id="app-thunderbird" class="thunderbird">
+                            <a href="/de/thunderbird">Thunderbird</a>
+                          </li>
+                                                                                                <li id="app-android" class="android">
+                            <a href="/de/android">Firefox für Android</a>
+                          </li>
+                                                                                                                                              <li id="app-seamonkey" class="seamonkey">
+                            <a href="/de/seamonkey">SeaMonkey</a>
+                          </li>
+                                                                  </ul>
+                  </li>
+                              </ul>
+            </nav>
+            <div class="header-search" role="search">
+                                                                  <form id="search" action="/de/firefox/search/">
+  <input id="search-q" type="text" name="q" autocomplete="off" title=""
+         class="text placeholder"
+         placeholder="Suche nach Add-ons"
+         value="">
+        <input id="id_appver" name="appver" type="hidden" />
+    <input id="id_platform" name="platform" type="hidden" />
+    <button class="search-button" type="submit" title="Suchen"
+         src="https://addons.cdn.mozilla.net/static/img/zamboni/global/btn-search.png?b=f1c80fb-561847ce"></button>
+      <div id="site-search-suggestions"
+         data-cat="all"
+         data-src="/de/firefox/search/suggestions"></div>
+  </form>                                          </div>
+            <div id="masthead">
+                            <h1 class="site-title">
+  <a href="/de/firefox/" title="Zurück zur Firefox-Add-ons-Startseite">
+  <img alt="Firefox" src="https://addons.cdn.mozilla.net/static/img/app-icons/med/firefox.png?b=f1c80fb-561847ce">
+  Add-ons
+</a>
+</h1>              
+
+<nav id="site-nav" class="menu-nav c">
+  <ul>
+      <li id="extensions">
+    <a href="/de/firefox/extensions/">Erweiterungen</a>
+    <ul class="two-col">
+              <li><em><a href="/de/firefox/extensions/?sort=featured">Vorgestellt</a></em></li>
+              <li><em><a href="/de/firefox/extensions/?sort=users">Beliebteste</a></em></li>
+              <li><em><a href="/de/firefox/extensions/?sort=rating">Am höchsten bewertet</a></em></li>
+                  <li><a href="/de/firefox/extensions/appearance/">Anzeige</a></li>
+            <li><a href="/de/firefox/extensions/privacy-security/">Datenschutz &amp; Sicherheit</a></li>
+            <li><a href="/de/firefox/extensions/download-management/">Download-Verwaltung</a></li>
+            <li><a href="/de/firefox/extensions/shopping/">Einkaufen</a></li>
+            <li><a href="/de/firefox/extensions/photos-music-videos/">Fotos, Musik und Videos</a></li>
+            <li><a href="/de/firefox/extensions/alerts-updates/">Hinweise und Benachrichtigungen</a></li>
+            <li><a href="/de/firefox/extensions/bookmarks/">Lesezeichen</a></li>
+            <li><a href="/de/firefox/extensions/feeds-news-blogging/">RSS-Feeds, Nachrichten &amp; Bloggen</a></li>
+            <li><a href="/de/firefox/extensions/games-entertainment/">Spiele und Unterhaltung</a></li>
+            <li><a href="/de/firefox/extensions/language-support/">Sprachwerkzeuge</a></li>
+            <li><a href="/de/firefox/extensions/search-tools/">Suchwerkzeuge</a></li>
+            <li><a href="/de/firefox/extensions/tabs/">Tabs</a></li>
+            <li><a href="/de/firefox/extensions/social-communication/">Tauschen und Veröffentlichen</a></li>
+            <li><a href="/de/firefox/extensions/web-development/">Webentwicklung</a></li>
+            <li><a href="/de/firefox/extensions/other/">Andere</a></li>
+          </ul>
+  </li>
+
+    
+        <li id="themes">
+      <a href="/de/firefox/themes/">Themes</a>
+              <ul class="two-col">
+                      <li><em><a href="/de/firefox/themes/?sort=popular">Beliebteste</a></em></li>
+                      <li><em><a href="/de/firefox/themes/?sort=rating">Am höchsten bewertet</a></em></li>
+                      <li><em><a href="/de/firefox/themes/?sort=created">Neueste</a></em></li>
+                                <li><a href="/de/firefox/themes/abstract">Abstrakt</a></li>
+                      <li><a href="/de/firefox/themes/other">Andere</a></li>
+                      <li><a href="/de/firefox/themes/causes">Anlässe</a></li>
+                      <li><a href="/de/firefox/themes/solid">Ausgefüllte Themen</a></li>
+                      <li><a href="/de/firefox/themes/film-and-tv">Film und Fernsehen</a></li>
+                      <li><a href="/de/firefox/themes/firefox">Firefox</a></li>
+                      <li><a href="/de/firefox/themes/foxkeh">Foxkeh</a></li>
+                      <li><a href="/de/firefox/themes/seasonal">Jahreszeiten</a></li>
+                      <li><a href="/de/firefox/themes/scenery">Landschaft</a></li>
+                      <li><a href="/de/firefox/themes/fashion">Mode</a></li>
+                      <li><a href="/de/firefox/themes/music">Musik</a></li>
+                      <li><a href="/de/firefox/themes/nature">Natur</a></li>
+                      <li><a href="/de/firefox/themes/sports">Sport</a></li>
+                      <li><a href="/de/firefox/themes/holiday">Urlaub</a></li>
+                      <li><a href="/de/firefox/themes/websites">Webseiten</a></li>
+                  </ul>
+        <div>
+          <a class="complete-themes" href="/de/firefox/complete-themes/">
+            Möchten Sie noch mehr Anpassungen? Probieren Sie <b>Vollständige Themes</b> aus          </a>
+        </div>
+          </li>
+
+        <li id="collections">
+            <a href="/de/firefox/collections/">Sammlungen</a>
+      <ul>
+                  <li><em><a href="/de/firefox/collections/?sort=featured">Vorgestellt</a></em></li>
+                  <li><em><a href="/de/firefox/collections/?sort=users">Meiste Beobachter</a></em></li>
+                  <li><em><a href="/de/firefox/collections/?sort=created">Neueste</a></em></li>
+                <hr>
+        <li><a href="/de/firefox/collections/mine/">
+          Von mir erstellte Sammlungen</a></li>
+        <li><a href="/de/firefox/collections/following/">
+          Sammlungen, denen ich folge</a></li>
+                <li><a href="/de/firefox/collections/mine/favorites">
+          Meine bevorzugten Add-ons</a></li>
+      </ul>
+          </li>
+    <li id="more">
+      <a href="#">Mehr&hellip;</a>
+      <ul>
+                  <li class="more-mobile"><a href="/de/android">
+            Add-ons für Firefox Mobile</a></li>
+                <li class="more-lang"><a href="/de/firefox/language-tools/">
+          Wörterbücher & Sprachpakete</a></li>
+        <li><a href="/de/firefox/search-tools/">Suchwerkzeuge</a></li>
+        <li><a href="/de/developers/">Entwickler-Zentrum</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                          </div>
+                                                      <div class="site-balloon" id="site-nonfx">
+                  <p>
+                    Um die Tausenden von hier verfügbaren Add-ons auszuprobieren, laden Sie <a href="http://mozilla.org/firefox/?src=amo">Mozilla Firefox</a> herunter, eine schnelle, kostenlose Möglichkeit, im Internet zu surfen!                  </p>
+                  <a href="#" class="close">Schließen</a>
+                </div>
+                            <div class="site-balloon" id="site-welcome">
+                                <h3>Willkommen bei den Firefox-Add-ons.</h3>
+                <p>
+                                      Wählen Sie aus Tausenden von Zusatzfunktionen und Stilen, um sich Firefox zu Eigen zu machen.                                  </p>
+                <a href="#" class="close">Schließen</a>
+              </div>
+              <div class="site-balloon" id="mobile-banner">
+                <h3>Unterwegs?</h3>
+                <p>
+                  Sehen Sie sich unsere <a class="mobile-link" href="#">Website für Firefox-Mobile-Add-ons</a> an.                </p>
+                <a href="#" class="close">Schließen</a>
+              </div>
+                      </div>
+        
+                                                                    <nav id="breadcrumbs">
+  <ol>
+      <li>
+                  <a href="/de/firefox/" class="home" title="Add-ons für Firefox">Add-ons für Firefox</a>
+              </li>
+      <li>
+                  <a href="/de/firefox/extensions/">Erweiterungen</a>
+              </li>
+      <li>
+                  <a href="/de/firefox/addon/selenium-expert-selenium-ide/">Selenium Expert (Selenium IDE)</a>
+              </li>
+      <li>
+          <span>Bewertungen</span>
+        </li>
+    </ol>
+</nav>
+
+    <header>
+    <hgroup>
+              <h1>Bewertungen von Selenium Expert (Selenium IDE)</h1>
+                            <h3><b>1</b> Bewertung für dieses Add-on</h3>
+                  </hgroup>
+  </header>
+  
+
+
+  <div class="secondary">
+    <section>
+      <div class="item addon">
+  <hgroup class="c">
+    <img id="addon-icon" src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" class="icon" alt="">
+    <h1 class="addon" lang="en-US" dir="ltr">
+              <a href="/de/firefox/addon/selenium-expert-selenium-ide/">Selenium Expert (Selenium IDE)</a>
+          </h1>
+    <h4 class="author">
+        von <a href="/de/firefox/user/samit-badle/" title="Samit Badle">Samit Badle</a>
+    </h4>
+  </hgroup>
+</div>
+    </section>
+          <section class="average-rating">
+          <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+        <strong>Durchschnitt</strong> (1)      </section>
+        <section>
+        <div>
+    <ul class="grouped_ratings" data-total="1">
+                <li class="c">  <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="1">
+          <span class="bar" style="width:100.0%">
+            <span class="num_ratings">1</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="0">
+          <span class="bar" style="width:0.0%">
+            <span class="num_ratings">0</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-3" title="Bewertet mit 3 von 5 Sternen">Bewertet mit 3 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="0">
+          <span class="bar" style="width:0.0%">
+            <span class="num_ratings">0</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-2" title="Bewertet mit 2 von 5 Sternen">Bewertet mit 2 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="0">
+          <span class="bar" style="width:0.0%">
+            <span class="num_ratings">0</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-1" title="Bewertet mit 1 von 5 Sternen">Bewertet mit 1 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="0">
+          <span class="bar" style="width:0.0%">
+            <span class="num_ratings">0</span>
+          </span>
+        </div>
+      </li>
+        </ul>
+  </div>
+    </section>
+    <section>
+          </section>
+  </div>
+  <div class="primary island hero c" id="reviews" role="main">
+                  
+<div class="review c item"
+     id="review-333582"
+     data-rating="5">
+        <h3>
+      <b>Awesome tool</b>
+                <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+          </h3>
+    <p class="byline">
+          von <a href="/de/firefox/user/garg11/" title="Stalker">Stalker</a> am January 31, 2012            &middot;
+    <a class="permalink"
+      href="/de/firefox/addon/selenium-expert-selenium-ide/reviews/333582/">Permanentlink</a>
+          &middot;
+      <a class="translate" rel="nofollow" target="_blank"
+         href="/de/firefox/addon/selenium-expert-selenium-ide/reviews/333582/translate/de">Übersetzen</a>
+      </p>
+  <p class="description">Works perfect with FF 9.0.1, not sure with FF10. please confirm.</p>
+          <span class="item-note">Diese Bewertung wurde für eine vorherige Version des Add-ons (0.7.1-signed) abgegeben.&nbsp;</span>
+      </div>              
+        <div class="hidden">
+  <form method="post" id="review-edit-form" action="#"
+        class="review article review-form prettyform">
+    
+    <fieldset>
+      <ul>
+                                  
+      <li class="row">
+      <label class="row" for="id_title">
+      Titel
+
+      
+      
+                </label>
+    
+          <input id="id_review_title" name="title" type="text" />
+        
+      </li>
+  
+                                  
+      <li class="row">
+      <label class="row" for="id_body">
+      Review
+
+              <span class="req" title="notwendig">*</span>
+      
+                </label>
+    
+          <textarea cols="40" id="id_review_body" name="body" rows="3">
+</textarea>
+        
+      </li>
+  
+                                  
+      <li class="row">
+      <label class="row" for="id_rating">
+      Bewertung
+
+              <span class="req" title="notwendig">*</span>
+      
+                </label>
+    
+          <select id="id_rating" name="rating">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+        
+      </li>
+  
+              </ul>
+    </fieldset>
+    <footer>
+      <p class="req" title="notwendig">* Erforderliche Felder</p>
+      <input id="review-edit-submit" type="submit" value="Bewertung abschicken">
+       oder <a href="#" id="review-edit-cancel">Abbrechen</a>
+    </footer>
+  </form>
+</div>
+    <div class="hidden">
+  <form method="post" id="review-reply-edit-form" action="#"
+        class="review article review-form prettyform">
+    
+    <fieldset>
+      <ul>
+                                  
+      <li class="row">
+      <label class="row" for="id_title">
+      Titel
+
+      
+      
+                </label>
+    
+          <input id="id_review_reply_title" name="title" type="text" />
+        
+      </li>
+  
+                                  
+      <li class="row">
+      <label class="row" for="id_body">
+      Review
+
+              <span class="req" title="notwendig">*</span>
+      
+                </label>
+    
+          <textarea cols="40" id="id_review_reply_body" name="body" rows="3">
+</textarea>
+        
+      </li>
+  
+              </ul>
+    </fieldset>
+    <footer>
+      <p class="req" title="notwendig">* Erforderliche Felder</p>
+      <input id="review-reply-edit-submit" type="submit" value="Bewertung abschicken">
+       oder <a href="#" id="review-reply-edit-cancel">Abbrechen</a>
+    </footer>
+  </form>
+</div>
+  </div>
+  <div class="hidden">
+  <div class="popup review-reason">
+    <h4>Bitte wählen Sie einen Grund:</h4>
+    <ul>
+              <li><a href="#review_flag_reason_spam">Spam oder anderweitiger Inhalt, der keine Bewertung ist</a></li>
+              <li><a href="#review_flag_reason_language">Unpassende Wortwahl</a></li>
+              <li><a href="#review_flag_reason_bug_support">Unpassender Fehlerbericht, oder Unterstützungs-Anfrage</a></li>
+              <li><a href="#review_flag_reason_other">Anderes (bitte eine Begründung angeben)</a></li>
+          </ul>
+        <form class="other-note" method="post">
+      <input id="id_note" maxlength="100" name="note" type="text" />
+      <input type="submit" value="Abschicken">
+    </form>
+  </div>
+</div>
+              </div>
+      <div id="tooltip">
+        <span></span>
+      </div>
+      <div id="popup-staging">
+        <div id="sharing-popup" class="popup">
+  <div class="share-networks share-content">
+    <ul>
+              <li class="facebook">
+          <span class="share-link">
+            <a class="uniquify" target="_self">
+              Bei Facebook posten
+            </a>
+          </span>
+          <span class="share-count">
+          </span>
+        </li>
+              <li class="twitter">
+          <span class="share-link">
+            <a class="uniquify" target="_self">
+              Auf Twitter twittern
+            </a>
+          </span>
+          <span class="share-count">
+          </span>
+        </li>
+              <li class="gplus">
+          <span class="share-link">
+            <a class="uniquify" target="_self">
+              Auf g+ teilen
+            </a>
+          </span>
+          <span class="share-count">
+          </span>
+        </li>
+              <li class="Reddit">
+          <span class="share-link">
+            <a class="uniquify" target="_self">
+              Auf Reddit posten
+            </a>
+          </span>
+          <span class="share-count">
+          </span>
+        </li>
+              <li class="Tumblr">
+          <span class="share-link">
+            <a class="uniquify" target="_self">
+              Auf Tumblr posten
+            </a>
+          </span>
+          <span class="share-count">
+          </span>
+        </li>
+          </ul>
+  </div></div>
+        <div id="add-to-collection" class="popup">
+          <div class="collection-add-login">
+            <p>Um Ihre eigenen Sammlungen zu erstellen, müssen Sie einen Benutzeraccount bei Mozilla Add-ons haben.</p>
+            <p class="register-button">
+              <a class="button" href="/de/firefox/users/register">Legen Sie ein Add-ons-Konto an</a>
+            </p>
+            <p>
+              oder <a href="/de/firefox/users/login?to=%2Fde%2Ffirefox%2Faddon%2Fselenium-expert-selenium-ide%2Freviews%2F">melden Sie sich mit Ihrem aktuellen Benutzerkonto an</a>            </p>
+          </div>
+        </div>
+                      </div>
+    </div>
+          <div id="footer" role="contentinfo">
+        <div class="section">
+                    <img class="footerlogo" src="https://addons.cdn.mozilla.net/static/img/zamboni/footer-logo-med.png?b=f1c80fb-561847ce" alt="Fußzeilenlogo">
+                                <div id="social-footer">
+  <ul>
+    <li>Lernen Sie Add-ons kennen</li>
+    <li><a href="/de/about">Über Mozilla Add-ons</a></li>
+    <li><a href="http://blog.mozilla.com/addons">Blog</a></li>
+    <li class="footer-devhub-link"><a href="/de/developers/">Entwickler-Zentrum</a></li>
+    <li><a href="/de/faq">Häufige Fragen</a></li>
+    <li><a href="https://discourse.mozilla-community.org/c/add-ons">Forum</a></li>
+  </ul>
+</div>
+<div id="footer-content">
+        <form class="languages go" id="lang_form" method="get" action="">
+      <label for="language">Andere Sprachen</label>
+      <select id="language" name="lang" dir="ltr">
+        <option value="af" >
+            Afrikaans
+          </option><option value="ar" >
+            عربي
+          </option><option value="bg" >
+            Български
+          </option><option value="bn-bd" >
+            বাংলা (বাংলাদেশ)
+          </option><option value="ca" >
+            Català
+          </option><option value="cs" >
+            Čeština
+          </option><option value="da" >
+            Dansk
+          </option><option value="de" selected>
+            Deutsch
+          </option><option value="el" >
+            Ελληνικά
+          </option><option value="en-gb" >
+            English (British)
+          </option><option value="en-us" >
+            English (US)
+          </option><option value="es" >
+            Español
+          </option><option value="eu" >
+            Euskara
+          </option><option value="fa" >
+            فارسی
+          </option><option value="fi" >
+            suomi
+          </option><option value="fr" >
+            Français
+          </option><option value="ga-ie" >
+            Gaeilge
+          </option><option value="he" >
+            עברית
+          </option><option value="hu" >
+            magyar
+          </option><option value="id" >
+            Bahasa Indonesia
+          </option><option value="it" >
+            Italiano
+          </option><option value="ja" >
+            日本語
+          </option><option value="ko" >
+            한국어
+          </option><option value="mk" >
+            Македонски
+          </option><option value="mn" >
+            Монгол
+          </option><option value="nl" >
+            Nederlands
+          </option><option value="pl" >
+            Polski
+          </option><option value="pt-br" >
+            Português (do Brasil)
+          </option><option value="pt-pt" >
+            Português (Europeu)
+          </option><option value="ro" >
+            Română
+          </option><option value="ru" >
+            Русский
+          </option><option value="sk" >
+            slovenčina
+          </option><option value="sl" >
+            Slovenščina
+          </option><option value="sq" >
+            Shqip
+          </option><option value="sv-se" >
+            Svenska
+          </option><option value="uk" >
+            Українська
+          </option><option value="vi" >
+            Tiếng Việt
+          </option><option value="zh-cn" >
+            中文 (简体)
+          </option><option value="zh-tw" >
+            正體中文 (繁體)
+          </option>      </select>
+            <noscript><button type="submit">Los</button></noscript>
+    </form>
+    <div id="copyright">
+  <p id="footer-links">
+          <a href="http://www.mozilla.org/privacy/websites/">
+        Datenschutzerklärung
+      </a> &nbsp;|&nbsp;
+      <a href="http://www.mozilla.org/about/legal.html">
+        Rechtliche Hinweise
+      </a> &nbsp;|&nbsp;
+      <a href="http://www.mozilla.org/legal/fraud-report/index.html">
+        Report Trademark Abuse
+      </a>
+            &nbsp;|&nbsp;<a class="mobile-link" href="#">Zur mobilen Version</a>
+        </p>
+  <p>
+    Except where otherwise <a href="http://www.mozilla.org/about/legal.html#site">noted</a>, content on this site is licensed under the <br /> <a href="http://creativecommons.org/licenses/by-sa/3.0/"> Creative Commons Attribution Share-Alike License v3.0 </a> or any later version.  </p>
+</div></div>
+                  </div>       </div>                   <script src="/de/firefox/jsi18n.js?b=f1c80fb-561847ce"></script>
+      <script src="https://addons.cdn.mozilla.net/static/js/impala-min.js?build=f1c80fb-561847ce"></script>
+      <script async defer src="/de/firefox/addons/buttons.js?b=f1c80fb-561847ce"></script>
+              </body>
+</html>G�}�F      V��V��;�\       R:https://addons.mozilla.org/de/firefox/addon/selenium-expert-selenium-ide/reviews/ necko:classified 1 security-info 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 request-method GET request-User-Agent Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0 response-head HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 15 Oct 2015 15:39:47 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-Mobile, User-Agent
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=31536000
+X-Backend-Server: web11
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 9 predictor::https://addons.cdn.mozilla.net/static/css/tabzilla/tabzilla.css 1,1,1444923586,0 predictor::https://addons.cdn.mozilla.net/static/css/zamboni/impala-min.css?build=241655d 1,1,1444923586,0 predictor::https://cdn.optimizely.com/js/2006260574.js 1,1,1444923586,0 predictor::https://addons.cdn.mozilla.net/static/js/preload-min.js?build=f1c80fb-561847ce 1,1,1444923586,0 predictor::https://ssl.google-analytics.com/ga.js 1,1,1444923586,0 predictor::https://ssl.google-analytics.com/__utm.gif?utmwv=5.6.7&utms=2&utmn=2115781806&utmhn=addons.mozilla.org&utmcs=UTF-8&utmsr=1366x768&utmvp=1301x673&utmsc=24-bit&utmul=de&utmje=0&utmfl=-&utmdt=Selenium%20Expert%20(Selenium%20IDE)%20%3A%3A%20Bewertungen%20%3A%3A%20Add-ons%20f%C3%BCr%20Firefox&utmhid=1383435363&utmr=0&utmp=%2Fde%2Ffirefox%2Faddon%2Fselenium-expert-selenium-ide%2Freviews%2F&utmht=1444923587827&utmac=UA-36116321-7&utmcc=__utma%3D164683759.1013352003.1444338094.1444682901.1444923545.4%3B%2B__utmz%3D164683759.1444923545.4.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3D(not%2520provided)%3B&utmjid=&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ 1,1,1444923586,0 predictor::https://addons.mozilla.org/de/firefox/jsi18n.js?b=f1c80fb-561847ce 1,1,1444923586,0 predictor::https://addons.cdn.mozilla.net/static/js/impala-min.js?build=f1c80fb-561847ce 1,1,1444923586,0 predictor::https://addons.mozilla.org/de/firefox/addons/buttons.js?b=f1c80fb-561847ce 1,1,1444923586,0   d>

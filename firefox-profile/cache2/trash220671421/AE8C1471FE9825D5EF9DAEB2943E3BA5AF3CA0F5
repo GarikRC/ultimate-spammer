@@ -1,0 +1,1096 @@
+
+<aside class="secondary addon-reviews c">
+      <div>
+        <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+      Durchschnitt
+    </div>
+      <div>
+    <ul class="grouped_ratings" data-total="3">
+                <li class="c">  <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="1">
+          <span class="bar" style="width:33.0%">
+            <span class="num_ratings">1</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="1">
+          <span class="bar" style="width:33.0%">
+            <span class="num_ratings">1</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-3" title="Bewertet mit 3 von 5 Sternen">Bewertet mit 3 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="0">
+          <span class="bar" style="width:0.0%">
+            <span class="num_ratings">0</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-2" title="Bewertet mit 2 von 5 Sternen">Bewertet mit 2 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="1">
+          <span class="bar" style="width:33.0%">
+            <span class="num_ratings">1</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-1" title="Bewertet mit 1 von 5 Sternen">Bewertet mit 1 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="0">
+          <span class="bar" style="width:0.0%">
+            <span class="num_ratings">0</span>
+          </span>
+        </div>
+      </li>
+        </ul>
+  </div>
+      <div>
+      <a class="button" id="add-review" href="/de/firefox/addon/favorites-selenium-ide/reviews/add">Eine Bewertung schreiben</a>
+    </div>
+    <a id="report-abuse" href="/de/developers/docs/policies/contact"
+     class="abuse-image">Missbrauch melden</a>
+</aside>
+
+<section id="reviews" class="primary island c">
+  <h2>Bewertungen</h2>
+                  <div class="review">
+        <h3>
+                      <b>Testing</b>
+                      <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+        </h3>
+        <p class="byline">
+          von <a href="/de/firefox/user/Harriss/" title="Harry">Harry</a> am May 12, 2014          &middot;
+          <a class="permalink"
+             href="/de/firefox/addon/favorites-selenium-ide/reviews/587318/">Permanentlink</a>
+                      &middot;
+            <a class="translate" rel="nofollow" target="_blank"
+               href="/de/firefox/addon/favorites-selenium-ide/reviews/587318/translate/de">Übersetzen</a>
+                  </p>
+        <p class="description">Entertainment, Games ( sports)</p>
+              </div>
+          <div class="review">
+        <h3>
+                      <b>Useful BUT</b>
+                      <span class="stars stars-2" title="Bewertet mit 2 von 5 Sternen">Bewertet mit 2 von 5 Sternen</span>
+
+        </h3>
+        <p class="byline">
+          von <a href="/de/firefox/user/Mcabo/" title="Mcabo">Mcabo</a> am August 28, 2012          &middot;
+          <a class="permalink"
+             href="/de/firefox/addon/favorites-selenium-ide/reviews/376525/">Permanentlink</a>
+                      &middot;
+            <a class="translate" rel="nofollow" target="_blank"
+               href="/de/firefox/addon/favorites-selenium-ide/reviews/376525/translate/de">Übersetzen</a>
+                  </p>
+        <p class="description">Not only useful, essential BUT It&#39;s very easy to clear all your favorites since there isn&#39;t a confirmation dialog of some sort and the command is just below the favorites list.<br>If it&#39;s difficult to put an &#34;are you sure..&#34; dialog for &#39;clear all&#39; I think it&#39;s better to remove it at least from one of the menus. Either &#39;favorites&#39; or &#39;star&#39;.<br><br>I find this plug-in (1st day user of Selenium) when I was searching for a way to run my script/test with ONE CLICK (like a bookmarklet).<br>I found a way using chrome://selenium-ide/content/selenium/TestRunner.html but this command is no longer supported.<br><br>With this plug-in you need 3 clicks: (1) I select Selenium (2) Select favorite (3) Click run<br>It will be great if this is somehow reduced...</p>
+                  <a class="more-info" href="/de/firefox/addon/favorites-selenium-ide/reviews/632048/">
+            Die Antwort des Entwicklers auf diese Bewertung anzeigen</a>
+              </div>
+          <div class="review">
+        <h3>
+                      <b>Small! but, smart!</b>
+                      <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+        </h3>
+        <p class="byline">
+          von <a href="/de/firefox/user/mckiran/" title="MCKiran">MCKiran</a> am April 10, 2012          &middot;
+          <a class="permalink"
+             href="/de/firefox/addon/favorites-selenium-ide/reviews/345116/">Permanentlink</a>
+                      &middot;
+            <a class="translate" rel="nofollow" target="_blank"
+               href="/de/firefox/addon/favorites-selenium-ide/reviews/345116/translate/de">Übersetzen</a>
+                  </p>
+        <p class="description">Its really a pretty tiny add-on, but smart. We can set all of our repeatedly used suites as Favorites.</p>
+              </div>
+              <p>
+        <a class="more-info" href="/de/firefox/addon/favorites-selenium-ide/reviews/">
+          Alle 3 Bewertungen von Benutzern ansehen        </a>
+      </p>
+      
+</section>
+
+<aside id="related" class="secondary metadata c">
+            <h3>Verwandte Kategorien</h3>
+      <ul>
+                <li>
+          <a href="/de/firefox/extensions/web-development/">
+            Webentwicklung
+          </a>
+        </li>
+              </ul>
+        
+</aside>
+
+  <section class="primary island c">
+          <section id="recommendations-grid">
+        <h2 class="compact-bottom">Oft verwendet mit&hellip;</h2>
+        <ul class="listing-grid c cols-3">
+    <section>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/file-logging-selenium-ide/?src=dp-dl-oftenusedwith">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für File Logging (Selenium IDE)">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/file-logging-selenium-ide/?src=dp-dl-oftenusedwith">
+        <h3>File Logging (Selenium IDE)</h3>
+                              <div class="category more-info">Webentwicklung</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/file-logging-selenium-ide/reviews/">(6)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="177844"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/file-logging-selenium-ide/developers"
+  data-versions="/de/firefox/addon/177844/versions/"
+  data-name="File Logging (Selenium IDE)"
+  
+  data-min="17.0"
+  data-max="41.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:e2a48f7bf1018d77733556c0248b4bc70ed70635ca037b86d07cf2e0baefe2de"
+      href="/firefox/downloads/latest/177844/addon-177844-latest.xpi?src=dp-hc-oftenusedwith"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      A plug-in for Selenium-IDE to save log to a file
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/samit-badle/" title="Samit Badle">Samit Badle</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    7.918 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/log-search-bar-selenium-ide/?src=dp-dl-oftenusedwith">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für Log Search Bar (Selenium IDE)">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/log-search-bar-selenium-ide/?src=dp-dl-oftenusedwith">
+        <h3>Log Search Bar (Selenium IDE)</h3>
+                              <div class="category more-info">Webentwicklung</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+            <b>Noch nicht bewertet</b>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="210844"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/log-search-bar-selenium-ide/developers"
+  data-versions="/de/firefox/addon/210844/versions/"
+  data-name="Log Search Bar (Selenium IDE)"
+  
+  data-min="3.5"
+  data-max="26.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:7fe4014a4857f4f548e64da8d6a0d2130aab9e9a21418e669f3d857edf60eaf6"
+      href="/firefox/downloads/latest/210844/addon-210844-latest.xpi?src=dp-hc-oftenusedwith"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      A plugin for Selenium-IDE to show a find toolbar in the log pane making it easy to search the displayed log messages
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/samit-badle/" title="Samit Badle">Samit Badle</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    2.215 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/power-debugger-selenium-ide/?src=dp-dl-oftenusedwith">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für Power Debugger (Selenium IDE)">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/power-debugger-selenium-ide/?src=dp-dl-oftenusedwith">
+        <h3>Power Debugger (Selenium IDE)</h3>
+                              <div class="category more-info">Webentwicklung</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/power-debugger-selenium-ide/reviews/">(2)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="255245"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/power-debugger-selenium-ide/developers"
+  data-versions="/de/firefox/addon/255245/versions/"
+  data-name="Power Debugger (Selenium IDE)"
+  
+  data-min="3.5"
+  data-max="26.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:14defca19ac99f20d19913df9c72baf0c0215106fec1aeb123394ca4cd80b139"
+      href="/firefox/downloads/latest/255245/addon-255245-latest.xpi?src=dp-hc-oftenusedwith"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      A plugin for Selenium-IDE to improve debugging and troubleshooting issues with scripts
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/samit-badle/" title="Samit Badle">Samit Badle</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    7.426 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/selenium-wiki-formatter/?src=dp-dl-oftenusedwith">
+            <img src="https://addons.cdn.mozilla.net/user-media/addon_icons/292/292699-32.png?modified=1306820747" alt="Symbol für Selenium Wiki Formatter">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/selenium-wiki-formatter/?src=dp-dl-oftenusedwith">
+        <h3>Selenium Wiki Formatter</h3>
+                              <div class="category more-info">Webentwicklung</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-3" title="Bewertet mit 3 von 5 Sternen">Bewertet mit 3 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/selenium-wiki-formatter/reviews/">(1)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="292699"
+  data-icon="https://addons.cdn.mozilla.net/user-media/addon_icons/292/292699-32.png?modified=1306820747"
+  data-developers="/de/firefox/addon/selenium-wiki-formatter/developers"
+  data-versions="/de/firefox/addon/292699/versions/"
+  data-name="Selenium Wiki Formatter"
+  
+  data-min="1.5"
+  data-max="41.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:a5601cd3ac228ee975387bd5f7b344359cec46e3a2cb931ee6752a28a1f7d3c4"
+      href="/firefox/downloads/latest/292699/addon-292699-latest.xpi?src=dp-hc-oftenusedwith"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      A Wiki Formatter for Selenium IDE
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/emidiostani/" title="EmidioStani">EmidioStani</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    1.034 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/selenium-ide-sel-blocks/?src=dp-dl-oftenusedwith">
+            <img src="https://addons.cdn.mozilla.net/user-media/addon_icons/301/301309-32.png?modified=1424306812" alt="Symbol für SelBlocks (for Selenium IDE)">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/selenium-ide-sel-blocks/?src=dp-dl-oftenusedwith">
+        <h3>SelBlocks (for Selenium IDE)</h3>
+                              <div class="category more-info">Sprachwerkzeuge</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/selenium-ide-sel-blocks/reviews/">(1)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="301309"
+  data-icon="https://addons.cdn.mozilla.net/user-media/addon_icons/301/301309-32.png?modified=1424306812"
+  data-developers="/de/firefox/addon/selenium-ide-sel-blocks/developers"
+  data-versions="/de/firefox/addon/301309/versions/"
+  data-name="SelBlocks (for Selenium IDE)"
+  
+  data-min="17.0"
+  data-max="41.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:d80dc4ef1b4ac215bfddead3908ea59b1d7f442ec8c9089c4fcef576817cd2f4"
+      href="/firefox/downloads/latest/301309/addon-301309-latest.xpi?src=dp-hc-oftenusedwith"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      This is a language extension for Selenium IDE that provides javascript-like conditionals, looping, callable functions, error catching, and JSON/XML driven parametrization.
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/refactoror/" title="refactoror">refactoror</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    4.599 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/test-results-selenium-ide/?src=dp-dl-oftenusedwith">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für Test Results (Selenium IDE)">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/test-results-selenium-ide/?src=dp-dl-oftenusedwith">
+        <h3>Test Results (Selenium IDE)</h3>
+                              <div class="category more-info">Webentwicklung</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/test-results-selenium-ide/reviews/">(6)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="344112"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/test-results-selenium-ide/developers"
+  data-versions="/de/firefox/addon/344112/versions/"
+  data-name="Test Results (Selenium IDE)"
+  
+  data-min="17.0"
+  data-max="41.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:b7b4268d9afcec06638c70375d706c33764b618a3b13bb51cbb0d9ace058c79f"
+      href="/firefox/downloads/latest/344112/addon-344112-latest.xpi?src=dp-hc-oftenusedwith"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      A plugin for Selenium-IDE to save the results of the test execution for the test suite and included test cases in a single click. Also allows you to export the test results for individual test cases.
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/samit-badle/" title="Samit Badle">Samit Badle</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    9.176 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+    </section>
+</ul>
+      </section>
+              <section id="collections-grid">
+        <h2>Teile dieser Sammlungen</h2>
+        <ul class="listing-grid c cols-3">
+    <section>
+      <li>
+      <div class="hovercard collection addon">
+        <a href="/de/firefox/collections/yehgdotnet/webhacker/">
+          <div class="icon">
+                          <img src="https://addons.cdn.mozilla.net/static/img/icons/collection.png" alt="">
+                      </div>
+          <div class="summary">
+            <h3>Web Hacker&#39;s Favorites [HackerFox]</h3>
+            <p class="desc">Favorites of the past and the present web application penetration testing firefox addons.</p>
+          </div>
+        </a>
+        <div class="more">
+                    <span>137</span> Add-ons          &middot;
+                    <span>19</span> Beobachter        </div>
+      </div>
+    </li>
+      <li>
+      <div class="hovercard collection addon">
+        <a href="/de/firefox/collections/samit-badle/samits-selenium-ide-plugins/">
+          <div class="icon">
+                          <img src="https://addons.cdn.mozilla.net/static/img/icons/collection.png" alt="">
+                      </div>
+          <div class="summary">
+            <h3>Samit&#39;s Selenium IDE Plugins</h3>
+            <p class="desc">A collection of my Selenium IDE Plugins</p>
+          </div>
+        </a>
+        <div class="more">
+                    <span>11</span> Add-ons          &middot;
+                    <span>14</span> Beobachter        </div>
+      </div>
+    </li>
+      <li>
+      <div class="hovercard collection addon">
+        <a href="/de/firefox/collections/spawnperm/astral-devel-pack/">
+          <div class="icon">
+                          <img src="https://addons.cdn.mozilla.net/user-media/collection_icons/125/125144.png?m=1355830424" alt="">
+                      </div>
+          <div class="summary">
+            <h3>Astral-devel pack</h3>
+            <p class="desc">Дополнения к firefox для программирования</p>
+          </div>
+        </a>
+        <div class="more">
+                    <span>115</span> Add-ons          &middot;
+                    <span>2</span> Beobachter        </div>
+      </div>
+    </li>
+    </section>
+</ul>
+
+      </section>
+                <section id="author-addons">
+        <h2>
+                      Weitere Add-ons von <a href="/de/firefox/user/samit-badle/" title="Samit Badle">Samit Badle</a>                  </h2>
+        <ul class="listing-grid c cols-3">
+    <section>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/file-logging-selenium-ide/?src=dp-dl-othersby">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für File Logging (Selenium IDE)">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/file-logging-selenium-ide/?src=dp-dl-othersby">
+        <h3>File Logging (Selenium IDE)</h3>
+                              <div class="category more-info">Webentwicklung</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/file-logging-selenium-ide/reviews/">(6)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="177844"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/file-logging-selenium-ide/developers"
+  data-versions="/de/firefox/addon/177844/versions/"
+  data-name="File Logging (Selenium IDE)"
+  
+  data-min="17.0"
+  data-max="41.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:e2a48f7bf1018d77733556c0248b4bc70ed70635ca037b86d07cf2e0baefe2de"
+      href="/firefox/downloads/latest/177844/addon-177844-latest.xpi?src=dp-hc-othersby"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      A plug-in for Selenium-IDE to save log to a file
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/samit-badle/" title="Samit Badle">Samit Badle</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    7.918 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/stored-variables-viewer-seleni/?src=dp-dl-othersby">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für Stored Variables (Selenium IDE)">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/stored-variables-viewer-seleni/?src=dp-dl-othersby">
+        <h3>Stored Variables (Selenium IDE)</h3>
+                              <div class="category more-info">Webentwicklung</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/stored-variables-viewer-seleni/reviews/">(1)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="189780"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/stored-variables-viewer-seleni/developers"
+  data-versions="/de/firefox/addon/189780/versions/"
+  data-name="Stored Variables (Selenium IDE)"
+  
+  data-min="17.0"
+  data-max="41.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:da69c7ec36e92df3140576fb7fc53a6080090f8548e81861b88c4691b5f0e02d"
+      href="/firefox/downloads/latest/189780/addon-189780-latest.xpi?src=dp-hc-othersby"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      A plugin for Selenium-IDE to interactively explore and manage stored variables
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/samit-badle/" title="Samit Badle">Samit Badle</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    4.129 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/test-suite-batch-converter-sel/?src=dp-dl-othersby">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für Test Suite Batch Converter (Selenium IDE)">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/test-suite-batch-converter-sel/?src=dp-dl-othersby">
+        <h3>Test Suite Batch Converter (Selenium IDE)</h3>
+                              <div class="category more-info">Webentwicklung</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/test-suite-batch-converter-sel/reviews/">(3)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="197691"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/test-suite-batch-converter-sel/developers"
+  data-versions="/de/firefox/addon/197691/versions/"
+  data-name="Test Suite Batch Converter (Selenium IDE)"
+  
+  data-min="3.5"
+  data-max="26.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:87676849d3686942990c12180ffc0a3d05d4ec6cb6bcc015fcbec086e6298f50"
+      href="/firefox/downloads/latest/197691/addon-197691-latest.xpi?src=dp-hc-othersby"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      A plugin for Selenium-IDE to convert one or more test suites (and included test cases) from the html format to another format supported by Selenium-IDE
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/samit-badle/" title="Samit Badle">Samit Badle</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    2.128 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/log-search-bar-selenium-ide/?src=dp-dl-othersby">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für Log Search Bar (Selenium IDE)">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/log-search-bar-selenium-ide/?src=dp-dl-othersby">
+        <h3>Log Search Bar (Selenium IDE)</h3>
+                              <div class="category more-info">Webentwicklung</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+            <b>Noch nicht bewertet</b>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="210844"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/log-search-bar-selenium-ide/developers"
+  data-versions="/de/firefox/addon/210844/versions/"
+  data-name="Log Search Bar (Selenium IDE)"
+  
+  data-min="3.5"
+  data-max="26.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:7fe4014a4857f4f548e64da8d6a0d2130aab9e9a21418e669f3d857edf60eaf6"
+      href="/firefox/downloads/latest/210844/addon-210844-latest.xpi?src=dp-hc-othersby"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      A plugin for Selenium-IDE to show a find toolbar in the log pane making it easy to search the displayed log messages
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/samit-badle/" title="Samit Badle">Samit Badle</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    2.215 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/highlight-elements-selenium-id/?src=dp-dl-othersby">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für Highlight Elements (Selenium IDE)">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/highlight-elements-selenium-id/?src=dp-dl-othersby">
+        <h3>Highlight Elements (Selenium IDE)</h3>
+                              <div class="category more-info">Webentwicklung</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/highlight-elements-selenium-id/reviews/">(1)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="228386"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/highlight-elements-selenium-id/developers"
+  data-versions="/de/firefox/addon/228386/versions/"
+  data-name="Highlight Elements (Selenium IDE)"
+  
+  data-min="3.5"
+  data-max="26.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:458be09fbfb5692370f35215d759d2ecf1b8eb09b0af8300e901c2b4e3d0046b"
+      href="/firefox/downloads/latest/228386/addon-228386-latest.xpi?src=dp-hc-othersby"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      A plugin for Selenium-IDE to highlight elements used in the Selenese commands
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/samit-badle/" title="Samit Badle">Samit Badle</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    8.237 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/power-debugger-selenium-ide/?src=dp-dl-othersby">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für Power Debugger (Selenium IDE)">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/power-debugger-selenium-ide/?src=dp-dl-othersby">
+        <h3>Power Debugger (Selenium IDE)</h3>
+                              <div class="category more-info">Webentwicklung</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/power-debugger-selenium-ide/reviews/">(2)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="255245"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/power-debugger-selenium-ide/developers"
+  data-versions="/de/firefox/addon/255245/versions/"
+  data-name="Power Debugger (Selenium IDE)"
+  
+  data-min="3.5"
+  data-max="26.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:14defca19ac99f20d19913df9c72baf0c0215106fec1aeb123394ca4cd80b139"
+      href="/firefox/downloads/latest/255245/addon-255245-latest.xpi?src=dp-hc-othersby"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      A plugin for Selenium-IDE to improve debugging and troubleshooting issues with scripts
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/samit-badle/" title="Samit Badle">Samit Badle</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    7.426 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+    </section>
+</ul>
+      </section>
+      </section>
+
+ ��GR      V��V��;�\       H:https://addons.mozilla.org/de/firefox/addon/favorites-selenium-ide/more security-info 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 request-method GET request-X-Requested-With XMLHttpRequest request-User-Agent Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0 response-head HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 15 Oct 2015 15:40:03 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-Requested-With, X-Mobile, User-Agent
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=31536000
+X-Backend-Server: web2
+ uncompressed-len 0   ��

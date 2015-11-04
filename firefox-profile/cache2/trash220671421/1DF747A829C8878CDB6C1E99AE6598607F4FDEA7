@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+            <title>Get all Cookies in XML :: Add-ons for Firefox</title>
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href="https://addons.cdn.mozilla.net/static/img/favicon.ico">
+
+    
+        <link title="Firefox Add-ons"
+          rel="search" type="application/opensearchdescription+xml"
+          href="/en-US/firefox/opensearch.xml" />
+
+          <link href="https://addons.cdn.mozilla.net/static/css/tabzilla/tabzilla.css" rel="stylesheet" />
+              <link rel="stylesheet" media="all" href="https://addons.cdn.mozilla.net/static/css/zamboni/impala-min.css?build=241655d" />
+      <!--[if lt IE 9]>
+        <script src="https://addons.cdn.mozilla.net/static/js/lib/iepp.min.js?b=9cef7e3-56169886"></script>
+      <![endif]-->
+      <!--[if lte IE 9]>
+        <link rel="stylesheet" href="https://addons.cdn.mozilla.net/static/css/legacy/ie9.css?b=9cef7e3-56169886">
+      <![endif]-->
+    
+            <link rel="prefetch" href="https://addons.cdn.mozilla.net/user-media/previews/full/109/109702.png?modified=1375191726">
+    <meta property="og:title" content="Get all Cookies in XML">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://addons.cdn.mozilla.net/static/img/addon-icons/webdev-64.png">
+  <meta property="og:url" content="https://addons.mozilla.org/en-US/firefox/addon/get-all-cookies-in-xml/">
+  <meta property="og:description" content="Save all cookies in cookie.xml file under profile directory">
+    <noscript><link rel="stylesheet" href="https://addons.cdn.mozilla.net/static/css/impala/nojs.css?b=9cef7e3-56169886"></noscript>
+
+    
+    
+    <script src="https://cdn.optimizely.com/js/2006260574.js"></script>
+    <script src="https://addons.cdn.mozilla.net/static/js/preload-min.js?build=9cef7e3-56169886"></script>
+  </head>
+  <body class="html-ltr firefox moz-header-slim gutter addon-details  is-impala"
+        data-app="firefox"
+        data-appname="Firefox"
+        data-appid="1"
+        data-min-beta-version="3.7"
+        data-nightly-version="41.0"
+        data-anonymous="true"
+        data-readonly="false"
+        data-media-url="https://addons.cdn.mozilla.net/user-media/"
+        data-static-url="https://addons.cdn.mozilla.net/static/"
+        data-collect-timings="/services/timing/record:0.1"
+        >
+
+    <div id="main-wrapper">
+      <div id="page" class="c">
+                  <div id="tabzilla">
+    <a href="https://www.mozilla.org/">Mozilla</a>
+</div>          <div class="amo-header">
+            <nav id="aux-nav" role="navigation" class="menu-nav c">
+              <ul>
+                                    <li class="account anonymous nomenu login legacy">
+    <a href="/en-US/firefox/users/register">Register</a> or <a href="/en-US/firefox/users/login?to=%2Fen-US%2Ffirefox%2Faddon%2Fget-all-cookies-in-xml%2F">Log in</a>  </li>
+
+                                                  <li>
+                    <a href="#" id="other-apps" title="Find add-ons for other applications">Other Applications</a>
+                    <ul class="other-apps">
+                                                                                                                      <li id="app-thunderbird" class="thunderbird">
+                            <a href="/en-US/thunderbird">Thunderbird</a>
+                          </li>
+                                                                                                <li id="app-android" class="android">
+                            <a href="/en-US/android">Firefox for Android</a>
+                          </li>
+                                                                                                                                              <li id="app-seamonkey" class="seamonkey">
+                            <a href="/en-US/seamonkey">SeaMonkey</a>
+                          </li>
+                                                                  </ul>
+                  </li>
+                              </ul>
+            </nav>
+            <div class="header-search" role="search">
+                                                                  <form id="search" action="/en-US/firefox/search/">
+  <input id="search-q" type="text" name="q" autocomplete="off" title=""
+         class="text placeholder"
+         placeholder="search for add-ons"
+         value="">
+        <input id="id_appver" name="appver" type="hidden" />
+    <input id="id_platform" name="platform" type="hidden" />
+    <button class="search-button" type="submit" title="Search"
+         src="https://addons.cdn.mozilla.net/static/img/zamboni/global/btn-search.png?b=9cef7e3-56169886"></button>
+      <div id="site-search-suggestions"
+         data-cat="all"
+         data-src="/en-US/firefox/search/suggestions"></div>
+  </form>                                          </div>
+            <div id="masthead">
+                            <h1 class="site-title">
+  <a href="/en-US/firefox/" title="Return to the Firefox Add-ons homepage">
+  <img alt="Firefox" src="https://addons.cdn.mozilla.net/static/img/app-icons/med/firefox.png?b=9cef7e3-56169886">
+  Add-ons
+</a>
+</h1>              
+
+<nav id="site-nav" class="menu-nav c">
+  <ul>
+      <li id="extensions">
+    <a href="/en-US/firefox/extensions/">Extensions</a>
+    <ul class="two-col">
+              <li><em><a href="/en-US/firefox/extensions/?sort=featured">Featured</a></em></li>
+              <li><em><a href="/en-US/firefox/extensions/?sort=users">Most Popular</a></em></li>
+              <li><em><a href="/en-US/firefox/extensions/?sort=rating">Top Rated</a></em></li>
+                  <li><a href="/en-US/firefox/extensions/alerts-updates/">Alerts &amp; Updates</a></li>
+            <li><a href="/en-US/firefox/extensions/appearance/">Appearance</a></li>
+            <li><a href="/en-US/firefox/extensions/bookmarks/">Bookmarks</a></li>
+            <li><a href="/en-US/firefox/extensions/download-management/">Download Management</a></li>
+            <li><a href="/en-US/firefox/extensions/feeds-news-blogging/">Feeds, News &amp; Blogging</a></li>
+            <li><a href="/en-US/firefox/extensions/games-entertainment/">Games &amp; Entertainment</a></li>
+            <li><a href="/en-US/firefox/extensions/language-support/">Language Support</a></li>
+            <li><a href="/en-US/firefox/extensions/photos-music-videos/">Photos, Music &amp; Videos</a></li>
+            <li><a href="/en-US/firefox/extensions/privacy-security/">Privacy &amp; Security</a></li>
+            <li><a href="/en-US/firefox/extensions/search-tools/">Search Tools</a></li>
+            <li><a href="/en-US/firefox/extensions/shopping/">Shopping</a></li>
+            <li><a href="/en-US/firefox/extensions/social-communication/">Social &amp; Communication</a></li>
+            <li><a href="/en-US/firefox/extensions/tabs/">Tabs</a></li>
+            <li><a href="/en-US/firefox/extensions/web-development/">Web Development</a></li>
+            <li><a href="/en-US/firefox/extensions/other/">Other</a></li>
+          </ul>
+  </li>
+
+    
+        <li id="themes">
+      <a href="/en-US/firefox/themes/">Themes</a>
+              <ul class="two-col">
+                      <li><em><a href="/en-US/firefox/themes/?sort=popular">Most Popular</a></em></li>
+                      <li><em><a href="/en-US/firefox/themes/?sort=rating">Top Rated</a></em></li>
+                      <li><em><a href="/en-US/firefox/themes/?sort=created">Newest</a></em></li>
+                                <li><a href="/en-US/firefox/themes/abstract">Abstract</a></li>
+                      <li><a href="/en-US/firefox/themes/causes">Causes</a></li>
+                      <li><a href="/en-US/firefox/themes/fashion">Fashion</a></li>
+                      <li><a href="/en-US/firefox/themes/film-and-tv">Film and TV</a></li>
+                      <li><a href="/en-US/firefox/themes/firefox">Firefox</a></li>
+                      <li><a href="/en-US/firefox/themes/foxkeh">Foxkeh</a></li>
+                      <li><a href="/en-US/firefox/themes/holiday">Holiday</a></li>
+                      <li><a href="/en-US/firefox/themes/music">Music</a></li>
+                      <li><a href="/en-US/firefox/themes/nature">Nature</a></li>
+                      <li><a href="/en-US/firefox/themes/other">Other</a></li>
+                      <li><a href="/en-US/firefox/themes/scenery">Scenery</a></li>
+                      <li><a href="/en-US/firefox/themes/seasonal">Seasonal</a></li>
+                      <li><a href="/en-US/firefox/themes/solid">Solid</a></li>
+                      <li><a href="/en-US/firefox/themes/sports">Sports</a></li>
+                      <li><a href="/en-US/firefox/themes/websites">Websites</a></li>
+                  </ul>
+        <div>
+          <a class="complete-themes" href="/en-US/firefox/complete-themes/">
+            Want more customization? Try <b>Complete Themes</b>          </a>
+        </div>
+          </li>
+
+        <li id="collections">
+            <a href="/en-US/firefox/collections/">Collections</a>
+      <ul>
+                  <li><em><a href="/en-US/firefox/collections/?sort=featured">Featured</a></em></li>
+                  <li><em><a href="/en-US/firefox/collections/?sort=users">Most Followers</a></em></li>
+                  <li><em><a href="/en-US/firefox/collections/?sort=created">Newest</a></em></li>
+                <hr>
+        <li><a href="/en-US/firefox/collections/mine/">
+          Collections I've Made</a></li>
+        <li><a href="/en-US/firefox/collections/following/">
+          Collections I'm Following</a></li>
+                <li><a href="/en-US/firefox/collections/mine/favorites">
+          My Favorite Add-ons</a></li>
+      </ul>
+          </li>
+    <li id="more">
+      <a href="#">More&hellip;</a>
+      <ul>
+                  <li class="more-mobile"><a href="/en-US/android">
+            Add-ons for Mobile</a></li>
+                <li class="more-lang"><a href="/en-US/firefox/language-tools/">
+          Dictionaries & Language Packs</a></li>
+        <li><a href="/en-US/firefox/search-tools/">Search Tools</a></li>
+        <li><a href="/en-US/developers/">Developer Hub</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                          </div>
+                                                      <div class="site-balloon" id="site-nonfx">
+                  <p>
+                    To try the thousands of add-ons available here, download <a href="http://mozilla.org/firefox/?src=amo">Mozilla Firefox</a>, a fast, free way to surf the Web!                  </p>
+                  <a href="#" class="close">Close</a>
+                </div>
+                            <div class="site-balloon" id="site-welcome">
+                                <h3>Welcome to Firefox Add-ons.</h3>
+                <p>
+                                      Choose from thousands of extra features and styles to make Firefox your own.                                  </p>
+                <a href="#" class="close">Close</a>
+              </div>
+              <div class="site-balloon" id="mobile-banner">
+                <h3>On the go?</h3>
+                <p>
+                  Check out our <a class="mobile-link" href="#">Mobile Add-ons site</a>.                </p>
+                <a href="#" class="close">Close</a>
+              </div>
+                      </div>
+        
+                                                                  <nav id="breadcrumbs">
+  <ol>
+      <li>
+                  <a href="/en-US/firefox/" class="home" title="Add-ons for Firefox">Add-ons for Firefox</a>
+              </li>
+      <li>
+                  <a href="/en-US/firefox/extensions/">Extensions</a>
+              </li>
+      <li>
+          <span>Get all Cookies in XML</span>
+        </li>
+    </ol>
+</nav>
+
+<div itemscope itemtype="http://schema.org/WebApplication">
+  <link itemprop="SoftwareApplicationCategory" href="http://schema.org/OtherApplication" />
+  <aside class="secondary addon-vitals">
+
+    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <meta itemprop="price" content="$0" />
+    <meta itemprop="priceCurrency" content="USD" />
+    <link itemprop="availability" href="http://schema.org/InStock" />
+  </span>
+
+  <div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+    <meta content="0.0" itemprop="ratingValue">
+    Not yet rated
+
+    <div>
+      <a id="reviews-link" href="/en-US/firefox/addon/get-all-cookies-in-xml/reviews/">
+      <span itemprop="ratingCount">0</span> user reviews      </a>
+    </div>
+  </div>
+
+                                  <div id="daily-users">
+              26 users
+            <meta itemprop="interactionCount" content="UserDownloads:596" />
+    </div>
+  
+  <div class="widgets">
+    
+    <a class="collection-add widget collection"
+  data-listurl="/en-US/firefox/collections/ajax/list"
+  data-addurl="/en-US/firefox/collections/ajax/add"
+  data-removeurl="/en-US/firefox/collections/ajax/remove"
+  data-newurl="/en-US/firefox/collections/ajax/new"
+  data-addonid="458092"
+  title=""
+  href="#"
+  >
+  Add to collection
+</a>        <a class="share widget"
+     data-share-counts="{&#34;Tumblr&#34;: &#34;0 posts&#34;, &#34;twitter&#34;: &#34;0 tweets&#34;, &#34;Reddit&#34;: &#34;0 posts&#34;, &#34;facebook&#34;: &#34;0 Likes&#34;, &#34;gplus&#34;: &#34;0 posts&#34;}"
+     data-base-url="/en-US/firefox/addon/get-all-cookies-in-xml/share?service="
+     title="Share this Add-on"
+     href="#">Share this Add-on</a>
+
+  </div>
+    </aside>
+
+
+<section class="primary">
+  <div id="addon" class="island c" role="main" data-id="458092">
+    <hgroup>
+            <img id="addon-icon" itemprop="image" src="https://addons.cdn.mozilla.net/static/img/addon-icons/webdev-64.png" class="icon" alt="Icon of Get all Cookies in XML">
+      <h1 class="addon">
+        <span itemprop="name">Get all Cookies in XML</span>
+                  <span class="version-number" itemprop="version">1.0.1-signed</span>
+                      </h1>
+      <h4 class="author">by <a href="/en-US/firefox/user/victory4vishnu/" title="victory4vishnu">victory4vishnu</a></h4>
+    </hgroup>
+    <p id="addon-summary" itemprop="description" >Save all cookies in cookie.xml file under profile directory</p>
+          <div class="install-wrapper ">
+<div class="install-shell">
+<div class="install lite"
+       data-addon="458092"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/webdev-32.png"
+  data-developers="/en-US/firefox/addon/get-all-cookies-in-xml/developers"
+  data-versions="/en-US/firefox/addon/458092/versions/"
+  data-name="Get all Cookies in XML"
+  
+  data-min="2.0"
+  data-max="41.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  caution prominent platform windows"
+  data-hash="sha256:54c9976ac9e41c8c86c7054113743a6474f3479a7d8639fd21b1dd23e14b30b3"
+      href="https://addons.mozilla.org/firefox/downloads/file/223472/get_all_cookies_in_xml-1.0-fx-windows.xpi?src=dp-btn-primary"
+  >
+      <b></b>
+    <span>
+      Download
+              <span class="os" data-os="Windows">
+                                  for Windows
+                  </span>
+          </span>
+  </a>
+      </p>
+</div> 
+    
+      <p class="warning">This add-on has been preliminarily reviewed by Mozilla. <a href="/en-US/faq#preliminary">Learn more</a> </p>
+  
+      <div class="d2c-reasons-popup popup">
+      <p>This add-on is not compatible with your version of Firefox because of the following:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> </div>
+          </div>
+
+  
+  
+
+  </section>
+
+      <section class="previews">
+      <div class="carousel">
+        <a href="#" class="control prev">&laquo;</a>
+        <a href="#" class="control next">&raquo;</a>
+        <ul id="preview" class="slider"><li class="panel">
+              <a class="screenshot thumbnail" rel="jquery-lightbox"
+                 href="https://addons.cdn.mozilla.net/user-media/previews/full/109/109702.png?modified=1375191726" title="Open URL chrome://getallcookies/content/getAllCookies.xul to capture cookies.">
+                                <img src="https://addons.cdn.mozilla.net/user-media/previews/thumbs/109/109702.png?modified=1375191726" alt="Add-on screenshot #1">
+              </a>
+            </li></ul>
+      </div>
+    </section>
+    <div id="lightbox">
+      <section>
+        <div class="content">
+          <a class="close" href="#">Close</a>
+        </div>
+        <div class="controls">
+          <a href="#" class="control next">&raquo;</a>
+          <a href="#" class="control prev">&laquo;</a>
+          <div class="caption"><span></span></div>
+        </div>
+      </section>
+    </div>
+  
+<aside class="secondary metadata c">
+  <ul class="links">
+              </ul>
+      <ul>
+      <li>Version 1.0.1-signed <a class="scrollto" href="#detail-relnotes">Info</a></li>
+      <li>Last Updated: July 30, 2013</li>
+      <li class="source-license">
+                                      Released under <a target="_blank" href="http://www.mozilla.org/MPL/2.0/">Mozilla Public License, version 2.0</a>                        </li>
+    </ul>
+  </aside>
+
+<section class="primary island c">
+  <h2>About this Add-on</h2>
+  <div class="prose">
+      <div id="addon-description" class="prose" >This plugin is created to help users to capture cookies from all domains just by opening a URL in the browser either in same window or new windows. This will be a boon to users who are using automation tools like WebDriver where there is no support for interacting with browser menu options.<br><br>Alternately, user can still use menu option 'Get all Cookies in XML' under tools to save all the cookies in an xml file.<br><br>To capture cookies at any moment, open the URL chrome://getAllCookies/content/getAllCookies.xul or click on the menu option which will save all cookies in file by name 'cookie.xml' directly under current profile directory.<br><br>The XML schema is as follows:<br><br>&lt;cookies&gt;	<br>	&lt;cookie id="cookie_name"&gt;<br>		&lt;host&gt;<a href="http://outgoing.mozilla.org/v1/867dba92134323b40387dbc96b97168bfc0d034d64be88db723165b3bf9a8753/http%3A//domain.com" rel="nofollow">domain.com</a>&lt;/host&gt;<br>		&lt;isdomain&gt;FALSE&lt;/isdomain&gt;<br>		&lt;path&gt;/&lt;/path&gt;<br>		&lt;issecure&gt;FALSE&lt;/issecure&gt;<br>		&lt;expires&gt;1388032303&lt;/expires&gt;<br>		&lt;name&gt;cookiename&lt;/name&gt;<br>		&lt;value&gt;&lt;/value&gt;<br>		&lt;policy&gt;0&lt;/policy&gt;<br>		&lt;status&gt;0&lt;/status&gt;<br>	&lt;/cookie&gt;<br>&lt;cookies&gt;	<br><br>Having access to this file user can now parse or search for specific cookies using any XML parsing mechanism.<br><br>Refer to <a href="http://outgoing.mozilla.org/v1/f0fef702279ce8ad4fcb61984a59750d6d6cc139d6dcdfcbf7ac0198fb7862fe/http%3A//automationoverflow.blogspot.in/2013/07/getting-cookies-from-all-domains.html" rel="nofollow">My Blog</a> for more details.</div>
+    </div>
+</section>
+
+<div id="more-webpage" class="primary c" data-more-url="/en-US/firefox/addon/get-all-cookies-in-xml/more"></div>
+
+<section class="primary island more-island">
+  
+      <section id="detail-relnotes" class="expando">
+      <h2>Version Information<a class="toggle" href="#detail-relnotes"><b></b></a></h2>
+      <div class="content listing">
+        <div class="items">
+          <div class="version item" id="version-1.0.1-signed">
+  <div class="info">
+    <h3><a href="/en-US/firefox/addon/get-all-cookies-in-xml/versions/1.0.1-signed"
+           title="Permanent link to this version">
+      Version 1.0.1-signed</a>
+      <span class="meta">
+        <time datetime="2013-07-30T13:17:44Z">
+                    Released July 30, 2013
+        </time>
+                  <span class="filesize">
+            2.3 kB
+          </span>
+              </span>
+              <span class="meta compat">
+                    Works with
+                      Firefox 2.0 and later        </span>
+          </h3>
+
+    <div class="desc prose" >
+      
+    </div>
+
+    <ul class="source">
+                  <li>
+                      Source code released under <a target="_blank" href="http://www.mozilla.org/MPL/2.0/">Mozilla Public License, version 2.0</a>                  </li>
+        <li>
+          <a class="license-faq" href="/en-US/faq#license">
+            What's this?</a>
+        </li>
+              <li>
+        <a class="source-code"
+           href="/en-US/firefox/files/browse/223472/">
+          View the source</a>
+      </li>
+        </ul>
+
+  </div>
+  <div class="action">
+    
+<div class="install-shell">
+<div class="install lite"
+       data-addon="458092"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/webdev-32.png"
+  data-developers="/en-US/firefox/addon/get-all-cookies-in-xml/developers"
+  data-versions="/en-US/firefox/addon/458092/versions/"
+  data-name="Get all Cookies in XML"
+  
+  data-min="2.0"
+  data-max="41.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  caution platform windows"
+  data-hash="sha256:54c9976ac9e41c8c86c7054113743a6474f3479a7d8639fd21b1dd23e14b30b3"
+      href="https://addons.mozilla.org/firefox/downloads/file/223472/get_all_cookies_in_xml-1.0-fx-windows.xpi?src=dp-btn-version"
+  >
+      <b></b>
+    <span>
+      Download
+              <span class="os" data-os="Windows">
+                                  for Windows
+                  </span>
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>This add-on is not compatible with your version of Firefox because of the following:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+  </div>
+</div>
+        </div>
+        <p class="more c">
+          <a class="more-info" href="/en-US/firefox/addon/get-all-cookies-in-xml/versions/">
+            See complete version history
+          </a>
+        </p>
+      </div>
+    </section>
+  
+  </section>
+
+
+</div>
+              </div>
+      <div id="tooltip">
+        <span></span>
+      </div>
+      <div id="popup-staging">
+        <div id="sharing-popup" class="popup">
+  <div class="share-networks share-content">
+    <ul>
+              <li class="facebook">
+          <span class="share-link">
+            <a class="uniquify" target="_self">
+              Post to Facebook
+            </a>
+          </span>
+          <span class="share-count">
+          </span>
+        </li>
+              <li class="twitter">
+          <span class="share-link">
+            <a class="uniquify" target="_self">
+              Tweet on Twitter
+            </a>
+          </span>
+          <span class="share-count">
+          </span>
+        </li>
+              <li class="gplus">
+          <span class="share-link">
+            <a class="uniquify" target="_self">
+              Share on g+
+            </a>
+          </span>
+          <span class="share-count">
+          </span>
+        </li>
+              <li class="Reddit">
+          <span class="share-link">
+            <a class="uniquify" target="_self">
+              Post to Reddit
+            </a>
+          </span>
+          <span class="share-count">
+          </span>
+        </li>
+              <li class="Tumblr">
+          <span class="share-link">
+            <a class="uniquify" target="_self">
+              Post to Tumblr
+            </a>
+          </span>
+          <span class="share-count">
+          </span>
+        </li>
+          </ul>
+  </div></div>
+        <div id="add-to-collection" class="popup">
+          <div class="collection-add-login">
+            <p>To create your own collections, you must have a Mozilla Add-ons account.</p>
+            <p class="register-button">
+              <a class="button" href="/en-US/firefox/users/register">Create an Add-ons Account</a>
+            </p>
+            <p>
+              or <a href="/en-US/firefox/users/login?to=%2Fen-US%2Ffirefox%2Faddon%2Fget-all-cookies-in-xml%2F">log in to your current account</a>            </p>
+          </div>
+        </div>
+                    <div id="abuse-modal" class="modal">
+      <a href="#" class="close">close</a>
+      <h2>Report Abuse</h2>
+      <form method="post" action="/en-US/firefox/addon/get-all-cookies-in-xml/abuse/">
+  
+  <fieldset class="abuse">
+        <ol >
+      <li>
+        <p>If you suspect this add-on violates <a href="/en-US/firefox/developers/docs/policies">our policies</a> or has security or privacy issues, please use the form below to describe your concerns. Please do not use this form for any other reason.</p>
+      </li>
+      <li>
+        <textarea cols="40" id="id_text" name="text" rows="10">
+</textarea>
+        
+      </li>
+              <li id="recap-container">
+<label for="recaptcha_response_field">
+  Are you human? <span class="req" title="required">*</span>
+  <a href="#" id="recaptcha_help">What's this?</a>
+</label>
+<div class="recaptcha-container">
+  <p> Please enter <strong>all the words</strong> below, <strong>separated by a space if necessary</strong>. </p> <p> If this is hard to read, you can <a href="#" id="recaptcha_different">try different words</a> or <a href="#" id="recaptcha_audio">try a different type of challenge</a> instead. </p>  <div id="recaptcha_image"></div>
+  <p>
+    <input type="text" name="recaptcha_response_field"
+           id="recaptcha_response_field" size="30">
+  </p>
+</div>
+</li>
+
+            <li class="footer-submit">
+        <button type="submit">Send Report</button>
+              </li>
+    </ol>
+  </fieldset>
+</form>
+    </div>
+        </div>
+    </div>
+          <div id="footer" role="contentinfo">
+        <div class="section">
+                    <img class="footerlogo" src="https://addons.cdn.mozilla.net/static/img/zamboni/footer-logo-med.png?b=9cef7e3-56169886" alt="Footer logo">
+                                <div id="social-footer">
+  <ul>
+    <li>get to know <b>add-ons</b></li>
+    <li><a href="/en-US/about">About</a></li>
+    <li><a href="http://blog.mozilla.com/addons">Blog</a></li>
+    <li class="footer-devhub-link"><a href="/en-US/developers/">Developer Hub</a></li>
+    <li><a href="/en-US/faq">FAQ</a></li>
+    <li><a href="https://discourse.mozilla-community.org/c/add-ons">Forum</a></li>
+  </ul>
+</div>
+<div id="footer-content">
+        <form class="languages go" id="lang_form" method="get" action="">
+      <label for="language">Other languages</label>
+      <select id="language" name="lang" dir="ltr">
+        <option value="af" >
+            Afrikaans
+          </option><option value="ar" >
+            عربي
+          </option><option value="bg" >
+            Български
+          </option><option value="bn-bd" >
+            বাংলা (বাংলাদেশ)
+          </option><option value="ca" >
+            Català
+          </option><option value="cs" >
+            Čeština
+          </option><option value="da" >
+            Dansk
+          </option><option value="de" >
+            Deutsch
+          </option><option value="el" >
+            Ελληνικά
+          </option><option value="en-gb" >
+            English (British)
+          </option><option value="en-us" selected>
+            English (US)
+          </option><option value="es" >
+            Español
+          </option><option value="eu" >
+            Euskara
+          </option><option value="fa" >
+            فارسی
+          </option><option value="fi" >
+            suomi
+          </option><option value="fr" >
+            Français
+          </option><option value="ga-ie" >
+            Gaeilge
+          </option><option value="he" >
+            עברית
+          </option><option value="hu" >
+            magyar
+          </option><option value="id" >
+            Bahasa Indonesia
+          </option><option value="it" >
+            Italiano
+          </option><option value="ja" >
+            日本語
+          </option><option value="ko" >
+            한국어
+          </option><option value="mk" >
+            Македонски
+          </option><option value="mn" >
+            Монгол
+          </option><option value="nl" >
+            Nederlands
+          </option><option value="pl" >
+            Polski
+          </option><option value="pt-br" >
+            Português (do Brasil)
+          </option><option value="pt-pt" >
+            Português (Europeu)
+          </option><option value="ro" >
+            Română
+          </option><option value="ru" >
+            Русский
+          </option><option value="sk" >
+            slovenčina
+          </option><option value="sl" >
+            Slovenščina
+          </option><option value="sq" >
+            Shqip
+          </option><option value="sv-se" >
+            Svenska
+          </option><option value="uk" >
+            Українська
+          </option><option value="vi" >
+            Tiếng Việt
+          </option><option value="zh-cn" >
+            中文 (简体)
+          </option><option value="zh-tw" >
+            正體中文 (繁體)
+          </option>      </select>
+            <noscript><button type="submit">Go</button></noscript>
+    </form>
+    <div id="copyright">
+  <p id="footer-links">
+          <a href="http://www.mozilla.org/privacy/websites/">
+        Privacy Policy
+      </a> &nbsp;|&nbsp;
+      <a href="http://www.mozilla.org/about/legal.html">
+        Legal Notices
+      </a> &nbsp;|&nbsp;
+      <a href="http://www.mozilla.org/legal/fraud-report/index.html">
+        Report Trademark Abuse
+      </a>
+            &nbsp;|&nbsp;<a class="mobile-link" href="#">View Mobile Site</a>
+        </p>
+  <p>
+    Except where otherwise <a href="http://www.mozilla.org/about/legal.html#site">noted</a>, content on this site is licensed under the <br /> <a href="http://creativecommons.org/licenses/by-sa/3.0/"> Creative Commons Attribution Share-Alike License v3.0 </a> or any later version.  </p>
+</div></div>
+                  </div>       </div>                   <script src="/en-US/firefox/jsi18n.js?b=9cef7e3-56169886"></script>
+      <script src="https://addons.cdn.mozilla.net/static/js/impala-min.js?build=9cef7e3-56169886"></script>
+      <script async defer src="/en-US/firefox/addons/buttons.js?b=9cef7e3-56169886"></script>
+          <script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=6LcHh9gSAAAAAJ_BAPRKKBdXUZwgERi7iwQVjIna"></script>
+    <script async defer src="https://www.paypalobjects.com/js/external/dg.js"></script>
+      </body>
+</html>����l      V٭Vٮ;�*�       G:https://addons.mozilla.org/en-US/firefox/addon/get-all-cookies-in-xml/ necko:classified 1 security-info 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 request-method GET request-User-Agent Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0 response-head HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 08 Oct 2015 21:01:33 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-Requested-With, X-Mobile, User-Agent
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=31536000
+X-Backend-Server: web4
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 33 predictor::https://addons.cdn.mozilla.net/static/css/tabzilla/tabzilla.css 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/css/zamboni/impala-min.css?build=241655d 1,1,1444338093,0 predictor::https://cdn.optimizely.com/js/2006260574.js 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/js/preload-min.js?build=9cef7e3-56169886 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/app-icons/med/firefox.png?b=9cef7e3-56169886 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/addon-icons/webdev-64.png 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/user-media/previews/thumbs/109/109702.png?modified=1375191726 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/zamboni/footer-logo-med.png?b=9cef7e3-56169886 1,1,1444338093,0 predictor::https://addons.mozilla.org/en-US/firefox/jsi18n.js?b=9cef7e3-56169886 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/js/impala-min.js?build=9cef7e3-56169886 1,1,1444338093,0 predictor::https://addons.mozilla.org/en-US/firefox/addons/buttons.js?b=9cef7e3-56169886 1,1,1444338093,0 predictor::https://www.google.com/recaptcha/api/challenge?k=6LcHh9gSAAAAAJ_BAPRKKBdXUZwgERi7iwQVjIna 1,1,1444338093,0 predictor::https://www.paypalobjects.com/js/external/dg.js 1,1,1444338093,0 predictor::https://ssl.google-analytics.com/ga.js 1,1,1444338093,0 predictor::https://ssl.google-analytics.com/r/__utm.gif?utmwv=5.6.7&utms=1&utmn=1994446580&utmhn=addons.mozilla.org&utmcs=UTF-8&utmsr=1366x768&utmvp=1301x641&utmsc=24-bit&utmul=de&utmje=0&utmfl=-&utmdt=Get%20all%20Cookies%20in%20XML%20%3A%3A%20Add-ons%20for%20Firefox&utmhid=966182309&utmr=http%3A%2F%2Fstackoverflow.com%2Fquestions%2F22200134%2Fmake-selenium-grab-all-cookies&utmp=%2Fen-US%2Ffirefox%2Faddon%2Fget-all-cookies-in-xml%2F&utmht=1444338093841&utmac=UA-36116321-7&utmcc=__utma%3D164683759.1013352003.1444338094.1444338094.1444338094.1%3B%2B__utmz%3D164683759.1444338094.1.1.utmcsr%3Dstackoverflow.com%7Cutmccn%3D(referral)%7Cutmcmd%3Dreferral%7Cutmcct%3D%2Fquestions%2F22200134%2Fmake-selenium-grab-all-cookies%3B&utmjid=488844871&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/zamboni/global/bg-header.png?7afdbd6 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/tabzilla/tabzilla-static.png 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/icons/search.png?eaad389 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/icons/go-arrow.png?ad8fa66 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/impala/breadcrumb-home.png?f3b8d00 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/impala/widgets.png?e4eb4a7 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/impala/loading-more.gif?4b3afb8 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/impala/expando-large.png?4f1cc6f 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/zamboni/global/bg-footer.png?75bd0b5 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/css/impala/fonts/MetaWebPro-Black.woff?5a32e0b 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/impala/search-stem.png?11fc7d4 1,1,1444338093,0 predictor::https://www.google.com/recaptcha/api/js/recaptcha.js 1,1,1444338093,0 predictor::https://www.google.com/js/th/1q_yQYHM-AKGda2NjGtjJaXYr5D7VwHw0xm0jwZ-eWo.js 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/impala/no.png?f10b6fb 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/impala/button-icons.png?76a8a6e 1,1,1444338093,0 predictor::https://addons.cdn.mozilla.net/static/img/impala/banner-close.png?b330fed 1,1,1444338093,0 predictor::https://www.google.com/recaptcha/api/reload?c=03AHJ_VutZgWnLYMbOijIlFdcJOrQOmGf8t8H_R4FXLQle4emBj4Jzxt33sn0j98EnrjH8OxTXJ6b3dGccX0gBtRWNDVTvslZzsQdpD1MFvKTLafpwgs4bkiqpZbloH37VTgW_Q4Ss1oAd1SeTUyO7pT4KlJLheZWxGU0qAStuzvxPnBsporlo94M7pPEHyQj5ofRLDAITdjGMg_bcozaOAcaoiewgdW7w7A&k=6LcHh9gSAAAAAJ_BAPRKKBdXUZwgERi7iwQVjIna&reason=i&type=image&lang=de&th=,BfSwq8uro_BjqoO2C-gi3i6wKQjwAAAAHqAAAAAG2AC8hYADPRVVPOhHhTU3RAZdHCRXnJTaPKjnNUFGUlTW7nh-cg4bgnYZ4lbj4N_OeGUOfZBqpJ83vQn67-EIH7xl9H66P-ifhGQi2oaRqIKXIiZP2kz2a47WcDCYS14UsNOWjU0jt9ChrJ-OytwMkp-z3kqBfO_7_vpMzRDNvmqDyEOgSzo8H7vVG-o1xHMcZZ38u9LWZbshdadaMFTN2LYdmkmjsoeRCk48jKIbakoO_fpyImW4dyEs2ja5jxM 1,1,1444338093,0 predictor::https://www.google.com/recaptcha/api/image?c=03AHJ_Vut6lVlweyQGa4Bn5cVzxCtg1PQ9qz7gzcdyF7Qi9s0ug50aZw07OEQNgtar71CTjn-JvNOdVHtLXH38x3s1kBDRsXSrtW049lcfp39q8L61IxY24ZeTWYwdIaj53VK3IbEQRV6Dony07kP0ZLw_G7aPPUCTJPPW9aaB5Vbxx2hH8DOsntVvl0AxvzKRlxukwpaAvSrr&th=,Nsewq8uro_BjqoO2C-gi3i6wKQjwAAAAHqAAAAAG2AC8hYADPRVVPOhHhTU3RAZdHCRXnJTaPKjnNUFGUlTW7nh-cg4bgnYZ4lbj4N_OeGUOfZBqpJ83vQn67-EIH7xl9H66P-ifhGQi2oaRqIKXIiZP2kz2a47WcDCYS14UsNOWjU0jt9ChrJ-OytwMkp-z3kqBfO_7_vpMzRDNvmqDyEOgSzo8H7vVG-o1xHMcZZ38u9LWZbshdadaMFTN2LYdmkmjsoeRCk48jKIbakoO_fpl72W4lPf43If06xg 1,1,1444338093,0   x

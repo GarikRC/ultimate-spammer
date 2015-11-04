@@ -1,0 +1,1328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XAcEWV5ACQMDUFRVAgk="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,ee:"QJf3ax"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=t("ee").create(),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-686.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script>
+<title>Selenium Tutorial: Learn Selenium WebDriver</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- All in One SEO Pack 2.2.7.2 by Michael Torbert of Semper Fi Web Design[399,451] -->
+<meta name="keywords"  content="tutorials" />
+
+<link rel="canonical" href="https://blog.udemy.com/selenium-ide-tutorial/" />
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="Udemy Blog &raquo; Feed" href="https://blog.udemy.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Udemy Blog &raquo; Comments Feed" href="https://blog.udemy.com/comments/feed/" />
+<!-- This site is powered by Shareaholic - https://shareaholic.com -->
+<script type='text/javascript' data-cfasync='false'>
+  //<![CDATA[
+    _SHR_SETTINGS = {"endpoints":{"local_recs_url":"https:\/\/blog.udemy.com\/wp-admin\/admin-ajax.php?action=shareaholic_permalink_related","share_counts_url":"https:\/\/blog.udemy.com\/wp-admin\/admin-ajax.php?action=shareaholic_share_counts_api"}};
+
+    (function() {
+      var shr = document.createElement('script');
+      shr.setAttribute('data-cfasync', 'false');
+      shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+      shr.type = 'text/javascript'; shr.async = 'true';
+      
+      shr.onload = shr.onreadystatechange = function() {
+        var rs = this.readyState;
+        if (rs && rs != 'complete' && rs != 'loaded') return;
+        var site_id = 'c6fe6c191302e91808fdf06127767340';
+        try { Shareaholic.init(site_id); } catch (e) {}
+      };
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(shr, s);
+    })();
+  //]]>
+</script>
+
+<!-- Shareaholic Content Tags -->
+<meta name='shareaholic:site_name' content='Udemy Blog' />
+<meta name='shareaholic:language' content='en-US' />
+<meta name='shareaholic:url' content='https://blog.udemy.com/selenium-ide-tutorial/' />
+<meta name='shareaholic:keywords' content='tutorials' />
+<meta name='shareaholic:article_published_time' content='2015-08-26T21:28:43+00:00' />
+<meta name='shareaholic:article_modified_time' content='2015-10-15T15:38:04+00:00' />
+<meta name='shareaholic:shareable_page' content='true' />
+<meta name='shareaholic:article_author_name' content='UdemyTutorials' />
+<meta name='shareaholic:site_id' content='c6fe6c191302e91808fdf06127767340' />
+<meta name='shareaholic:wp_version' content='7.5.0.1' />
+<meta name='shareaholic:image' content='https://blog.udemy.com/wp-content/uploads/2015/08/banner_WebDriver.jpg' />
+<!-- Shareaholic Content Tags End -->
+
+<!-- Shareaholic Open Graph Tags -->
+<meta property='og:image' content='https://blog.udemy.com/wp-content/uploads/2015/08/banner_WebDriver.jpg' />
+<!-- Shareaholic Open Graph Tags End -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/blog.udemy.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='epik-theme-css'  href='https://blog.udemy.com/wp-content/themes/epik/style.css?ver=2.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='digg-digg-css'  href='https://blog.udemy.com/wp-content/plugins/digg-digg/css/diggdigg-style.css?ver=5.3.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='https://blog.udemy.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='udemy-blog-css'  href='https://blog.udemy.com/wp-content/themes/epik/css/udemy-blog.css?ver=1444923896' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='easy_table_style-css'  href='https://blog.udemy.com/wp-content/plugins/easy-table/themes/default/style.css?ver=1.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://blog.udemy.com/wp-content/plugins/jetpack/css/jetpack.css?ver=3.7' type='text/css' media='all' />
+<link rel='stylesheet' id='button-shortcode-styles-css'  href='https://blog.udemy.com/wp-content/plugins/easy-shortcode-buttons/buttons-style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='fbSEOStylesheet-css'  href='https://blog.udemy.com/wp-content/plugins/seo-facebook-comments/assets/fbseo-style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='fbSEOwpcomments-css'  href='https://blog.udemy.com/wp-content/plugins/seo-facebook-comments/assets/wpcomments.css?ver=4.3.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://blog.udemy.com/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='https://blog.udemy.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js?ver=0.28'></script>
+<script type='text/javascript' src='https://blog.udemy.com/wp-content/themes/epik/js/ud.jquery.ready.js?ver=1444923896'></script>
+<script type='text/javascript' src='https://blog.udemy.com/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.9'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blog.udemy.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://blog.udemy.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Microsoft Access Tutorial for Beginners' href='https://blog.udemy.com/microsoft-access-tutorial-for-beginners/' />
+<link rel='next' title='WordPress Tutorial: A Guide to WordPress for Beginners' href='https://blog.udemy.com/wordpress-tutorial/' />
+
+<link rel='shortlink' href='https://wp.me/p4Crag-5TC' />
+<style>.bk-button-wrapper .customButtonA {
+-moz-box-shadow:inset 0px 1px 2px 0px #d9fbbe;
+	-webkit-box-shadow:inset 0px 1px 2px 0px #d9fbbe;
+	box-shadow:inset 0px 1px 2px 0px #d9fbbe;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #b8e356), color-stop(1, #a5cc52) );
+	background:-moz-linear-gradient( center top, #b8e356 5%, #a5cc52 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'#b8e356\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\', endColorstr=\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'#a5cc52\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\');
+	background-color:#b8e356;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+        padding: 0px 10px;
+	font-family:Arial;
+	font-size:21px;
+	font-weight:bold;
+	font-style:normal;
+	height:49px;
+	line-height:49px;
+	width:168px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #86ae47;
+}</style><link rel="Shortcut Icon" href="https://blog.udemy.com/wp-content/themes/epik/images/favicon.ico" type="image/x-icon" />
+<link rel="pingback" href="https://blog.udemy.com/xmlrpc.php" />
+<!-- Start BounceX tag. Deploy at the beginning of document head. -->
+
+        <script>
+        (function(d) {
+            var e = d.createElement('script');
+            e.src = d.location.protocol + '//bounceexchange.com/tag/858/i.js';
+            e.async = true;
+            d.getElementsByTagName("head")[0].appendChild(e);
+        }(document));
+        </script>
+
+<!-- End BounceX Tag-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12366301-1']);
+  _gaq.push(['_trackPageview']);
+   setTimeout("_gaq.push(['_trackEvent', '15_seconds', 'read'])",15000);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', "1457291081167286"]);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(["track", "PixelInitialized", {}]);
+</script>
+<noscript><img height="1" width="1" border="0" alt="" style="display:none" src="https://www.facebook.com/tr?id=1457291081167286&amp;ev=NoScript" /></noscript>
+
+
+<!-- Start getting pixels. -->
+<!-- Yahoo Code for your Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var yahoo_conversion_id = 1000204606;
+var yahoo_conversion_label = "OkJyCL6_hlsQv_mGzQM";
+var yahoo_conversion_value = 500;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://s.yimg.jp/images/listing/tool/cv/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://b91.yahoo.co.jp/pagead/conversion/1000204606/?value=500&amp;label=OkJyCL6_hlsQv_mGzQM&amp;guid=ON&amp;script=0&amp;disvt=true"/>
+</div>
+</noscript>
+
+<script type="text/javascript" language="javascript">
+  /* <![CDATA[ */
+  var yahoo_ydn_conv_io = "RdbzFngOLDVJ43MekUGf";
+  var yahoo_ydn_conv_label = "R1D5UMOKNEM25SOEZ6G235913";
+  var yahoo_ydn_conv_transaction_id = "";
+  var yahoo_ydn_conv_amount = "500";
+  /* ]]> */
+</script>
+<script type="text/javascript" language="javascript" charset="UTF-8" src="//b90.yahoo.co.jp/conv.js"></script>
+
+<!-- Google Code for Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 966888136;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "SgynCKCv_VoQyJWGzQM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/966888136/?label=SgynCKCv_VoQyJWGzQM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Google Code for Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 951369813;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "kUq1CNrK-1oQ1YDTxQM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/951369813/?label=kUq1CNrK-1oQ1YDTxQM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Facebook Conversion Code for Thank you page -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6034528106080', {'value':'0.00','currency':'JPY'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6034528106080&amp;cd[value]=0.00&amp;cd[currency]=JPY&amp;noscript=1" /></noscript><!-- All in one Favicon 4.3 --><link rel="shortcut icon" href="https://blog.udemy.com/wp-content/uploads/2014/05/favicon1.png" />
+<link rel="icon" href="https://blog.udemy.com/wp-content/uploads/2014/05/favicon.png" type="image/png"/>
+<!-- Google Analytics Tracking by Google Analyticator 6.4.9: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+    var analyticsFileTypes = [''];
+    var analyticsSnippet = 'enabled';
+    var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+  
+	_gaq.push(['_setAccount', 'UA-12366301-2']);
+    _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<style id="custom-css-css">@import "https://fonts.googleapis.com/css?family=Lora:400,700,400italic";</style>
+</head>
+<body class="single single-post postid-22668 single-format-standard custom-header content-sidebar tutorials"><div id="wrap"><div id="head-wrap"><div id="header"><div class="wrap">
+    <div class="fxac">
+        <div id="header-menu" class="fx">
+            <div class="btn-group cats-dropdown">
+                <div data-toggle="dropdown" class="dropdown-toggle cats-toggle fxac">
+                    <a href="#" class="white-link sb mt0">
+                        <i class="fa fa-bars"></i>
+                        Course Categories
+                    </a>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="fxw">
+                        <div class="menu-bottom-container"><ul id="menu-bottom" class="list-unstyled"><li id="menu-item-100046" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100046"><a href="https://www.udemy.com/teach?tc=blog.discover.teach"><span>Create a Course</span></a></li>
+<li id="menu-item-100048" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100048"><a href="https://www.udemy.com/organizations/?ref=dropdown"><span>Corporate Learning</span></a></li>
+<li id="menu-item-100050" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100050"><a href="https://www.udemy.com/mobile/?tc=blog.discover.mobile"><span>Mobile</span></a></li>
+</ul></div>                        <div class="menu-second-container"><ul id="menu-second" class="list-unstyled"><li id="menu-item-100024" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100024"><a href="https://www.udemy.com/courses/Lifestyle?tc=blog.discover.lifestyle"><span><i class="fa fa-smile-o"></i>  Lifestyle</span></a></li>
+<li id="menu-item-100028" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100028"><a href="https://www.udemy.com/courses/Teacher-Training?tc=blog.discover.education"><span><i class="fa fa-magic"></i> Education</span></a></li>
+<li id="menu-item-100030" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100030"><a href="https://www.udemy.com/courses/Language?tc=blog.discover.languages"><span><i class="fa fa-globe"></i> Languages</span></a></li>
+<li id="menu-item-100034" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100034"><a href="https://www.udemy.com/courses/Lifestyle&#038;tc=blog.discover.socialsciences"><span><i class="fa fa-users"></i> Lifestyle</span></a></li>
+<li id="menu-item-143916" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143916"><a href="https://www.udemy.com/courses/Health-and-Fitness?tc=blog.discover.healthandfitness&#038;utm_source=blog&#038;utm_medium=udemyads&#038;utm_content=post0&#038;utm_campaign=content-marketing-blog&#038;xref=blog"><span><i class="fa fa-heart"></i> Health and Fitness</span></a></li>
+</ul></div>                        <div class="menu-third-container"><ul id="menu-third" class="list-unstyled"><li id="menu-item-100036" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100036"><a href="https://www.udemy.com/courses/Music?tc=blog.discover.music"><span><i class="fa fa-music"></i> Music</span></a></li>
+<li id="menu-item-100040" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100040"><a href="https://www.udemy.com/courses/Sports?tc=blog.discover.sports"><span><i class="fa fa-trophy"></i>  Sports</span></a></li>
+<li id="menu-item-100042" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100042"><a href="https://www.udemy.com/courses/Games?tc=blog.discover.games"><span><i class="fa fa-gamepad"></i>  Games</span></a></li>
+<li id="menu-item-100044" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100044"><a href="https://www.udemy.com/courses/Marketing?tc=blog.discover.other"><span><i class="fa fa-th-large"></i>  Marketing</span></a></li>
+</ul></div>                    </div>
+                    <div class="footer"><div class="menu-bottom-container"><ul id="menu-bottom-1" class="nav group"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100046"><a href="https://www.udemy.com/teach?tc=blog.discover.teach"><span>Create a Course</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100048"><a href="https://www.udemy.com/organizations/?ref=dropdown"><span>Corporate Learning</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100050"><a href="https://www.udemy.com/mobile/?tc=blog.discover.mobile"><span>Mobile</span></a></li>
+</ul></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="logo-area" >
+            <a id="logo" href="https://blog.udemy.com">
+                <img src="https://blog.udemy.com/wp-content/themes/epik/images/udemy_blog.svg" alt="Udemy Blog. Learn anything. Anywhere."/>
+            </a>
+
+        </div>
+
+        <div id="discoverLink" class="fx">
+            <div class="search-v4 fr">
+                <form id="searchbox" action="https://www.udemy.com/courses/search/">
+                    <input type="text" placeholder="Search for Courses" autocomplete="off" name="q" class="search-input quick-search" value="">
+                    <input type="hidden" name="utm_source" value="blog"/>
+                    <input type="hidden" name="utm_medium" value="udemyads"/>
+                    <input type="hidden" name="utm_content" value="post0"/>
+                    <input type="hidden" name="utm_campaign" value="content-marketing-blog"/>
+                    <input type="hidden" name="xref" value="blog"/>
+                    <input type="hidden" name="tc" value="blog.search"/>
+                    <button type="submit" class="icon-search search-btn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div></div></div><div id="inner"><div class="wrap"><div id="content-sidebar-wrap"><div id="content" class="hfeed"><div class="post-22668 post type-post status-publish format-standard hentry category-tutorials entry"><h1 class="entry-title">Selenium Tutorial: Learn Selenium WebDriver</h1> 
+<div class="post-info"><span class="date published time" title="2015-08-26T14:28:43+00:00">August 26, 2015</span>  by <span class="author vcard"><span class="fn"><a href="https://blog.udemy.com/author/tutorialcontent/" rel="author">UdemyTutorials</a></span></span>  </div><div class="entry-content"><a id="dd_start"></a><p><a href="https://blog.udemy.com/selenium-ide-tutorial/"><img class="aligncenter wp-image-146774 size-full" src="https://blog.udemy.com/wp-content/uploads/2015/08/banner_WebDriver.jpg" alt="banner_WebDriver" width="700" height="300" /></a></p>
+<p><span id="more-22668"></span></p>
+<p>&nbsp;</p>
+<h4>By Alan Richardson for Udemy</h4>
+<p><em>Interested in more than just a guide? Check out Alan&#8217;s <a href="https://www.udemy.com/selenium-2-webdriver-basics-with-java/" target="_blank">full Selenium WebDriver course.</a></em></p>
+<h4><b>TABLE OF CONTENTS: CLICK TO JUMP TO A SPECIFIC SECTION</b></h4>
+<h4 style="text-align: justify;"><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="#1">Background</a></span></h4>
+<p style="text-align: justify; padding-left: 30px;"><span style="color: #808080;"><em><a style="color: #808080;" href="#1_1">What WebDriver &#8216;is&#8217;</a></em></span><br />
+<span style="color: #808080;"><em><a style="color: #808080;" href="#1_2">What WebDriver &#8216;does&#8217;</a></em></span></p>
+<h4 style="text-align: justify;"><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="#2">Installing the Tools</a></span></h4>
+<p style="text-align: justify; padding-left: 30px;"><em><span style="color: #808080;"><a style="color: #808080;" href="#2_1">Installing Java JDK</a></span></em><br />
+<em><span style="color: #808080;"><a style="color: #808080;" href="#2_2">Installing Maven</a></span></em><br />
+<em><span style="color: #808080;"><a style="color: #808080;" href="#2_3">Installing IntelliJ</a></span></em><br />
+<em><span style="color: #808080;"><a style="color: #808080;" href="#2_4">Installing Firefox</a></span></em><br />
+<em><span style="color: #808080;"><a style="color: #808080;" href="#2_5">Installing WebDriver</a></span></em></p>
+<h4 style="text-align: justify;"><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="#3">Create a New Project in IntelliJ</a></span></h4>
+<p style="text-align: justify; padding-left: 30px;"><span style="color: #808080;"><em><a style="color: #808080;" href="#3_1">Add dependencies to the Maven pom.xml file</a></em></span></p>
+<h4 style="text-align: justify;"><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="#4">Our First WebDriver Test</a></span></h4>
+<p style="text-align: justify; padding-left: 30px;"><span style="color: #808080;"><em><a style="color: #808080;" href="#4_1">Create a Test Class</a></em></span><br />
+<span style="color: #808080;"><em><a style="color: #808080;" href="#4_2">Create a JUnit Test Method</a></em></span><br />
+<span style="color: #808080;"><em><a style="color: #808080;" href="#4_3">Let&#8217;s Open Firefox</a></em></span><br />
+<span style="color: #808080;"><em><a style="color: #808080;" href="#4_4">Code Explained</a></em></span><br />
+<span style="color: #808080;"><em><a style="color: #808080;" href="#4_5">Now let&#8217;s click on something</a></em></span></p>
+<h4 style="text-align: justify;"><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="#5">WebDriver and WebElement</a></span></h4>
+<p style="text-align: justify; padding-left: 30px;"><span style="color: #808080;"><em><a style="color: #808080;" href="#5_1">Using Code Completion to Learn</a></em></span><br />
+<span style="color: #808080;"><em><a style="color: #808080;" href="#5_2">WebDriver methods</a></em></span><br />
+<span style="color: #808080;"><em><a style="color: #808080;" href="#5_3">WebElement methods</a></em></span></p>
+<h4 style="text-align: justify;"><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="#6">Synchronization</a></span></h4>
+<p style="text-align: justify; padding-left: 30px;"><span style="color: #808080;"><em><a style="color: #808080;" href="#6_1">Implicit Wait</a></em></span><br />
+<span style="color: #808080;"><em><a style="color: #808080;" href="#6_2">Explicit Wait</a></em></span></p>
+<h4 style="text-align: justify;"><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="#7">Summary</a></span></h4>
+<hr />
+<p style="text-align: justify;"><span style="font-weight: 400;">Modern software development processes want to develop software quickly and reliably. To reduce the risk of regression defects, they automate the application to allow fast and reliable checking of test conditions after each change.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">If you are working on web applications, then the first automation tool you&#8217;ll want to get familiar with is Selenium WebDriver. Fortunately, Selenium WebDriver is open source and supports multiple programming languages, making it easy to introduce into your development project.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">This tutorial will help you get started with Selenium WebDriver and provide a short introduction to the WebDriver API. All examples are provided in Java.</span></p>
+<p style="text-align: justify;">Completely new to software testing? <a href="https://www.udemy.com/technical-web-testing-101/?tc=blog.seleniumidetutorial&amp;utm_source=blog&amp;utm_medium=udemyads&amp;utm_content=post22668&amp;utm_campaign=content-marketing-blog&amp;xref=blog">Learn the basics of technical web testing</a> in this course.</p>
+<p style="text-align: justify;"><span style="font-weight: 400;">By the end of this tutorial, you will have installed all the tools need to run the following code, which will open the </span><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="http://seleniumhq.org"><span style="font-weight: 400;">seleniumhq.org</span></a></span><span style="font-weight: 400;"> website, navigate to the downloads and check that the title of the page is &#8220;Downloads&#8221;.</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">WebDriver driver = new FirefoxDriver();</span>
+<span style="font-weight: 400;">driver.get("http://seleniumhq.org");</span>
+ 
+<span style="font-weight: 400;">WebElement downloadTab = driver.findElement(By.id("menu_download"));</span>
+<span style="font-weight: 400;">WebElement downloadLink = downloadTab.findElement(By.tagName("a"));</span>
+<span style="font-weight: 400;">downloadLink.click();</span>
+ 
+<span style="font-weight: 400;">Assert.assertEquals("Downloads", driver.getTitle());</span>
+ 
+<span style="font-weight: 400;">driver.quit();
+
+</span></pre>
+<h2 style="text-align: center;"><span style="color: #17aa1c;"><b><a id="1"></a>Background</b></span></h2>
+<p style="text-align: justify;"><span style="font-weight: 400;">First, a little background so you understand what Selenium WebDriver is and what it does.</span></p>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="1_1"></a>What WebDriver &#8216;is&#8217;</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">&#8220;Selenium&#8221; is the name of the project and includes a number of tools and APIs: Selenium IDE, Selenium RC, Selenium WebDriver, and Selenium Grid. You can find the homepage for the Selenium Project at </span><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="http://seleniumhq.org"><span style="font-weight: 400;">seleniumhq.org</span></a></span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">Selenium IDE is a Firefox plugin which allows users to record and play back actions in the browser.</span></li>
+<li><span style="font-weight: 400;">Selenium-RC was the first tool in the Selenium project that allowed automation of web applications in browsers. This has been deprecated, although it is still functional in the project, and WebDriver is now the recommended tool for browser automation.</span></li>
+<li><span style="font-weight: 400;">Selenium WebDriver is the Selenium project supported browser automation tool. It consists of a set of libraries for different programming languages and &#8216;drivers&#8217; (small applications) which can automate actions in browsers.</span></li>
+<li><span style="font-weight: 400;">Selenium Grid allows you to run automation remotely on multiple browsers, and on other machines.</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">For the rest of this tutorial, we will refer to Selenium WebDriver as simply  WebDriver.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">WebDriver has libraries (or language bindings) for multiple programming languages: Java, C#, Ruby, JavaScript, Python, PHP, Perl, and others. This allows software development teams to use WebDriver with the language they are most familiar with. You do not have to learn a proprietary scripting language unique to WebDriver. You use WebDriver like any other library you add to your project.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">WebDriver uses &#8216;drivers&#8217; to control different browsers. At the moment drivers exist for Firefox, Chrome, Safari and Internet Explorer. Microsoft is working on a driver for Microsoft Edge. The Firefox driver is built in to WebDriver, so Firefox is often the default browser used for automation by most projects. Other drivers are small applications that you install separately.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">WebDriver communicates to the &#8216;driver&#8217; using a JSON protocol that has a become a </span><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="http://www.w3.org/TR/webdriver/"><span style="font-weight: 400;">W3C standard</span></a></span><span style="font-weight: 400;">. This means that browser vendors are more likely to support WebDriver and create their own drivers. The hope is that Microsoft will take ownership of an IE driver and that Apple will take ownership of the Safari driver.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">WebDriver also has a mobile driver called Appium which allows test code to run on mobile devices and tablets.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Because WebDriver has the Selenium Grid, this has allowed cloud vendors to create &#8216;grids&#8217; of browsers so you can run your tests on multiple versions of Firefox, Chrome, IE, and on multiple operating system combinations. These cloud services cost money, but are much more affordable, in terms of the time it would take, than setting up your own internal grid with lots of machines and browser combinations.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Essentially the Selenium ecosystem is very wide, and allows you to test on local desktops, local mobile devices, cross platform so you don&#8217;t have to use Windows, or Mac &#8211; you can use both &#8211; or Linux. You can choose the programming language that suits your team and project best. You can also run your tests in parallel and on remote machines. All you have to do is put in the time to learn how to use WebDriver.</span></p>
+<p style="text-align: justify;">To learn more about Selenium and automated testing, check out this course on <a href="https://www.udemy.com/web-application-testing-with-selenium/?tc=blog.seleniumidetutorial&amp;couponCode=half-off-for-blog&amp;utm_source=blog&amp;utm_medium=udemyads&amp;utm_content=post22668&amp;utm_campaign=content-marketing-blog&amp;xref=blog">web application testing with Selenium</a>.</p>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="1_2"></a>What WebDriver &#8216;does&#8217;</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">WebDriver automates browsers. Essentially WebDriver lets you open URLs and interact with the rendered pages, e.g.:</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">start new instances of a browser</span></li>
+<li><span style="font-weight: 400;">open URLs in the browser</span></li>
+<li><span style="font-weight: 400;">click on links on the rendered page</span></li>
+<li><span style="font-weight: 400;">type into the fields in the rendered page</span></li>
+<li><span style="font-weight: 400;">execute JavaScript in the rendered page</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">WebDriver is not a tool for testing REST APIs, or SOAP APIs, or databases.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">WebDriver is a tool for automating browsers.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Because WebDriver is essentially a &#8216;library&#8217; and you use a normal programming language, you can use any other library that your programming language supports to call other APIs or databases.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">I frequently use other Java libraries in combination with WebDriver to let me access the database to check results and use REST libraries to make API calls, and then check results on the web pages with WebDriver.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Using a library instead of a framework gives you more flexibility in how you approach your automation.</span></p>
+<h2 style="text-align: center;"><span style="color: #17aa1c;"><b><a id="2" style="color: #17aa1c;"></a>Installing the Tools</b></span></h2>
+<p style="text-align: justify;"><span style="font-weight: 400;">To work with WebDriver with Java we need to install some tools:</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">Java JDK</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">the Java compiler and libraries</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">Maven</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">a dependency management tool for Java</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">IntelliJ</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">an IDE for programming Java</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">Firefox</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">the default browser used by WebDriver</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">JUnit</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">A Unit testing framework for Java that we will use to execute our test code</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">WebDriver</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">The Selenium WebDriver</span></p>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="2_1"></a>Installing Java JDK</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">You can tell if you have the Java JDK installed by issuing the command </span><code><span style="font-weight: 400;">javac -version</span></code><span style="font-weight: 400;"> at the command line.</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">C:\Users\Alan&gt;javac -version</span>
+ <span style="font-weight: 400;">javac 1.8.0_40</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">On Mac, if you type the above command, and don&#8217;t have Java installed then you will be asked if you want to install it.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">On Windows and Mac, you can install the Java JDK by following the instructions on the Oracle website:</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"><span style="font-weight: 400;">http://www.oracle.com/technetwork/java/javase/downloads/index.html</span></a></span></li>
+</ul>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="2_2"></a>Installing Maven</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">You can find instructions to install Maven on the &#8216;Apache Maven Project&#8217; homepage:</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="https://maven.apache.org"><span style="font-weight: 400;">https://maven.apache.org</span></a></span></li>
+</ul>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="2_3"></a>Installing IntelliJ</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Download the &#8216;Community Edition&#8217; of IntelliJ from jetbrains.com:</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="https://www.jetbrains.com/idea"><span style="font-weight: 400;">https://www.jetbrains.com/idea</span></a></span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">The &#8216;Community Edition&#8217; is free and open source. On all the Enterprise Java projects I&#8217;ve worked on, IntelliJ has been the most popular IDE due to its ease of installation and productivity features, including built-in refactoring.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You can use other IDEs, e.g., Eclipse. But I&#8217;ve found that IntelliJ works out of the box far more easily than Eclipse, and when you are learning, you want to minimize the amount of installation issues you might face. And since IntelliJ is the choice of the best Java developer I know, it will grow with you as you improve your automation and development skills.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">When you start IntelliJ for the first time, you may be given the opportunity to customise it. Instead, choose the button marked &#8220;Skip All and Set Defaults&#8221;.</span><span style="font-weight: 400;"><br />
+<a href="https://blog.udemy.com/wp-content/uploads/2015/08/image005.png"><img class="aligncenter size-full wp-image-146745" src="https://blog.udemy.com/wp-content/uploads/2015/08/image005.png" alt="image00" width="819" height="686" /></a></span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You can close IntelliJ down now until we need it to install WebDriver.</span></p>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="2_4"></a>Installing Firefox</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">You can install Firefox by visiting:</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="https://www.mozilla.org/firefox"><span style="font-weight: 400;">https://www.mozilla.org/firefox</span></a></span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">And downloading and following the install instructions for your platform.</span></p>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="2_5"></a>Installing WebDriver</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">We don&#8217;t actually install WebDriver. Instead we use Maven to manage our project dependencies and we add WebDriver as a dependency in our project.</span></p>
+<h2 style="text-align: center;"><span style="color: #17aa1c;"><b><a id="3"></a>Create a New Project in IntelliJ</b></span></h2>
+<p style="text-align: justify;"><span style="font-weight: 400;">To do this, we startup IntelliJ and create a new project using the &#8220;Create New Project&#8221; on the &#8220;Welcome to IntelliJ IDEA&#8221; dialog.</span><span style="font-weight: 400;"><br />
+<a href="https://blog.udemy.com/wp-content/uploads/2015/08/image026.png"><img class="aligncenter size-full wp-image-146746" src="https://blog.udemy.com/wp-content/uploads/2015/08/image026.png" alt="image02" width="673" height="469" /></a></span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You will then see the &#8220;New Project&#8221; dialog where you will select &#8220;Maven&#8221; as the Project type.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">If the Project SDK is not automatically shown in the drop-down then use the </span><em><span style="font-weight: 400;">[New&#8230;]</span></em><span style="font-weight: 400;"> button to find the location of your Java SDK; on Windows this is usually <em>&#8220;</em></span><em><span style="font-weight: 400;">C:\Program Files\Java\</span></em><span style="font-weight: 400;"><em>&#8220;</em> and then the folder of the JDK you are using, e.g., if you are using JDK 8u40 then it would be in the subfolder </span><em><span style="font-weight: 400;">jdk1.8.0_40</span></em></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image015.png"><img class="aligncenter size-full wp-image-146747" src="https://blog.udemy.com/wp-content/uploads/2015/08/image015.png" alt="image01" width="603" height="661" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">After selecting </span><em><span style="font-weight: 400;">[Next]</span></em><span style="font-weight: 400;"> you will type in the Maven GroupId and ArtifactId values. For this tutorial you can simply write </span><code>myFirstWebDriverTest</code><span style="font-weight: 400;"> as both the GroupId and the ArtifactId.</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image045.png"><img class="aligncenter size-full wp-image-146748" src="https://blog.udemy.com/wp-content/uploads/2015/08/image045.png" alt="image04" width="603" height="661" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Then click </span><em><span style="font-weight: 400;">[Next]</span></em><span style="font-weight: 400;"> and choose the name and location for your project.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">I&#8217;m using the name </span><code><span style="font-weight: 400;">myFirstWebDriverProject</span></code><span style="font-weight: 400;"> and stored it in location </span><em><span style="font-weight: 400;">C:\Users\Alan\IdeaProjects\myFirstWebDriverProject</span><span style="font-weight: 400;">.</span></em></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">IntelliJ will then open the project for us.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">In the top right of the screen you may see a dialog prompting you to enable auto import for Maven. I suggest you click &#8220;Enable Auto Import&#8221; as it will allow you to make changes to the project and IntelliJ will automatically import and refresh the project contents.</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image035.png"><img class="aligncenter size-full wp-image-146749" src="https://blog.udemy.com/wp-content/uploads/2015/08/image035.png" alt="image03" width="377" height="128" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">IntelliJ will now show you the IDE with the Project view on the left side of the screen, and it will have opened the project&#8217;s </span><code><span style="font-weight: 400;">pom.xml</span></code><span style="font-weight: 400;"> file on the right.</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image065.png"><img class="aligncenter size-full wp-image-146750" src="https://blog.udemy.com/wp-content/uploads/2015/08/image065.png" alt="image06" width="989" height="349" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">The Project pane shows you the source code for your project, and you can see IntelliJ has created a </span><code><span style="font-weight: 400;">src\main\java</span></code><span style="font-weight: 400;"> hierarchy and a </span><code><span style="font-weight: 400;">src\test\java</span></code><span style="font-weight: 400;"> folder hierarchy. All of our test code will be added to the </span><code><span style="font-weight: 400;">src\test\java</span></code><span style="font-weight: 400;"> hierarchy.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You can also see a </span><code><span style="font-weight: 400;">myFirstWebDriverProject.iml</span></code><span style="font-weight: 400;"> file and </span><code><span style="font-weight: 400;">.idea</span></code><span style="font-weight: 400;"> folder. These are IntelliJ project files storing the configuration details.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">The important file here is the </span><code><span style="font-weight: 400;">pom.xml</span></code><span style="font-weight: 400;"> file, which you can see at the root of your project folder, and can see the contents of, on the right-hand side.</span></p>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="3_1"></a>Add dependencies to the Maven </b><b>pom.xml</b><b> file</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">A </span><code><span style="font-weight: 400;">pom.xml</span></code><span style="font-weight: 400;"> file is a file that Maven uses to build and configure a project. We will add our dependencies into this </span><code><span style="font-weight: 400;">pom.xml</span></code><span style="font-weight: 400;"> file and Maven will download them for us, compile and build our Java project, and run our tests.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">We will add a dependencies section to this file to allow us to use JUnit and WebDriver in our project.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">At the time of writing, I can see that the current versions of JUnit and WebDriver are:</span></p>
+<p><span style="color: #17aa1c;"><strong>JUnit 4.12</strong></span></p>
+<p style="text-align: justify; padding-left: 30px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">from </span><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="https://github.com/junit-team/junit/wiki/Download-and-Install"><span style="font-weight: 400;">JUnit Download and Install page</span></a></span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="https://github.com/junit-team/junit/wiki/Download-and-Install"><span style="font-weight: 400;">https://github.com/junit-team/junit/wiki/Download-and-Install</span></a></span></li>
+</ul>
+<p><span style="color: #17aa1c;"><strong>WebDriver 2.47.1</strong></span></p>
+<p style="text-align: justify; padding-left: 30px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">from </span><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="http://www.seleniumhq.org/download/maven.jsp"><span style="font-weight: 400;">Selenium Maven Information page</span></a></span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="http://www.seleniumhq.org/download/maven.jsp"><span style="font-weight: 400;">http://www.seleniumhq.org/download/maven.jsp</span></a></span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">To add these as dependencies in the project, I add a </span><code><span style="font-weight: 400;">&lt;dependencies&gt;</span></code><span style="font-weight: 400;"> section in my <code>pom.xml</code> file:</span></p>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+ &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+ &lt;groupId&gt;myFirstWebDriverTest&lt;/groupId&gt;
+ &lt;artifactId&gt;myFirstWebDriverTest&lt;/artifactId&gt;
+ &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+
+ &lt;dependencies&gt;
+ 
+ &lt;/dependencies&gt;
+&lt;/project&gt;</pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">Within the dependencies xml block, I copy and paste the information from the JUnit install page and the WebDriver install page so that my <code>pom.xml</code> file looks as follows:</span></p>
+<pre><span style="font-weight: 400;">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span style="font-weight: 400;">&lt;project xmlns="http://maven.apache.org/POM/4.0.0"</span>
+<span style="font-weight: 400;">         
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+</span><span style="font-weight: 400;">xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+</span><span style="font-weight: 400;">http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;</span>
+<span style="font-weight: 400;">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</span>
+
+<span style="font-weight: 400;">    &lt;groupId&gt;myFirstWebDriverTest&lt;/groupId&gt;</span>
+<span style="font-weight: 400;">    &lt;artifactId&gt;myFirstWebDriverTest&lt;/artifactId&gt;</span>
+<span style="font-weight: 400;">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</span>
+
+<span style="font-weight: 400;">    &lt;dependencies&gt;</span>
+<span style="font-weight: 400;">        &lt;dependency&gt;</span>
+<span style="font-weight: 400;">            &lt;groupId&gt;junit&lt;/groupId&gt;</span>
+<span style="font-weight: 400;">            &lt;artifactId&gt;junit&lt;/artifactId&gt;</span>
+<span style="font-weight: 400;">            &lt;version&gt;4.12&lt;/version&gt;</span>
+<span style="font-weight: 400;">            &lt;scope&gt;test&lt;/scope&gt;</span>
+<span style="font-weight: 400;">        &lt;/dependency&gt;</span>
+<span style="font-weight: 400;">        &lt;dependency&gt;</span>
+<span style="font-weight: 400;">            &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;</span>
+<span style="font-weight: 400;">            &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;</span>
+<span style="font-weight: 400;">            &lt;version&gt;2.47.1&lt;/version&gt;</span>
+<span style="font-weight: 400;">        &lt;/dependency&gt;</span>
+<span style="font-weight: 400;">    &lt;/dependencies&gt;</span>
+<span style="font-weight: 400;">&lt;/project&gt;</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">The above basically means that my project is dependent upon:</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">version 4.12 of JUnit</span></li>
+<li><span style="font-weight: 400;">version 2.47.1 of Selenium WebDriver</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">Since these projects are updated frequently, make sure you check the official install pages and use the dependency xml information listed there, and the most up-to-date version numbers.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Once you have added this information into the </span><code><span style="font-weight: 400;">pom.xml</span></code><span style="font-weight: 400;"> file in IntelliJ, because we enabled auto imports, IntelliJ will download the necessary files to let us use JUnit and IntelliJ. These will be stored in the local Maven folder </span><code><span style="font-weight: 400;">.m2</span></code></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">On Windows in folder </span><code><span style="font-weight: 400;">%USERPROFILE%\.m2</span></code></li>
+<li><span style="font-weight: 400;">On Linux and Mac, in folder </span><code><span style="font-weight: 400;">~\.m2</span></code></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">We can now start writing a test that uses JUnit and WebDriver to automate a web application.</span></p>
+<h2 style="text-align: center;"><span style="color: #17aa1c;"><b><a id="4"></a>Our First WebDriver Test</b></span></h2>
+<p style="text-align: justify;"><span style="font-weight: 400;">To write a JUnit Test which uses WebDriver, we need to create a Java Class.</span></p>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="4_1"></a>Create a Test Class</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Right-click with the mouse on the </span><code><span style="font-weight: 400;">java</span></code><span style="font-weight: 400;"> folder in the Project hierarchy and select </span><em><span style="font-weight: 400;">New \ Java Class</span><span style="font-weight: 400;">.</span></em></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image053.png"><img class="aligncenter size-full wp-image-146751" src="https://blog.udemy.com/wp-content/uploads/2015/08/image053.png" alt="image05" width="541" height="420" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Using the &#8220;Create New Class&#8221; dialog, name the class </span><code><span style="font-weight: 400;">MyFirstWebDriverTest</span></code><span style="font-weight: 400;">, and press </span><span style="font-weight: 400;"><em>[OK]</em>.</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image085.png"><img class="aligncenter size-full wp-image-146752" src="https://blog.udemy.com/wp-content/uploads/2015/08/image085.png" alt="image08" width="361" height="158" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">IntelliJ will then create a </span><code><span style="font-weight: 400;">MyFirstWebDriverTest.java</span></code><span style="font-weight: 400;"> file in the project for us, and open it in the IDE to allow us to edit it.</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image074.png"><img class="aligncenter size-full wp-image-146753" src="https://blog.udemy.com/wp-content/uploads/2015/08/image074.png" alt="image07" width="646" height="298" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">It is important that in Java, the class names start with uppercase letters, and that when we write JUnit test classes, that we add </span><code><span style="font-weight: 400;">Test</span></code><span style="font-weight: 400;"> in the name of the class. This allows Maven to execute the tests when we type </span><code><span style="font-weight: 400;">mvn test</span></code><span style="font-weight: 400;"> at the command line, or during Continuous Integration.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You don&#8217;t need the comments that IntelliJ has added, so you can delete the lines at the top of the class like:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">/**</span>
+<span style="font-weight: 400;"> * Created by Alan on 14/08/2015.</span>
+<span style="font-weight: 400;"> */</span></pre>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="4_2"></a>Create a JUnit Test Method</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">The tests we write in Java with JUnit are </span><i><span style="font-weight: 400;">methods</span></i><span style="font-weight: 400;"> annotated with </span><code><span style="font-weight: 400;">@Test</span></code><span style="font-weight: 400;">.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">E.g.:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">@Test</span>
+<span style="font-weight: 400;">public void checkSeleniumHQinFirefox(){</span>
+<span style="font-weight: 400;">}</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">If you add the above method code into your Java class, you will notice that IntelliJ highlights </span><span style="font-weight: 400;">@Test</span><span style="font-weight: 400;"> in red, and identifies it as an error.</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image113.png"><img class="aligncenter size-full wp-image-146754" src="https://blog.udemy.com/wp-content/uploads/2015/08/image113.png" alt="image11" width="311" height="89" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">This is because we haven&#8217;t imported the JUnit Test object.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">We can do that by clicking on </span><code><span style="font-weight: 400;">@Test</span></code><span style="font-weight: 400;"> and pressing the keys </span><code><span style="font-weight: 400;">alt + enter</span></code><span style="font-weight: 400;">. Then in the menu that appears, select </span><em><span style="font-weight: 400;">Import Class</span></em><span style="font-weight: 400;">.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You may be provided with a list of classes at this point. If so, you want to choose </span><code><span style="font-weight: 400;">org.junit.Test</span></code><span style="font-weight: 400;">.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">IntelliJ will then add the import statement to the code for our </span><code><span style="font-weight: 400;">@Test</span></code><span style="font-weight: 400;"> method:</span></p>
+<p style="text-align: justify;"><code><span style="font-weight: 400;">import org.junit.Test;</span></code></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">At this point you should see no red text on the screen and IntelliJ should not be reporting any errors.</span></p>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="4_3"></a>Let&#8217;s Open Firefox</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Now, let&#8217;s add some code to the body of the method so that our test will open Firefox, and navigate to the official Selenium homepage, and then close the browser.</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">    @Test</span>
+<span style="font-weight: 400;">    public void checkSeleniumHQinFirefox(){</span>
+<span style="font-weight: 400;">        WebDriver driver = new FirefoxDriver();</span>
+<span style="font-weight: 400;">        driver.get("http://seleniumhq.org");</span>
+<span style="font-weight: 400;">        driver.quit();</span>
+<span style="font-weight: 400;">    }</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">When you add this code, you&#8217;ll need to add imports for </span><code><span style="font-weight: 400;">WebDriver</span></code><span style="font-weight: 400;"> and </span><code><span style="font-weight: 400;">FirefoxDriver</span></code><span style="font-weight: 400;">. You can do that by pressing </span><code><span style="font-weight: 400;">alt + enter</span></code><span style="font-weight: 400;">.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You should have the following imports added at the top of your code.</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">import org.openqa.selenium.WebDriver;</span>
+<span style="font-weight: 400;">import org.openqa.selenium.firefox.FirefoxDriver;</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">If all has gone well, then you will have no errors in your code and your </span><code><span style="font-weight: 400;">MyFirstWebDriverTest.java</span></code><span style="font-weight: 400;"> will look as follows:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">import org.junit.Test;</span>
+<span style="font-weight: 400;">import org.openqa.selenium.WebDriver;</span>
+<span style="font-weight: 400;">import org.openqa.selenium.firefox.FirefoxDriver;</span>
+
+<span style="font-weight: 400;">public class MyFirstWebDriverTest {</span>
+<span style="font-weight: 400;">    @Test</span>
+<span style="font-weight: 400;">    public void checkSeleniumHQinFirefox(){</span>
+<span style="font-weight: 400;">        WebDriver driver = new FirefoxDriver();</span>
+<span style="font-weight: 400;">        driver.get("http://seleniumhq.org");</span>
+<span style="font-weight: 400;">        driver.quit();</span>
+<span style="font-weight: 400;">    }</span>
+<span style="font-weight: 400;">}</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">Now let&#8217;s run the test.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">We can do this by right-clicking on the method name and selecting </span><em><span style="font-weight: 400;">Run</span></em><span style="font-weight: 400;"> from the pop-up menu.</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image094.png"><img class="aligncenter size-full wp-image-146755" src="https://blog.udemy.com/wp-content/uploads/2015/08/image094.png" alt="image09" width="522" height="506" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You should then see:</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">IntelliJ run the test</span></li>
+<li><span style="font-weight: 400;">Firefox should open</span></li>
+<li><span style="font-weight: 400;">Firefox will get the URL &#8220;http://seleniumhq.org&#8221; and load the official Selenium homepage</span></li>
+<li><span style="font-weight: 400;">Firefox will then quit and the test will finish</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">Congratulations &#8211; you just used WebDriver to automate a browser.</span></p>
+<p>Want to create more advanced tests? Check out how to use<a href="https://www.udemy.com/selenium-2-webdriver-basics-with-java/?tc=blog.seleniumidetutorial&amp;utm_source=blog&amp;utm_medium=udemyads&amp;utm_content=post22668&amp;utm_campaign=content-marketing-blog&amp;xref=blog"> Selenium 2 WebDriver to create powerful automated tests</a>.</p>
+<p style="text-align: justify;">
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="4_4"></a>Code Explained</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Now, let&#8217;s look at this code in more detail.</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">WebDriver driver = new FirefoxDriver();</span>
+<span style="font-weight: 400;">driver.get("http://seleniumhq.org");</span>
+<span style="font-weight: 400;">driver.quit();</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">We create a new instance of Firefox by instantiating a </span><code><span style="font-weight: 400;">new FirefoxDriver()</span></code><span style="font-weight: 400;">. This will open Firefox for us.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">WebDriver</span><span style="font-weight: 400;"> is the </span><i><span style="font-weight: 400;">Interface</span></i><span style="font-weight: 400;"> that all &#8216;drivers&#8217; implement. By declaring my </span><code><span style="font-weight: 400;">driver</span></code><span style="font-weight: 400;"> variable of type </span><code><span style="font-weight: 400;">WebDriver</span></code><span style="font-weight: 400;"> I can easily amend my code later to use use any instantiated driver &#8211; e.g., IE, Chrome, or a remote driver &#8211; to execute tests on a browser on another machine.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">In this example, you could replace </span><code><span style="font-weight: 400;">WebDriver</span></code><span style="font-weight: 400;"> with </span><code><span style="font-weight: 400;">FirefoxDriver</span></code><span style="font-weight: 400;"> and the test will still work the same way. As an exercise, try it for yourself. Change the code to use </span><code><span style="font-weight: 400;">FirefoxDriver</span></code><span style="font-weight: 400;"> and run the test again.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;"><code>FirefoxDriver driver = new FirefoxDriver();</code></span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Change the code back. Get in the habit of coding to the </span><code><span style="font-weight: 400;">WebDriver</span></code><span style="font-weight: 400;"> interface when you instantiate a driver.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">We then use the </span><code><span style="font-weight: 400;">get</span></code><span style="font-weight: 400;"> method from the </span><code><span style="font-weight: 400;">WebDriver</span></code><span style="font-weight: 400;"> interface:</span></p>
+<p style="text-align: justify;"><code><span style="font-weight: 400;">driver.get("http://seleniumhq.org");</span></code></p>
+<p style="text-align: justify;"><code><span style="font-weight: 400;">get</span></code><span style="font-weight: 400;"> takes a </span><code><span style="font-weight: 400;">String</span></code><span style="font-weight: 400;"> as an argument, and this is the URL that we wish to open in the browser.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;"><code>driver.quit();</code></span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">The </span><code><span style="font-weight: 400;">quit</span></code><span style="font-weight: 400;"> method closes the browser for us.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;"><code>WebDriver</code> also has a </span><code><span style="font-weight: 400;">close</span></code><span style="font-weight: 400;"> method.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">The </span><code><span style="font-weight: 400;">close</span></code><span style="font-weight: 400;"> method closes the last opened browser tab, and if it is the last tab open, will also close the browser.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">The </span><code><span style="font-weight: 400;">quit</span></code><span style="font-weight: 400;"> method closes the browser, no matter how many tabs are open.</span></p>
+<p style="text-align: justify;"><b>Run the test from the command line</b></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Because we are using Maven, we can easily run the test from the command line. This is helpful when we want to add our test code into continuous integration.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">To quickly run the test from the command line, you can open a command line in the root directory of your project.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">In my case, I would open a terminal or command prompt and change to </span><em><span style="font-weight: 400;">C:\Users\Alan\IdeaProjects\myFirstWebDriverProject</span></em><span style="font-weight: 400;"> and then tell Maven to run the tests </span><code><span style="font-weight: 400;">mvn test</span></code></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">&gt; cd C:\Users\Alan\IdeaProjects\myFirstWebDriverProject</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">&gt; mvn test</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Maven would then compile the project and run the tests:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">[INFO] Scanning for projects...</span>
+ <span style="font-weight: 400;">[INFO]                                                                         </span>
+ <span style="font-weight: 400;">[INFO] ------------------------------------------------------------------------</span>
+ <span style="font-weight: 400;">[INFO] Building myFirstWebDriverTest 1.0-SNAPSHOT</span>
+ <span style="font-weight: 400;">[INFO] ------------------------------------------------------------------------</span>
+ <span style="font-weight: 400;">[INFO] </span>
+ <span style="font-weight: 400;">[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ </span>
+ <span style="font-weight: 400;">myFirstWebDriverTest --- </span>
+ <span style="font-weight: 400;">[debug] execute contextualize</span>
+ <span style="font-weight: 400;">[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, </span>
+ <span style="font-weight: 400;">i.e. build is platform dependent!</span>
+ <span style="font-weight: 400;">[INFO] Copying 0 resource</span>
+ <span style="font-weight: 400;">[INFO] </span>
+ <span style="font-weight: 400;">[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ </span>
+ <span style="font-weight: 400;">myFirstWebDriverTest ---</span>
+ <span style="font-weight: 400;">[INFO] Nothing to compile - all classes are up to date</span>
+ <span style="font-weight: 400;">[INFO] </span>
+ <span style="font-weight: 400;">[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) </span>
+ <span style="font-weight: 400;">@ myFirstWebDriverTest ---</span>
+ <span style="font-weight: 400;">[debug] execute contextualize</span>
+ <span style="font-weight: 400;">[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, </span>
+ <span style="font-weight: 400;">i.e. build is platform dependent!</span>
+ <span style="font-weight: 400;">[INFO] skip non existing resourceDirectory </span>
+ <span style="font-weight: 400;">C:\Users\Alan\IdeaProjects\myFirstWebDriverProject\src\test\resources</span>
+ <span style="font-weight: 400;">[INFO] </span>
+ <span style="font-weight: 400;">[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @</span>
+ <span style="font-weight: 400;"> myFirstWebDriverTest ---</span>
+ <span style="font-weight: 400;">[INFO] Nothing to compile - all classes are up to date</span>
+ <span style="font-weight: 400;">[INFO] </span>
+ <span style="font-weight: 400;">[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ myFirstWebDriverTest ---</span>
+ <span style="font-weight: 400;">[INFO] Surefire report directory: </span>
+ <span style="font-weight: 400;">C:\Users\Alan\IdeaProjects\myFirstWebDriverProject\target\surefire-reports</span>
+ 
+ <span style="font-weight: 400;">-------------------------------------------------------</span>
+ <span style="font-weight: 400;">T E S T S</span>
+ <span style="font-weight: 400;">-------------------------------------------------------</span>
+ <span style="font-weight: 400;">Running MyFirstWebDriverTest</span>
+ <span style="font-weight: 400;">Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.776 sec</span>
+ 
+ <span style="font-weight: 400;">Results :</span>
+ 
+ <span style="font-weight: 400;">Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</span>
+ 
+ <span style="font-weight: 400;">[INFO] ------------------------------------------------------------------------</span>
+ <span style="font-weight: 400;">[INFO] BUILD SUCCESS</span>
+ <span style="font-weight: 400;">[INFO] ------------------------------------------------------------------------</span>
+ <span style="font-weight: 400;">[INFO] Total time: 5.409s</span>
+ <span style="font-weight: 400;">[INFO] Finished at: Fri Aug 21 13:36:43 BST 2015</span>
+ <span style="font-weight: 400;">[INFO] Final Memory: 8M/245M</span>
+ <span style="font-weight: 400;">[INFO] ------------------------------------------------------------------------</span></pre>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="4_5"></a>Now let&#8217;s click on something</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">When we are using WebDriver, there are two very important classes:</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">WebDriver</span></li>
+<li><span style="font-weight: 400;">WebElement</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">You&#8217;ve already used </span><code><span style="font-weight: 400;">WebDriver</span></code><span style="font-weight: 400;">; that is the main interface that represents our browser.</span></p>
+<p style="text-align: justify;"><code><span style="font-weight: 400;">WebElement</span></code><span style="font-weight: 400;"> is a class that represents an object on the page.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">The Selenium homepage has a set of links across the top of its page.</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image105.png"><img class="aligncenter size-full wp-image-146757" src="https://blog.udemy.com/wp-content/uploads/2015/08/image105.png" alt="image10" width="495" height="52" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">We are going to click on the </span><em><span style="font-weight: 400;">[Download]</span></em><span style="font-weight: 400;"> tab and navigate to the downloads page.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">To do that, we have to find the element on the page.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">WebDriver provides a </span><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> method to help us do this, but we need to know what to tell it to find. So we have to inspect the page in the browser to find out what we can use.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">I do this using the built-in development tools for browsers.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Since we are using Firefox, I&#8217;ll load up &#8220;seleniumhq.org&#8221; in Firefox. Then right-click on the </span><em><span style="font-weight: 400;">[Download]</span></em><span style="font-weight: 400;"> tab and select </span><em><span style="font-weight: 400;">Inspect Element (Q)</span></em><span style="font-weight: 400;"> from the pop-up menu.</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image123.png"><img class="aligncenter size-full wp-image-146758" src="https://blog.udemy.com/wp-content/uploads/2015/08/image123.png" alt="image12" width="301" height="236" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">This will show me the Development tools. With the element I right-clicked on, highlighted in the &#8220;DOM and Style Inspector&#8221;:</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image133.png"><img class="aligncenter size-full wp-image-146759" src="https://blog.udemy.com/wp-content/uploads/2015/08/image133.png" alt="image13" width="887" height="758" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">The important parts of the HTML for our purpose are:</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image145.png"><img class="aligncenter size-full wp-image-146760" src="https://blog.udemy.com/wp-content/uploads/2015/08/image145.png" alt="image14" width="366" height="52" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">We can see here that the download link is an anchor with a title of &#8220;Get Selenium&#8221;, wrapped with an </span><code><span style="font-weight: 400;">li</span></code><span style="font-weight: 400;"> tag, and the </span><code><span style="font-weight: 400;">li</span></code><span style="font-weight: 400;"> tag has an </span><code><span style="font-weight: 400;">id</span></code><span style="font-weight: 400;"> of </span><span style="font-weight: 400;">&#8220;menu_download&#8221;</span><span style="font-weight: 400;">.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">The </span><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> method takes a </span><code><span style="font-weight: 400;">By</span></code><span style="font-weight: 400;"> object as parameter. We generally instantiate the </span><code><span style="font-weight: 400;">By</span></code><span style="font-weight: 400;"> object using static methods on the </span><code><span style="font-weight: 400;">By</span></code><span style="font-weight: 400;"> class:</span></p>
+<ul style="text-align: justify;">
+<li><strong><span style="color: #17aa1c;">By.id</span></strong></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">find an element by using the </span><code><span style="font-weight: 400;">id</span></code><span style="font-weight: 400;"> attribute of the element. This is very useful since an </span><code><span style="font-weight: 400;">id</span></code><span style="font-weight: 400;"> is supposed to be unique in the dom so this can uniquely locate an element on a well-formed page</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>By.linkText</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">the link text is the text between the </span><code><span style="font-weight: 400;">&lt;a&gt;&lt;/a&gt;</span></code><span style="font-weight: 400;"> tags; in the example above, the </span><code><span style="font-weight: 400;">a</span></code><span style="font-weight: 400;"> tags are empty and have no link text.</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>By.partialLinkText</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">find an element which contains some text in the anchor tag</span></p>
+<ul style="text-align: justify;">
+<li><strong><span style="color: #17aa1c;">By.name</span></strong></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">if an element has a </span><code><span style="font-weight: 400;">name</span></code><span style="font-weight: 400;"> attribute, then you can use that to locate the element</span></p>
+<ul style="text-align: justify;">
+<li><strong><span style="color: #17aa1c;">By.tagName</span></strong></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">we can find elements using the tag, e.g., </span><code><span style="font-weight: 400;">li</span></code><span style="font-weight: 400;"> or </span><code><span style="font-weight: 400;">a</span></code></p>
+<ul style="text-align: justify;">
+<li><strong><span style="color: #17aa1c;">By.className</span></strong></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">if the tag has a </span><code><span style="font-weight: 400;">class</span></code><span style="font-weight: 400;"> attribute, then we can use that to locate the element</span></p>
+<ul style="text-align: justify;">
+<li><strong><span style="color: #17aa1c;">By.xpath</span></strong></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Xpath is a very powerful language for matching elements in an XML document</span></p>
+<ul style="text-align: justify;">
+<li><strong><span style="color: #17aa1c;">By.cssSelector</span></strong></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">CSS Selectors are used in CSS to locate elements for styling; we can use the same syntax to find elements on the page</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">By looking at the HTML snippet we have, since the </span><span style="font-weight: 400;">li</span><span style="font-weight: 400;"> has an id, we can uniquely find the </span><span style="font-weight: 400;">li</span><span style="font-weight: 400;"> dom element.</span></p>
+<p style="text-align: justify;"><code><span style="font-weight: 400;">driver.findElement(By.id("menu_download"))</span></code></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">But we want to click on the </span><span style="font-weight: 400;">a</span><span style="font-weight: 400;"> element, i.e., the link.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Fortunately, </span><code><span style="font-weight: 400;">driver.findElement</span></code><span style="font-weight: 400;"> returns a </span><code><span style="font-weight: 400;">WebElement</span></code><span style="font-weight: 400;"> object, and the </span><code><span style="font-weight: 400;">WebElement</span></code><span style="font-weight: 400;"> class has a </span><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> method so we can &#8216;chain&#8217; these commands and I can:</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">first find the </span><code><span style="font-weight: 400;">li</span></code><span style="font-weight: 400;"> element by the </span><code><span style="font-weight: 400;">id</span></code></li>
+<li><span style="font-weight: 400;">then use the </span><code><span style="font-weight: 400;">li</span></code><span style="font-weight: 400;"> element to find the </span><span style="font-weight: 400;">a</span><span style="font-weight: 400;"> by the </span><code><span style="font-weight: 400;">tagname</span></code></li>
+</ul>
+<p style="text-align: justify;"><code><span style="font-weight: 400;">driver.findElement(By.id("menu_download")).findElement(By.tagName("a"))</span></code></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">To make the code easier to read, I will create variables to store the </span><code><span style="font-weight: 400;">WebElement</span></code><span style="font-weight: 400;"> objects:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">WebElement downloadTab = driver.findElement(By.id("menu_download"));
+</span><span style="font-weight: 400;">WebElement downloadLink = downloadTab.findElement(By.tagName("a"));</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">And having found the </span><code><span style="font-weight: 400;">downloadLink</span></code><span style="font-weight: 400;"> all that remains is to use the </span><code><span style="font-weight: 400;">WebElement</span></code><span style="font-weight: 400;"> method </span><code><span style="font-weight: 400;">click</span></code><span style="font-weight: 400;"> to click on the link.</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">WebElement downloadTab = driver.findElement(By.id("menu_download"));
+</span><span style="font-weight: 400;">WebElement downloadLink = downloadTab.findElement(By.tagName("a"));
+</span><span style="font-weight: 400;">downloadLink.click();</span></pre>
+<p style="text-align: justify;"><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> will only match the first item found. This is important when using anything other than </span><code><span style="font-weight: 400;">By.id</span></code><span style="font-weight: 400;"> since all of the other approaches can match multiple elements, i.e., there are more than 1 </span><code><span style="font-weight: 400;">li</span></code><span style="font-weight: 400;"> tags on the page so if I used </span><code><span style="font-weight: 400;">By.tagName("li")</span></code><span style="font-weight: 400;"> to find the </span><code><span style="font-weight: 400;">li</span></code><span style="font-weight: 400;"> element, it would match the first one on the page, rather than the one I was looking for.</span></p>
+<p style="text-align: justify;"><code><span style="font-weight: 400;">By.xpath</span></code><span style="font-weight: 400;"> and </span><code><span style="font-weight: 400;">By.cssSelector</span></code><span style="font-weight: 400;"> are the most powerful selectors available. Most people use CSS Selectors rather than Xpath, because this is supported by every browser. These selectors are beyond the scope of this tutorial, but you can find a lot of useful information online, and in particular I recommend the </span><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="https://www.simple-talk.com/dotnet/.net-framework/xpath,-css,-dom-and-selenium-the-rosetta-stone/"><span style="font-weight: 400;">XPath, CSS Rosetta stone</span></a></span><span style="font-weight: 400;">.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Just to demonstrate how powerful a CSS Selector is, I could combine both </span><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> commands into a single CSS Selector of </span><span style="font-weight: 400;">&#8220;<code>#menu_download a</code>&#8220;</span><span style="font-weight: 400;">.</span></p>
+<pre style="text-align: justify;">WebElement downloadLink = driver.findElement(By.cssSelector("#menu_download a"));
+  downloadLink.click();</pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">It is well worth researching CSS Selectors, but when starting to learn WebDriver, you can do a lot with the basic id, name, linkText and className selectors.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Now that we know how to navigate between pages by clicking on elements, it is important that our </span><code><span style="font-weight: 400;">@Test</span></code><span style="font-weight: 400;"> method can check that we are on the correct page and that our navigation worked.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">We do this by using the </span><code><span style="font-weight: 400;">Assert</span></code><span style="font-weight: 400;"> class from JUnit, to assert that some condition has been met.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">For this test, I&#8217;m going to take advantage of the title on the page. For the download page, the title is &#8220;Downloads&#8221;; we can see that either in the tab on the browser or in the HTML itself when we use the developer tools.</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image154.png"><img class="aligncenter size-full wp-image-146768" src="https://blog.udemy.com/wp-content/uploads/2015/08/image154.png" alt="image15" width="315" height="272" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">If only WebDriver had a way to access the title of a page&#8230;</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Fortunately, the </span><code><span style="font-weight: 400;">WebDriver</span></code><span style="font-weight: 400;"> interface exposes a </span><code><span style="font-weight: 400;">getTitle</span></code><span style="font-weight: 400;"> method, so I can use that in a JUnit assert to check that we are on the correct page:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">Assert.assertEquals("Downloads", driver.getTitle());</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">This uses the static </span><code><span style="font-weight: 400;">assertEquals</span></code><span style="font-weight: 400;"> method from the </span><code><span style="font-weight: 400;">org.junit.Assert</span></code><span style="font-weight: 400;"> class to compare the string &#8220;Downloads&#8221; with the value returned from the </span><code><span style="font-weight: 400;">getTitle</span></code><span style="font-weight: 400;"> method.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">If they are the same, then the assert will pass and the test will pass.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">If they are different, then the assertion will fail and throw an exception. This will be reported in IntelliJ as a failing test.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">E.g., if I change the assertion to:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">Assert.assertEquals("Uploads", driver.getTitle());</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">Then this will fail, because the expected value &#8220;Uploads&#8221; does not equal the Actual value returned by the </span><code><span style="font-weight: 400;">getTitle</span></code><span style="font-weight: 400;"> method, which is &#8220;Downloads&#8221;.</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image164.png"><img class="aligncenter size-full wp-image-146769" src="https://blog.udemy.com/wp-content/uploads/2015/08/image164.png" alt="image16" width="1029" height="277" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">The test in full is shown below, in case you made any mistakes typing the code.</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">import org.junit.Assert;</span>
+<span style="font-weight: 400;">import org.junit.Test;</span>
+<span style="font-weight: 400;">import org.openqa.selenium.By;</span>
+<span style="font-weight: 400;">import org.openqa.selenium.WebDriver;</span>
+<span style="font-weight: 400;">import org.openqa.selenium.WebElement;</span>
+<span style="font-weight: 400;">import org.openqa.selenium.firefox.FirefoxDriver;</span>
+
+<span style="font-weight: 400;">public class MyFirstWebDriverTest {</span>
+<span style="font-weight: 400;">    @Test</span>
+<span style="font-weight: 400;">    public void checkSeleniumHQinFirefox(){</span>
+<span style="font-weight: 400;">        WebDriver driver = new FirefoxDriver();</span>
+<span style="font-weight: 400;">        driver.get("http://seleniumhq.org");</span>
+
+<span style="font-weight: 400;">        WebElement downloadTab = driver.findElement(By.id("menu_download"));</span>
+<span style="font-weight: 400;">        WebElement downloadLink = downloadTab.findElement(By.tagName("a"));</span>
+<span style="font-weight: 400;">        downloadLink.click();</span>
+
+<span style="font-weight: 400;">        Assert.assertEquals("Downloads", driver.getTitle());</span>
+
+<span style="font-weight: 400;">        driver.quit();</span>
+<span style="font-weight: 400;">    }</span>
+<span style="font-weight: 400;">}</span></pre>
+<h2 style="text-align: center;"><span style="color: #17aa1c;"><b><a id="5"></a>WebDriver</b><b> and </b><b>WebElement</b></span></h2>
+<p style="text-align: justify;"><span style="font-weight: 400;">The two main classes that you use for WebDriver testing are </span><code><span style="font-weight: 400;">WebDriver</span></code><span style="font-weight: 400;"> and </span><code><span style="font-weight: 400;">WebElement</span></code><span style="font-weight: 400;">.</span></p>
+<p style="text-align: justify;"><span style="color: #17aa1c;"><strong>WebDriver</strong></span><span style="font-weight: 400;"> represents the browser and has general methods for controlling the browser and accessing generic elements or parts of the page.</span></p>
+<p style="text-align: justify;"><strong><span style="color: #17aa1c;">WebElement</span></strong><span style="font-weight: 400;"> represents an element on the page and supports methods related to that element, e.g., click, returning the text in the element, returning attributes, etc.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">We will now look at these methods in greater detail, and show you how you can learn more yourself.</span></p>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="5_1"></a>Using Code Completion to Learn</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">We can use the existing code we&#8217;ve written to help us see the range of methods available to us on the </span><code><span style="font-weight: 400;">WebDriver</span></code><span style="font-weight: 400;"> class.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">If I put the cursor in IntelliJ, just after </span><span style="font-weight: 400;"><code>driver</code>.</span><span style="font-weight: 400;"> and then press </span><code><span style="font-weight: 400;">ctrl  + space</span></code><span style="font-weight: 400;"> I will see a pop-up menu showing the methods that I can call from </span><span style="font-weight: 400;"><code>WebDriver</code>:</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image173.png"><img class="aligncenter size-full wp-image-146770" src="https://blog.udemy.com/wp-content/uploads/2015/08/image173.png" alt="image17" width="489" height="252" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">In the pop-up you can see that we can:</span></p>
+<ul style="text-align: justify;">
+<li><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> &#8211; find an element on the page</span></li>
+<li><code><span style="font-weight: 400;">get</span></code><span style="font-weight: 400;"> &#8211; go to a URL</span></li>
+<li><code><span style="font-weight: 400;">getTitle</span></code><span style="font-weight: 400;"> &#8211; return the title of the page as a string</span></li>
+<li><code><span style="font-weight: 400;">close</span></code><span style="font-weight: 400;"> &#8211; close the tab</span></li>
+<li><code><span style="font-weight: 400;">findElements</span></code><span style="font-weight: 400;"> &#8211; return a </span><code><span style="font-weight: 400;">List</span></code><span style="font-weight: 400;"> of </span><code><span style="font-weight: 400;">WebElement</span></code><span style="font-weight: 400;"> objects that match the locator, e.g., find all the anchor elements on the page</span></li>
+<li><code><span style="font-weight: 400;">getCurrentUrl</span></code><span style="font-weight: 400;"> &#8211; return the current URL; this might be useful if we have been redirected to another page</span></li>
+<li><code><span style="font-weight: 400;">getPageSource</span></code><span style="font-weight: 400;"> &#8211; return the source code of the page</span></li>
+<li><span style="font-weight: 400;">etc.</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">Code completion is a great way to explore the possibilities open to us when we are testing.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">In addition, we can look at the JavaDoc help for any of these methods by pressing </span><code><span style="font-weight: 400;">ctrl + Q</span></code><span style="font-weight: 400;"> in Windows (</span><code><span style="font-weight: 400;">ctrl + J</span></code><span style="font-weight: 400;"> on Mac) to see the library documentation for the method.</span></p>
+<p style="text-align: justify;"><a href="https://blog.udemy.com/wp-content/uploads/2015/08/image184.png"><img class="aligncenter size-full wp-image-146771" src="https://blog.udemy.com/wp-content/uploads/2015/08/image184.png" alt="image18" width="935" height="244" /></a></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">With this little trick you can learn a lot about the API and the methods, from within the IDE.</span></p>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="5_2"></a>WebDriver</b><b> methods</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">The </span><span style="font-weight: 400;">WebDriver</span><span style="font-weight: 400;"> methods tend to be methods you can use at any point in time &#8211; i.e., the context is having a page loaded in the browser.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You have already seen some of these methods, so we won&#8217;t repeat those here.</span></p>
+<ul style="text-align: justify;">
+<li><code><span style="font-weight: 400;">getWindowHandle</span></code><span style="font-weight: 400;"> &#8211; returns a list of handles to all open tabs</span></li>
+<li><code><span style="font-weight: 400;">switchTo</span></code><span style="font-weight: 400;"> &#8211; allows to you switch focus to an open tab or a frame</span></li>
+<li><code><span style="font-weight: 400;">manage</span></code><span style="font-weight: 400;"> &#8211; allows you to control the current browser details, e.g., view and amend cookies, change the size and location of the browser window</span></li>
+<li><code><span style="font-weight: 400;">navigate</span></code><span style="font-weight: 400;"> &#8211; provides an alternative to the </span><span style="font-weight: 400;">get</span><span style="font-weight: 400;"> command so you can `navigate().to(aUrl)&#8217;</span></li>
+</ul>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="5_3"></a>WebElement</b><b> methods</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">The </span><code><span style="font-weight: 400;">WebElement</span></code><span style="font-weight: 400;"> methods tend to be local to a specific element on the page.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You have already seen:</span></p>
+<ul style="text-align: justify;">
+<li><code><span style="font-weight: 400;">click</span></code><span style="font-weight: 400;"> which triggers a mouse click on the element</span></li>
+<li><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> which helps you find a child element</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">If you use code completion in the IDE, then you will see that we can also:</span></p>
+<ul style="text-align: justify;">
+<li><code><span style="font-weight: 400;">clear</span></code><span style="font-weight: 400;"> &#8211; clear the text in an input field</span></li>
+<li><code><span style="font-weight: 400;">findElements</span></code><span style="font-weight: 400;"> &#8211; find children of the element</span></li>
+<li><code><span style="font-weight: 400;">getAttribute</span></code><span style="font-weight: 400;"> &#8211; get a value of an attribute, e.g., </span><code><span style="font-weight: 400;">class</span></code><span style="font-weight: 400;"> or </span><code><span style="font-weight: 400;">id</span></code></li>
+<li><code><span style="font-weight: 400;">getTagName</span></code><span style="font-weight: 400;"> &#8211; the tag name for the element, e.g., </span><code><span style="font-weight: 400;">li</span></code><span style="font-weight: 400;"> or </span><code><span style="font-weight: 400;">a</span></code></li>
+<li><code><span style="font-weight: 400;">getText</span></code><span style="font-weight: 400;"> &#8211; get the text in the element, e.g., the link text</span></li>
+<li><code><span style="font-weight: 400;">sendKeys</span></code><span style="font-weight: 400;"> &#8211; send keys to type into the field</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">We can also check the status of the element:</span></p>
+<ul style="text-align: justify;">
+<li><code><span style="font-weight: 400;">isDisplayed</span></code><span style="font-weight: 400;"> &#8211; Is the element visible?</span></li>
+<li><code><span style="font-weight: 400;">isEnabled</span></code><span style="font-weight: 400;"> &#8211; Can we interact with the element?</span></li>
+<li><code><span style="font-weight: 400;">isSelected</span></code><span style="font-weight: 400;"> &#8211; Is it selected?</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">There are more methods on </span><span style="font-weight: 400;">WebElement</span><span style="font-weight: 400;"> but the above list covers those that you would use most often.</span></p>
+<h2 style="text-align: center;"><span style="color: #17aa1c;"><b><a id="6"></a>Synchronization</b></span></h2>
+<p style="text-align: justify;"><span style="font-weight: 400;">The above are the basics that would help you work with many web pages. You would be able to load pages into the browser, find elements on the page, click and interact with them, and retrieve text from the page to check your results.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">And for very simple websites, this is probably all you need to know.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">For more complicated websites and applications, synchronization becomes important.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">This means, rather than:</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">open a page</span></li>
+<li><span style="font-weight: 400;">find a link</span></li>
+<li><span style="font-weight: 400;">click the link</span></li>
+<li><span style="font-weight: 400;">check the title on the new page</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">Instead, we would:</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">open a page</span></li>
+<li><span style="font-weight: 400;">wait for the page to be loaded and ready to use</span></li>
+<li><span style="font-weight: 400;">find a link</span></li>
+<li><span style="font-weight: 400;">click on the link</span></li>
+<li><span style="font-weight: 400;">wait for the page to be loaded and ready to use</span></li>
+<li><span style="font-weight: 400;">check the title on the new page</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">The above approach becomes important when the web application we are testing uses a lot of JavaScript to populate the page, or for a single-page app that is only one page, but the DOM changes via JavaScript based on user actions.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">WebDriver provides two main approaches to synchronization.: a built-in synchronization approach called implicit wait, and a more user-controlled approach known as explicit wait.</span></p>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="6_1"></a>Implicit Wait</b></span></h3>
+<pre style="text-align: justify;"><span style="font-weight: 400;">driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">The implicit wait is configured by using the </span><code><span style="font-weight: 400;">manage</span> <span style="font-weight: 400;">timeouts</span></code><span style="font-weight: 400;"> functionality from the WebDriver API.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">By setting the </span><code><span style="font-weight: 400;">implicitlyWait</span></code><span style="font-weight: 400;"> value on </span><code><span style="font-weight: 400;">timeouts</span></code><span style="font-weight: 400;"> I&#8217;m basically telling WebDriver that &#8220;whenever I try to </span><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> on a page, I want you to keep trying, and only timeout after 10 seconds&#8221;.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">For example, if I load a page, and the page makes some AJAX requests to populate part of the DOM, then when I try to </span><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> it will not have loaded yet, so WebDriver would throw a </span><code><span style="font-weight: 400;">NoSuchElementException</span></code><span style="font-weight: 400;"> exception and my test would fail.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">The implicit wait provides a mechanism for avoiding that. By setting the implicit wait timeout to 10 seconds, if I try to </span><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> part of the DOM that has not yet finished loading by AJAX, then WebDriver will:</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">try to find it,</span></li>
+<li><span style="font-weight: 400;">fail,</span></li>
+<li><span style="font-weight: 400;">but instead of throwing a </span><code><span style="font-weight: 400;">NoSuchElementException</span></code><span style="font-weight: 400;"> exception,</span></li>
+<li><span style="font-weight: 400;">WebDriver will wait for 500 milliseconds,</span></li>
+<li><span style="font-weight: 400;">then WebDriver will try to find it again</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">WebDriver will repeat the above loop until:</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">it finds the element, and will then return it, or</span></li>
+<li><span style="font-weight: 400;">the timeout time of 10 seconds has been reached, at which point WebDriver will throw a </span><code><span style="font-weight: 400;">NoSuchElementException</span></code></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">This seems like a very easy way to synchronize with your application and AJAX requests. But, since the implicit wait timeout is set as a global, you can&#8217;t wait for some elements for 5 seconds and others for 25 seconds, so you have to set the timeout for the highest value you think you need.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">This means that, if a test should fail, because the element really is not on the page, then your test will wait 25 seconds before failing, and when you have a lot of tests, this can cause the test execution to slow down.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Also, sometimes we use </span><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> to make sure that an element is not present on the page. If you are using implicit waits, then every call to make sure that an element is not present on the page will take the maximum timeout time &#8211; again leading to slow tests.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Because of the above reasons, when we work on production code, we prefer to use explicit waits rather than implicit waits. This is why the default implicit wait time in WebDriver is set to 0 seconds, forcing you to think about your synchronization approach.</span></p>
+<h3 style="text-align: justify;"><span style="color: #17aa1c;"><b><a id="6_2"></a>Explicit Wait</b></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Explicit wait in WebDriver is handled by the </span><code><span style="font-weight: 400;">WebDriverWait</span></code><span style="font-weight: 400;"> class.</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">WebDriverWait wait = new WebDriverWait(driver, 10);</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">The above creates a </span><code><span style="font-weight: 400;">WebDriverWait</span></code><span style="font-weight: 400;"> object, associated with the current driver, where the timeout time is set to 10 seconds.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You &#8216;wait&#8217; until a particular &#8216;expected condition&#8217; is true.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">E.g.:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">wait.until(ExpectedConditions.elementToBeClickable(downloadLink));</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">When starting with </span><code><span style="font-weight: 400;">WebDriverWait</span></code><span style="font-weight: 400;">, I recommend that you use the built-in </span><code><span style="font-weight: 400;">ExpectedConditions</span></code><span style="font-weight: 400;"> class to help you.</span></p>
+<p style="text-align: justify;"><code><span style="font-weight: 400;">WebDriverWait</span></code><span style="font-weight: 400;"> and </span><code><span style="font-weight: 400;">ExpectedConditions</span></code><span style="font-weight: 400;"> are part of the WebDriver support classes:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">import org.openqa.selenium.support.ui.ExpectedConditions;</span>
+ <span style="font-weight: 400;">import org.openqa.selenium.support.ui.WebDriverWait;</span></pre>
+<p style="text-align: justify;"><code><span style="font-weight: 400;">ExpectedConditions</span></code><span style="font-weight: 400;"> contains a lot of statically accessible methods which can help us wait for a variety of element states in the DOM.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">For example, I could wait for an element to be present in the DOM. This doesn&#8217;t mean that it is visible or ready for use, but it means it has been loaded into the DOM:</span></p>
+<pre style="text-align: justify;">WebElement downloadLink = wait.until(
+   ExpectedConditions.presenceOfElementLocated(
+      By.cssSelector("#menu_download a")));</pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">In the above code, I am waiting until the download link is present in the DOM. And you can see that the </span><code><span style="font-weight: 400;">until</span></code><span style="font-weight: 400;"> method actually returns the </span><code><span style="font-weight: 400;">WebElement</span></code><span style="font-weight: 400;"> so I don&#8217;t need an additional </span><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> statement.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">I can also wait until elements are clickable:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">wait.until(ExpectedConditions.elementToBeClickable(downloadLink));</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">A full list of Expected Conditions is available from code completion within the IDE, but to give you an idea of the supplied synchronization methods, I list the ones I use most often below:</span></p>
+<ul style="text-align: justify;">
+<li><strong><span style="color: #17aa1c;">presenceOfElementLocated</span></strong></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Waits for an element to be present in the DOM; returns the </span><code><span style="font-weight: 400;">WebElement</span></code></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>visibilityOfElementLocated</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Waits for an element to be visible; returns true if the element is visible</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>invisibilityOfElementLocated</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Waits for an element to be invisible; returns true if the element is not visible</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>elementToBeClickable</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Waits for element to be clickable, i.e., visible and enabled; returns the </span><span style="font-weight: 400;">WebElement</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>alertIsPresent</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Waits for an alert to be present; returns the alert if present</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>titleIs</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Waits for the title to match a specific value</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>elementSelectionStateToBe</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Waits for an element to be selected or not</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>frameToBeAvailableAndSwitchToIt</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Waits for a frame to be available and switches to it so we can interact with the contents of the frame</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>titleContains</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Waits for the title to contain a String; returns true when title matches</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>urlContains</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Waits for the URL to contain a specific String</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>urlMatches</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Waits for the URL to match a specific regular expression</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #17aa1c;"><strong>urlToBe</strong></span></li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;"><span style="font-weight: 400;">–</span> <span style="font-weight: 400;">Waits for the URL to be an exact String</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">With the </span><code><span style="font-weight: 400;">WebDriverWait</span></code><span style="font-weight: 400;">, if the </span><code><span style="font-weight: 400;">ExpectedCondition</span></code><span style="font-weight: 400;"> is not met then a </span><code><span style="font-weight: 400;">TimeoutException</span></code><span style="font-weight: 400;"> is thrown.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">If the supplied </span><code><span style="font-weight: 400;">ExpectedConditions</span></code><span style="font-weight: 400;"> does not have an exact match for the condition that you need to wait for, then you can create your own </span><code><span style="font-weight: 400;">ExpectedCondition</span></code><span style="font-weight: 400;"> and wait for specific conditions related to your application. An explanation of this is beyond the scope of this introductory article, but you can always use &#8216;ctrl + left-click&#8217; to click through to the source code of any of the </span><code><span style="font-weight: 400;">ExpectedConditions</span></code><span style="font-weight: 400;"> methods and see how they have been implemented and copy the pattern into your own code.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You can see that in the test we have an assertion that matches on title:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">Assert.assertEquals("Downloads", driver.getTitle());</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">When you start learning about expected conditions, the temptation might be to replace the Assert with an expected condition, e.g.:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">wait.until(ExpectedConditions.titleIs("Downloads"));</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">If the </span><code><span style="font-weight: 400;">ExpectedCondition</span></code><span style="font-weight: 400;"> check fails, then a </span><code><span style="font-weight: 400;">TimeoutException</span></code><span style="font-weight: 400;"> would be thrown, which would fail the test, but it may not be as clear to read as an Assertion.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Also, an </span><code><span style="font-weight: 400;">Assert</span></code><span style="font-weight: 400;"> in the </span><code><span style="font-weight: 400;">@Test</span></code><span style="font-weight: 400;"> method makes it clear that the method is checking for this particular condition, rather than expecting it in passing.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">I try to keep my &#8216;wait&#8217; code specific for synchronization and have assertions for the conditions that I want to check in the </span><code><span style="font-weight: 400;">@Test</span></code><span style="font-weight: 400;">.</span></p>
+<h2 style="text-align: center;"><span style="color: #17aa1c;"><b><a id="7"></a>Summary</b></span></h2>
+<p style="text-align: justify;"><span style="font-weight: 400;">Even though this was a very brief introduction to </span><span style="font-weight: 400;">WebDriver</span><span style="font-weight: 400;">, you have learned the basics needed to get started.</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">You know how to install the tools</span></li>
+<li><span style="font-weight: 400;">You&#8217;ve seen how to create a basic test</span></li>
+<li><span style="font-weight: 400;">You know how to start a new browser and navigate to a URL</span></li>
+<li><span style="font-weight: 400;">You know how to interrogate the page with methods on the </span><span style="font-weight: 400;">WebDriver</span><span style="font-weight: 400;"> class</span></li>
+<li><span style="font-weight: 400;">You know how to </span><code><span style="font-weight: 400;">findElement</span></code><span style="font-weight: 400;"> on the page and then interrogate it and manipulate it with methods on the </span><code><span style="font-weight: 400;">WebDriver</span></code><span style="font-weight: 400;"> class</span></li>
+<li><span style="font-weight: 400;">You know the importance of synchronizing on specific DOM states, rather than implicitly wait for elements to be accessible</span></li>
+<li><span style="font-weight: 400;">You know how to explicitly wait for elements on the page prior to interacting with them to make your tests robust</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">This should be enough to help you get started writing code against production systems, and create fairly robust tests.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Selenium WebDriver offers you more than this, which we haven&#8217;t been able to cover.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">When you become more experienced with WebDriver, you&#8217;ll want to use the features that let you run your tests on multiple browsers, i.e., Chrome, IE, and Safari, and not just Firefox.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">You might want to experiment with the </span><code><span style="font-weight: 400;">HmlUnitDriver</span></code><span style="font-weight: 400;"> to run your tests &#8216;headless&#8217;, i.e., without creating a browser. For more complicated tests, you might have to add more synchronization or use different browser capabilities. But for the simple test we wrote in this article, you could use </span><code><span style="font-weight: 400;">HtmlUnitDriver</span></code><span style="font-weight: 400;"> by replacing </span><code><span style="font-weight: 400;">FirefoxDriver</span></code><span style="font-weight: 400;"> as follows:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">WebDriver driver = new HtmlUnitDriver();</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">You can also run your tests on other machines using the </span><code><span style="font-weight: 400;">RemoteWebDriver</span></code><span style="font-weight: 400;">; this allows you to connect to a </span><code><span style="font-weight: 400;">WebDriver</span></code><span style="font-weight: 400;"> Grid and run your test on different browser and operating system combinations. You can also use this to take advantage of cloud-based grid providers so you don&#8217;t have to maintain a lot of physical machines with different operating system and browser combinations.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">As you expand your automation, you&#8217;ll want to learn how to create your own custom </span><code><span style="font-weight: 400;">ExpectedCondition</span></code><span style="font-weight: 400;"> methods and synchronize on application-specific conditions; this will help keep your test code simple to maintain, more domain-specific and easier to read.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">As you build more tests, you&#8217;ll want to move away from having </span><span style="font-weight: 400;"><code>driver</code>.</span><span style="font-weight: 400;"> code in your tests, and instead start using a Page Object Model approach, where you create classes that represent your Pages, and you write your tests in terms of Page Object methods, e.g.:</span></p>
+<pre style="text-align: justify;"><span style="font-weight: 400;">HomePage homePage = new HomePage(driver);</span>
+<span style="font-weight: 400;">homePage.navigationMenu().clickDownload();</span></pre>
+<p style="text-align: justify;"><span style="font-weight: 400;">Writing Page Objects and Domain Object abstractions helps keep your tests maintainable and easier to make robust with effective synchronization.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">The WebDriver API will also let you automate mobile native applications, hybrid apps and automate the browser on mobile devices by using Appium.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">For more complicated websites, you&#8217;ll want to learn a little JavaScript and take advantage of WebDriver&#8217;s ability to inject and run arbitrary JavaScript on the web page using the </span><code><span style="font-weight: 400;">JavascriptExecutor</span></code><span style="font-weight: 400;">.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">The future for WebDriver continues to look bright and makes it an excellent investment in terms of time to learn and skill development.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">A few hints to help you proceed further:</span></p>
+<ul style="text-align: justify;">
+<li><span style="font-weight: 400;">Use code completion to see the methods available.</span></li>
+<li><span style="font-weight: 400;">Use the JavaDoc to see what a method does.</span></li>
+<li><span style="font-weight: 400;">Read the documentation on the </span><span style="color: #17aa1c;"><a style="color: #17aa1c;" href="http://seleniumhq.org"><span style="font-weight: 400;">SeleniumHQ.org</span></a></span><span style="font-weight: 400;"> homepage.</span></li>
+<li><span style="font-weight: 400;">If your tests are randomly failing, then it is probably a synchronization problem, so add some </span><code><span style="font-weight: 400;">WebDriverWait</span></code><span style="font-weight: 400;"> to your code.</span></li>
+<li><span style="font-weight: 400;">No matter how tempting it is to increase the implicit wait timeout, don&#8217;t. Use </span><code><span style="font-weight: 400;">WebDriverWait</span></code><span style="font-weight: 400;"> instead.</span></li>
+<li><span style="font-weight: 400;">If your test passes when you debug and step through line by line, but fails when your run the test, then assume it is a synchronization problem and you need to add an effective `WebDriverWait&#8217;.</span></li>
+</ul>
+<p style="text-align: justify;"><span style="font-weight: 400;">Best of luck with your future learning and experimentation with WebDriver.</span></p>
+<hr />
+<hr />
+<h1 class="entry-title"></h1>
+<h1 class="entry-title">Selenium IDE Tutorial</h1>
+<h4>BY KASIA MIKOLUK</h4>
+<p>Selenium IDE is a fully-featured Integrated Development Environment (IDE) that installs as a plugin in Mozilla Firefox and enables developers to test their web applications through Selenium. With the Selenium IDE, you can record user interactions with the web browser and play them back to test for errors. It’s a powerful, robust IDE that radically simplifies and automates the QA testing process.</p>
+<p>In this tutorial, we’ll learn the basics of the Selenium IDE, how to use it, and what you can use it for. To learn more about software and web application testing, check out this <a href="https://www.udemy.com/learn-selenium-ide-and-webdriver/?tc=blog.seleniumidetutorial&amp;couponCode=half-off-for-blog">course on Selenium IDE and WebDriver</a>.</p>
+<h2><b>What is Selenium IDE?</b></h2>
+<p>Selenium is a web application testing software developed by Jason Huggins in 2004. It’s an open-source software that works on all three major platforms – Windows, Mac and Linux. Selenium supports a wide range of languages, including, but not limited to, Java, Python, Ruby, Perl, C# and PHP. The best part? Selenium enables you to test web applications with zero knowledge of any test scripting language.</p>
+<p>This brings us to Selenium IDE. As mentioned above, the Selenium IDE is a Firefox plugin that makes it possible to record, edit and debug tests. It was developed independently of the Selenium project by Shinya Kasatani and was merged with the former in 2006. It was previously known as the Selenium Recorder; don’t be surprised if you stumble upon old tutorials mentioning it by that name!</p>
+<h2><b>How to Use Selenium IDE?</b></h2>
+<p>The Selenium IDE is currently available only on Firefox. Chrome users might want to look at alternatives like iMacros, Sahi and Scirocco.</p>
+<p>First of all, install Selenium IDE in Firefox by grabbing a copy of the software from the Selenium HQ. It’ll install as a set of 5 extensions with separate formatters for Python, Ruby, etc. (language formatters are optional; install formatters only for languages you want to use). Once installed, restart Firefox. If you now go to the main Firefox options menu -&gt; Add Ons -&gt; Extensions, you should see Selenium IDE along with language formatters for Ruby, Python, C# and Java.</p>
+<p><a href="https://blog.udemy.com/wp-content/uploads/2013/12/1.png"><img class="size-full wp-image-22670 aligncenter" src="https://blog.udemy.com/wp-content/uploads/2013/12/1.png" alt="1" width="593" height="185" /></a></p>
+<p>You are now ready to use Selenium. Below, we’ll learn how to record and play back actions using Selenium.</p>
+<h3><b>Using Selenium</b></h3>
+<p>To use the Selenium IDE, go to Firefox -&gt; Web Developer -&gt; Selenium IDE.</p>
+<p><a href="https://blog.udemy.com/wp-content/uploads/2013/12/2.png"><img class="size-full wp-image-22672 aligncenter" src="https://blog.udemy.com/wp-content/uploads/2013/12/2.png" alt="2" width="432" height="578" /></a></p>
+<p>Alternatively, press CTRL + ALT + S to open the Selenium IDE window.</p>
+<p style="text-align: center;"> <a href="https://blog.udemy.com/wp-content/uploads/2013/12/3.png"><img class="alignnone size-full wp-image-22676" src="https://blog.udemy.com/wp-content/uploads/2013/12/3.png" alt="3" width="400" height="520" /></a></p>
+<p>Let’s take a closer look at the Selenium IDE window:</p>
+<ul>
+<li>The left pane lists all the open test cases.</li>
+<li>The ‘Base URL’ shows the URL the test is being performed on.</li>
+<li>The ‘Table’ pane will show a list of actions recorded as part of the test. You can see how this works in the example below.</li>
+<li>The ‘Fast-Slow’ slider dictates how fast/slow playback for the recorded test should be.</li>
+<li>The ‘Play’ button plays back the test.</li>
+<li>The big red button at the rightmost edge is the ‘Record’ toggle switch. Switch it on to record interactions on any website.</li>
+<li>The bottom pane shows a log of actions and a reference list.</li>
+</ul>
+<p>There are a number of other options – Selenium IDE is a fairly powerful tool, after all – but for now, we only need to be concerned with the options listed above.</p>
+<p>New to software testing? <a href="https://www.udemy.com/technical-web-testing-101/?tc=blog.seleniumidetutorial">Learn the basics of technical web testing</a> in this course!</p>
+<p><b>Creating a Simple Test in Selenium IDE</b></p>
+<p>For the purpose of this tutorial, we will create a simple test that will enter a particular query into Google. In essence, this will be more like a macro than an actual ‘test’, but it will demonstrate the power of automated testing using Selenium IDE.</p>
+<p><b>Step 1: </b>Create a new test case by going to File -&gt; New Test Case.</p>
+<p style="text-align: center;"><a href="https://blog.udemy.com/wp-content/uploads/2013/12/4.png"><img class="alignnone size-full wp-image-22678" src="https://blog.udemy.com/wp-content/uploads/2013/12/4.png" alt="4" width="202" height="191" /></a></p>
+<p>A new untitled test should show up in the test case pane to the left.</p>
+<p style="text-align: center;"><a href="https://blog.udemy.com/wp-content/uploads/2013/12/5.png"><img class="alignnone size-full wp-image-22680" src="https://blog.udemy.com/wp-content/uploads/2013/12/5.png" alt="5" width="94" height="296" /></a></p>
+<p><b>Step 2: </b>We are now going to record our test. To do this, hit the red record switch to the right.</p>
+<p style="text-align: center;"><a href="https://blog.udemy.com/wp-content/uploads/2013/12/6.png"><img class="alignnone size-full wp-image-22682" src="https://blog.udemy.com/wp-content/uploads/2013/12/6.png" alt="6" width="396" height="311" /></a></p>
+<p>Now, perform the following actions in sequence:</p>
+<p style="padding-left: 30px;">1. Type in Google.com into your Firefox address bar:</p>
+<p style="padding-left: 30px;"><a href="https://blog.udemy.com/wp-content/uploads/2013/12/7.png"><img class="size-full wp-image-22684 aligncenter" src="https://blog.udemy.com/wp-content/uploads/2013/12/7.png" alt="7" width="511" height="117" /></a>2. On the Google.com homepage, search for any query. For this example, we used the query ‘automated testing.</p>
+<p style="padding-left: 30px;">3. Once the results page opens, stop the test by clicking the red toggle switch.</p>
+<p><b>Step 3: </b>Now that we’ve recorded the test, let’s play it back.</p>
+<p>This is what your ‘Table’ pane should look like now:</p>
+<p><a href="https://blog.udemy.com/wp-content/uploads/2013/12/8.png"><img class="aligncenter size-full wp-image-22686" src="https://blog.udemy.com/wp-content/uploads/2013/12/8.png" alt="8" width="293" height="288" /></a></p>
+<p>Click on the ‘Play current test case’ button.</p>
+<p style="text-align: center;"><a href="https://blog.udemy.com/wp-content/uploads/2013/12/9.png"><img class="aligncenter size-full wp-image-22688" src="https://blog.udemy.com/wp-content/uploads/2013/12/9.png" alt="9" width="389" height="133" /></a></p>
+<p>This will automatically open Google.com, type in ‘automated testing’ into the query field, and display the search results.</p>
+<p>If you take a closer look at the two commands in the Table pane, you’ll see that you can not only change the command, but also alter the values associated with it.</p>
+<p>For example, the first command is ‘open’. You can change this to anything else – Selenium IDE offers a huge list of built-in commands. You can also change the ‘Target’ url to anything that you like.</p>
+<p><a href="https://blog.udemy.com/wp-content/uploads/2013/12/10.png"><img class="aligncenter size-full wp-image-22690" src="https://blog.udemy.com/wp-content/uploads/2013/12/10.png" alt="10" width="281" height="97" /></a></p>
+<p>The next command is ‘type’. This basically instructs Selenium to type-in the desired query into the search bar. You can change the query to anything you want by changing the ‘value’.</p>
+<p style="text-align: center;"><a href="https://blog.udemy.com/wp-content/uploads/2013/12/11.png"><img class="aligncenter size-full wp-image-22692" src="https://blog.udemy.com/wp-content/uploads/2013/12/11.png" alt="11" width="274" height="100" /></a></p>
+<p>For example, if you change it to ‘red and orange widgets’, Selenium IDE will automatically query ‘red and orange widgets’ into Google.</p>
+<p style="text-align: center;"><a href="https://blog.udemy.com/wp-content/uploads/2013/12/12.png"><img class="aligncenter size-full wp-image-22694" src="https://blog.udemy.com/wp-content/uploads/2013/12/12.png" alt="12" width="550" height="47" /></a></p>
+<p>This is one of the most basic examples of what Selenium IDE can do. By combining different commands, you can make the IDE run complex tasks and test for bugs automatically.</p>
+<p>Want to create more advanced tests? <a href="https://www.udemy.com/selenium-2-webdriver-basics-with-java/?tc=blog.seleniumidetutorial">Learn Selenium 2 WebDriver to create powerful automated tests</a>.</p>
+<h3><b>Using Selenium IDE Contextual Menu</b></h3>
+<p>Besides the Selenium IDE window, the plugin also installs a contextual menu into Firefox that can be accessed by pressing the right mouse button.</p>
+<p>Let’s see an example of how it works:</p>
+<p>Like the previous example, create a new test case and hit ‘record’. Then go to Google.com, type in a query (‘automated testing’) and wait for the search results page to load.</p>
+<p>After the results page opens, right click on the main search field on Google. A contextual menu will pop up with a list of actions you can perform.</p>
+<p><a href="https://blog.udemy.com/wp-content/uploads/2013/12/13.png"><img class="aligncenter size-full wp-image-22696" src="https://blog.udemy.com/wp-content/uploads/2013/12/13.png" alt="13" width="600" height="213" /></a></p>
+<p>At the bottom of the menu, you’ll see a ‘verifyValue’ option. If you select this option, Selenium will make sure that there is always a value present in the search bar – a simple test.</p>
+<p style="text-align: center;"><a href="https://blog.udemy.com/wp-content/uploads/2013/12/14.png"><img class="aligncenter size-full wp-image-22698" src="https://blog.udemy.com/wp-content/uploads/2013/12/14.png" alt="14" width="447" height="300" /></a></p>
+<p>You can also see a list of all available commands on the same menu. This will give you a huge list of commands to choose from like ‘verifyTitle’, ‘verifyValue’, ‘open’, ‘storeTitle’, etc.</p>
+<p style="text-align: center;"><a href="https://blog.udemy.com/wp-content/uploads/2013/12/15.png"><img class="aligncenter size-full wp-image-22700" src="https://blog.udemy.com/wp-content/uploads/2013/12/15.png" alt="15" width="447" height="492" /></a></p>
+<p>Using these different options, you can create automated tests to check different elements in a web app. For this example, if you stop the recording and play back the test, Selenium IDE will first open Google.com, type in the desired query, and finally, verify that the query has been entered into the search bar.</p>
+<p><a href="https://blog.udemy.com/wp-content/uploads/2013/12/16.png"><img class="aligncenter size-full wp-image-22702" src="https://blog.udemy.com/wp-content/uploads/2013/12/16.png" alt="16" width="281" height="182" /></a></p>
+<p>Selenium IDE is a very powerful tool for making QA tests. You can combine different commands, use the contextual menu, and even create your own commands through Selenium.</p>
+<p>To learn more about Selenium and automated testing, check out this course on <a href="https://www.udemy.com/web-application-testing-with-selenium/?tc=blog.seleniumidetutorial&amp;couponCode=half-off-for-blog">web application testing with Selenium</a>.</p>
+<a id="dd_end"></a><div class='dd_outer'><div class='dd_inner'><div id='dd_ajax_float'><div class='dd_button_v'><a href="http://twitter.com/share" class="twitter-share-button" data-url="https://blog.udemy.com/selenium-ide-tutorial/" data-count="vertical" data-text="Selenium Tutorial: Learn Selenium WebDriver" data-via="" ></a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></div><div style='clear:left'></div><div class='dd_button_v'><a href="http://bufferapp.com/add" class="buffer-add-button" data-count="vertical" data-text="Selenium Tutorial: Learn Selenium WebDriver" data-url="https://blog.udemy.com/selenium-ide-tutorial/" data-via=""></a><script type="text/javascript" src="https://static.bufferapp.com/js/button.js"></script></div><div style='clear:left'></div><div class='dd_button_v'><script src="//connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="https://blog.udemy.com/selenium-ide-tutorial/" send="false" show_faces="false"  layout="box_count" width="50"  ></fb:like></div><div style='clear:left'></div><div class='dd_button_v'><script type='text/javascript' src='https://apis.google.com/js/plusone.js'></script><g:plusone size='tall' href='https://blog.udemy.com/selenium-ide-tutorial/'></g:plusone></div><div style='clear:left'></div></div></div></div><script type="text/javascript">var dd_offset_from_content = 43;var dd_top_offset_from_content = 0;var dd_override_start_anchor_id = "";var dd_override_top_offset = "";</script><script type="text/javascript" src="https://blog.udemy.com/wp-content/plugins/digg-digg//js/diggdigg-floating-bar.js?ver=5.3.6"></script></div><div class="post-meta"><span class="categories">Filed Under: <a href="https://blog.udemy.com/category/tutorials/" rel="category tag">Tutorials</a></span> </div></div></div><div id="sidebar" class="sidebar widget-area"><div id="text-11" class="widget widget_text"><div class="widget-wrap"><h4 class="widget-title widgettitle">Top Udemy Courses:</h4>
+			<div class="textwidget"><div class="featured-posts">
+<ul class="wpp-list">
+<li><a href=https://www.udemy.com/topic/java>Top Java Courses</a></li>
+<li><a href=https://www.udemy.com/topic/python/>Top Python Courses</a></li>
+<li><a href=https://www.udemy.com/topic/excel/>Top Excel Courses</a></li>
+<li><a href=https://www.udemy.com/tutorials/learn-excel>Learn Excel With This GIF Tutorial</a></li>
+<li><a href=https://www.udemy.com/how-to-become-a-web-developer-from-scratch/?tc=blog.widget.webdev.p&couponCode=blog13><img width="15" border="0" src="https://blog.udemy.com/wp-content/uploads/2013/08/webdeveloper.png" alt="" class="wpp-thumbnail wpp_cached_thumb wpp_featured">Become a Web Developer from Scratch! (8100+ students)</a></li>
+<li><a href=https://www.udemy.com/excel-mastery-course-part-1-of-5-calculate/?tc=blog.widget.excel.p&couponCode=blog13><img width="15" border="0" src="https://blog.udemy.com/wp-content/uploads/2013/08/excelmastery.png" alt="" class="wpp-thumbnail wpp_cached_thumb wpp_featured">Excel Mastery Course (1010+ students)</a></li>
+<li><a href=https://www.udemy.com/advanced-excel/?tc=blog.widget.excel.p&couponCode=blog13><img width="15" border="0" src="https://blog.udemy.com/wp-content/uploads/2013/08/advancedexcel.png" alt="" class="wpp-thumbnail wpp_cached_thumb wpp_featured">Advanced Excel Training (42,660+ students)</a></li>
+<li><a href=https://www.udemy.com/coding-for-entrepreneurs/?tc=blog.widget.coding.p&couponCode=blog13><img width="15" border="0" src="https://blog.udemy.com/wp-content/uploads/2013/08/coding.png" alt="" class="wpp-thumbnail wpp_cached_thumb wpp_featured">Coding for Entrepreneurs (4810+ students)</a></li>
+<li><a href=https://www.udemy.com/ios-development-code-camp/?tc=blog.widget.ios.p&couponCode=blog13><img width="15" border="0" src="https://blog.udemy.com/wp-content/uploads/2013/08/iosdev.png" alt="" class="wpp-thumbnail wpp_cached_thumb wpp_featured">iOS Development Code Camp (1155+ students)</a></li>
+<li><a href=https://www.udemy.com/advanced-java-programming/?tc=blog.widget.java.p&couponCode=blog13><img width="15" border="0" src="https://blog.udemy.com/wp-content/uploads/2013/08/advancedjavaprogramming.png" alt="" class="wpp-thumbnail wpp_cached_thumb wpp_featured">Advanced Java Programming (735+ students)</a></li>
+</ul>
+</div>
+</div>
+		</div></div>
+<div id="text-12" class="widget widget_text"><div class="widget-wrap"><h4 class="widget-title widgettitle">Popular Posts</h4>
+			<div class="textwidget"><ul class="wpp-list popular-posts">
+<li><a href="https://blog.udemy.com/how-to-build-an-iphone-app-from-scratch-for-non-technical-people/" title="How to Build an iPhone App from Scratch for Non-Technical People: Your quick and dirty guide" target="_self"><img src="https://blog.udemy.com/wp-content/uploads/2012/02/Build-iphone-app-15x15.jpg" title="How to Build an iPhone App from Scratch for Non-Technical People: Your quick and dirty guide" alt="How to Build an iPhone App from Scratch for Non-Technical People: Your quick and dirty guide" width="15" height="15" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a><a href="https://blog.udemy.com/how-to-build-an-iphone-app-from-scratch-for-non-technical-people/" title="How to Build an iPhone App from Scratch for Non-Technical People: Your quick and dirty guide" class="wpp-post-title" target="_self">How to Build an iPhone App from Scratch for Non-Technical People: Your quick and dirty guide</a>  <span class="post-stats"></span> </li>
+<li><a href="https://blog.udemy.com/excel-formulas/" title="Excel Formulas: 10 Formulas That Helped Me Keep My Job" target="_self"><img src="https://blog.udemy.com/wp-content/plugins/wordpress-popular-posts/no_thumb.jpg" title="Excel Formulas: 10 Formulas That Helped Me Keep My Job" alt="Excel Formulas: 10 Formulas That Helped Me Keep My Job" width="15" height="15" class="wpp-thumbnail wpp_def_noPath wpp_featured" scale="0"></a><a href="https://blog.udemy.com/excel-formulas/" title="Excel Formulas: 10 Formulas That Helped Me Keep My Job" class="wpp-post-title" target="_self">Excel Formulas: 10 Formulas That Helped Me Keep My Job</a>  <span class="post-stats"></span> </li>
+<li><a href="https://blog.udemy.com/modern-language-wars/" title="Code Wars: Ruby vs Python vs PHP [Infographic]" target="_self"><img src="https://blog.udemy.com/wp-content/uploads/2011/12/PROGRAMMING-LANGUAGE-3-e1326262537447-15x15.png" title="Code Wars: Ruby vs Python vs PHP [Infographic]" alt="Code Wars: Ruby vs Python vs PHP [Infographic]" width="15" height="15" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a><a href="https://blog.udemy.com/modern-language-wars/" title="Code Wars: Ruby vs Python vs PHP [Infographic]" class="wpp-post-title" target="_self">Code Wars: Ruby vs Python vs PHP [Infographic]</a>  <span class="post-stats"></span> </li>
+<li><a href="https://blog.udemy.com/best-programming-language/" title="Top 10 Programming Languages to Learn in 2014" target="_self"><img src="https://blog.udemy.com/wp-content/uploads/2013/07/21-15x15.jpg" title="Top 10 Programming Languages to Learn in 2014" alt="Top 10 Programming Languages to Learn in 2014" width="15" height="15" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a><a href="https://blog.udemy.com/best-programming-language/" title="Top 10 Programming Languages to Learn in 2014" class="wpp-post-title" target="_self">Top 10 Programming Languages to Learn in 2014</a>  <span class="post-stats"></span> </li>
+<li><a href="https://blog.udemy.com/how-to-add-ringtones-to-iphone/" title="How to Add Ringtones To Your iPhone (Updated for iOS 7)" target="_self"><img src="https://blog.udemy.com/wp-content/uploads/2013/10/howtoaddringtonestoiphone-15x15.jpg" title="How to Add Ringtones To Your iPhone (Updated for iOS 7)" alt="How to Add Ringtones To Your iPhone (Updated for iOS 7)" width="15" height="15" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a><a href="https://blog.udemy.com/how-to-add-ringtones-to-iphone/" title="How to Add Ringtones To Your iPhone (Updated for iOS 7)" class="wpp-post-title" target="_self">How to Add Ringtones To Your iPhone (Updated for iOS 7)</a>  <span class="post-stats"></span> </li>
+<li><a href="https://blog.udemy.com/best-powerpoint-presentations/" title="8 Best PowerPoint Presentations: How To Create Engaging Presentations" target="_self"><img src="https://blog.udemy.com/wp-content/plugins/wordpress-popular-posts/no_thumb.jpg" title="8 Best PowerPoint Presentations: How To Create Engaging Presentations" alt="8 Best PowerPoint Presentations: How To Create Engaging Presentations" width="15" height="15" class="wpp-thumbnail wpp_def_noPath wpp_featured" scale="0"></a><a href="https://blog.udemy.com/best-powerpoint-presentations/" title="8 Best PowerPoint Presentations: How To Create Engaging Presentations" class="wpp-post-title" target="_self">8 Best PowerPoint Presentations: How To Create Engaging Presentations</a>  <span class="post-stats"></span> </li>
+<li><a href="https://blog.udemy.com/java-interview-questions/" title="Java Interview Questions: How to crack the TOP 15 questions" target="_self"><img src="https://blog.udemy.com/wp-content/uploads/2013/06/photodune-4652712-occupation-s-15x15.jpg" title="Java Interview Questions: How to crack the TOP 15 questions" alt="Java Interview Questions: How to crack the TOP 15 questions" width="15" height="15" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a><a href="https://blog.udemy.com/java-interview-questions/" title="Java Interview Questions: How to crack the TOP 15 questions" class="wpp-post-title" target="_self">Java Interview Questions: How to crack the TOP 15 questions</a>  <span class="post-stats"></span> </li>
+<li><a href="https://blog.udemy.com/drupal-vs-joomla-vs-wordpress/" title="Drupal vs Joomla vs WordPress: CMS Showdown [infographic]" target="_self"><img src="https://blog.udemy.com/wp-content/uploads/2013/07/CMSShowdown_final2-15x15.jpg" title="Drupal vs Joomla vs WordPress: CMS Showdown [infographic]" alt="Drupal vs Joomla vs WordPress: CMS Showdown [infographic]" width="15" height="15" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a><a href="https://blog.udemy.com/drupal-vs-joomla-vs-wordpress/" title="Drupal vs Joomla vs WordPress: CMS Showdown [infographic]" class="wpp-post-title" target="_self">Drupal vs Joomla vs WordPress: CMS Showdown [infographic]</a>  <span class="post-stats"></span> </li>
+<li><a href="https://blog.udemy.com/making-an-app/" title="Making an App: 6 Things You Should Consider Before Getting Started" target="_self"><img src="https://blog.udemy.com/wp-content/uploads/2013/03/bigstock-Icons-in-a-tablet-Vector-33670934-15x15.jpg" title="Making an App: 6 Things You Should Consider Before Getting Started" alt="Making an App: 6 Things You Should Consider Before Getting Started" width="15" height="15" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a><a href="https://blog.udemy.com/making-an-app/" title="Making an App: 6 Things You Should Consider Before Getting Started" class="wpp-post-title" target="_self">Making an App: 6 Things You Should Consider Before Getting Started</a>  <span class="post-stats"></span> </li>
+<li><a href="https://blog.udemy.com/10-formulas-de-excel/" title="10 Fórmulas de Excel para ser Más Productivo" target="_self"><img src="https://blog.udemy.com/wp-content/uploads/2013/10/advancedexceltutorial-15x15.jpg" title="10 Fórmulas de Excel para ser Más Productivo" alt="10 Fórmulas de Excel para ser Más Productivo" width="15" height="15" class="wpp-thumbnail wpp_cached_thumb wpp_featured" scale="0"></a><a href="https://blog.udemy.com/10-formulas-de-excel/" title="10 Fórmulas de Excel para ser Más Productivo" class="wpp-post-title" target="_self">10 Fórmulas de Excel para ser Más Productivo</a>  <span class="post-stats"></span> </li>
+
+</ul></div>
+		</div></div>
+</div></div></div></div><div id="footer" class="footer"><div class="wrap"><div class="gototop"><p><a href="#wrap" rel="nofollow">Return to top of page</a></p></div><div class="creds"><p>&#x000A9;&nbsp;2015 &middot; <a href="https://www.udemy.com">udemy.com</a> &middot; Built on the <a href="http://www.studiopress.com/themes/genesis" title="Genesis Framework">Genesis Framework</a></p></div></div></div></div><script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName('script')[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0020/4338.js";
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+	<div style="display:none">
+	</div>
+<script type="text/javascript">
+adroll_adv_id = "554CPNW4XBAX5EYKBL4HVU";
+adroll_pix_id = "OKLCQMMNANCRNGGEOKKR5M";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+<!-- Qualaroo for udemy.com -->
+<!-- Paste this code right after the <body> tag on every page of your site. -->
+<script type="text/javascript">
+  var _kiq = _kiq || [];
+  (function(){
+    setTimeout(function(){
+    var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+    s.async = true; s.src = '//s3.amazonaws.com/ki.js/34436/6GL.js'; f.parentNode.insertBefore(s, f);
+    }, 1);
+  })();
+</script>
+<script type="text/javascript" src="//www.hellobar.com/hellobar.js"></script>
+<script type="text/javascript">
+    new HelloBar(68118,112497);
+</script>
+<link rel='stylesheet' id='hljstheme-css'  href='https://blog.udemy.com/wp-content/plugins/wp-code-highlightjs/styles/default.css?ver=0.5.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201542'></script>
+<script type='text/javascript' src='https://secure.gravatar.com/js/gprofiles.js?ver=2015Octaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blog.udemy.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.3.1'></script>
+<script type='text/javascript' src='https://blog.udemy.com/wp-content/plugins/wp-code-highlightjs/highlight.common.pack.js?ver=0.5.0'></script>
+    <style>pre.hljs {padding: 5px;}
+pre.hljs code {}</style>
+    <script type="text/javascript">
+    (function($, window) {
+        var init_fn_flag = false;
+        var init_fn = (function() {
+            if (init_fn_flag)
+                return;
+
+            init_fn_flag = true;
+
+             hljs.configure({"tabReplace":"    "});
+            $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
+           
+        });
+
+        $(document).ready(init_fn);
+        $(window).on("load", init_fn);
+    })(jQuery, window);
+    </script>
+
+<script type="text/javascript" src="//www.hellobar.com/hellobar.js"></script>
+<script type="text/javascript">
+    new HelloBar(68118,104827);
+</script>
+<script type='text/javascript' src='https://stats.wp.com/e-201542.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.7',blog:'68266232',post:'22668',tz:'-7',srv:'blog.udemy.com'} ]);
+	_stq.push([ 'clickTrackerInit', '68266232', '22668' ]);
+</script>
+<script src="https://blog.udemy.com/wp-content/themes/epik/js/uri.js"></script>
+<script>
+
+    jQuery(document).ready(function ($) {
+        {
+            $('body').click(function () {
+                $(".cats-dropdown").removeClass('open');
+                $(".dropdown-menu").hide();
+            });
+
+            $('[data-toggle="dropdown"]').toggle(
+                function () {
+                    $(this).parent().addClass('open');
+                },
+                function () {
+                    $(this).parent().removeClass('open');
+                }
+            );
+            $('a').filter('[href^="http://www.udemy.com/"],[href^="https://www.udemy.com/"]').not('[href^="https://blog.udemy.com/"]').each(function () {
+                var h = this.href;
+                var p = $(this).closest(".post");
+                if (p.length) {
+                    if (matches = p.attr("class").match(/post-([0-9]+)/)) {
+                        var id = matches[1];
+                    }
+                } else {
+                    var id = 0;
+                }
+                var uri = new Uri(h)
+                    .addQueryParam('utm_source', 'blog')
+                    .addQueryParam('utm_medium', 'udemyads')
+                    .addQueryParam('utm_content', 'post' + id)
+                    .addQueryParam('utm_campaign', 'content-marketing-blog')
+                    .addQueryParam('xref', 'blog');
+
+                                this.href = uri.toString();
+
+
+            });
+
+//            $(".menu-courses-container a").each(function(){
+//                $(this).attr("href",function(){
+//                    return this.href+"&tc=blog.discover";
+//                })
+//            })
+
+        }
+
+//        $("#discount-popup").fancybox({
+//            wrapCSS : 'discount-popup'
+//        });
+//        $(".fancybox").fancybox();
+
+
+    });
+</script>
+
+
+
+    <a href="#discount-popup" class="fancybox discount-popup-link" style="display: none;">discount</a>
+
+    <div id="discount-popup" style="display: none;">
+        <div class="fxac justify-content-center h100p color-white tac">
+            <div>
+                <div class="fs21">Special Offer for Blog Readers!</div>
+                <div class="anton ttu big-get-text">get 50% Off</div>
+                <div class="fs21">Any* Course for a Limited Time</div>
+                <div>
+                    <a href="https://www.udemy.com/courses/?pmtag=blog&utm_source=blog&utm_medium=udemyads&utm_content=hellobar&utm_campaign=content-marketing-blog&source=blogpop" class="gray-btn">Find
+                        a Course Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        (function ($) {
+            $(document).ready(function () {
+                $(".discount-popup-link").fancybox({
+                    wrapCSS: 'discount-popup-wrapper'
+                });
+                setTimeout(function () {
+                    $('.discount-popup-link').trigger('click');
+                }, 15000);
+            });
+        })(jQuery);
+    </script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3bb663a57e","applicationID":"10345758","transactionName":"NVJWNRdVDEICVBVRDQwYdQIRXQ1fTEQIVgUOUg==","queueTime":0,"applicationTime":1160,"atts":"GRVVQ19PH0w=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-686.min.js"}</script></body>
+</html>
+�#�      VɭV��;�\�       .:https://blog.udemy.com/selenium-ide-tutorial/ necko:classified 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAQAAgAAAAAAAAAAAAAAAAAAAAAB4vFIJp5wRkeyPxAQ9RJGKPqbqVvKO0mKuIl8ec8o/uhmCjImkVxP+7sgiYWmMt8F+O2DZM7ZTG6GukivU8OT5gAAAAAAAAtRMIILTTCCCjWgAwIBAgIQCu5ejWwMGy6d3lQxQZyOiDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMS8wLQYDVQQDEyZEaWdpQ2VydCBTSEEyIEhpZ2ggQXNzdXJhbmNlIFNlcnZlciBDQTAeFw0xNTAzMDMwMDAwMDBaFw0xNjA0MDYxMjAwMDBaMG4xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRUwEwYDVQQKEwxGYXN0bHksIEluYy4xGzAZBgNVBAMMEiouYy5zc2wuZmFzdGx5Lm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOHWjdkuEag2aL5dJ80aPtL5hmgjzGAz2YdVcvgC/BstoiXqZJOZpgSSCpHyy0s6omUlWllr9MmQ82ndnBM6TQ7n5B+Wli2ssywVpgYLdZo1eg79x+kPs+syAqaNTnhpRycMJk38/fviqbrX16Re6ZXHGEnKwnWcXGBNBDnR70KsxEZCcO+aiZOz+yW4prAyPbGhf71kFey98aqUWIp2HPQnuRCzeBzoBi16bAEFa5NEuojFFox2ZrW2v557AV3zVaRZrKTCGG76zdOO5k11PXpp72RX+bSilYdGzSBFkjpzIXQOL5hAPMBrchL6CMYyCT/JGO0EUi6qXXNnbFKRmA8CAwEAAaOCB+MwggffMB8GA1UdIwQYMBaAFFFo/5CvAgd1PMzZZWRiohK4WXI7MB0GA1UdDgQWBBT29F+NSEY/eCd2iLurG2Idwnd6/DCCBh0GA1UdEQSCBhQwggYQghIqLmMuc3NsLmZhc3RseS5uZXSCEGMuc3NsLmZhc3RseS5uZXSCDCoudGFyZ2V0LmNvbYIIKi52aHgudHaCDiouc25hcHB5dHYuY29tgg8qLmF0bGFzc2lhbi5uZXSCFHNlY3VyZS5sZXNzdGhhbjMuY29tgg8qLmF0bGFzc2lhbi5jb22CD2Euc2VsbHBvaW50Lm5ldIIPY2RuLnVwdGhlcmUuY29tggwqLnRpc3N1dS5jb22CCyouaXNzdXUuY29tggwqLnB5dGhvbi5vcmeCDioudGhldmVyZ2UuY29tgg4qLnNibmF0aW9uLmNvbYINKi5wb2x5Z29uLmNvbYIVKi50d29icmlnaHRsaWdodHMuY29tghQqLjJicmlnaHRsaWdodHMuaW5mb4IJKi52b3guY29tghdzdGFnaW5nLWNkbi51cHRoZXJlLmNvbYIMKi56ZWVib3guY29tggwqLmJlYW1seS5jb22CDSouYXRpY3Bhbi5vcmeCF3N0cmVhbS5zdmMuN2RpZ2l0YWwubmV0ghxzdHJlYW0tdGVzdC5zdmMuN2RpZ2l0YWwubmV0ghAqLmFydGljdWxhdGUuY29tggZzLnQuc3SCEXZpZC50aGVzdHJlZXQuY29tghEqLnBsYW5ldC1sYWJzLmNvbYINKi51cmwycG5nLmNvbYIIdHVybi5jb22CDHd3dy50dXJuLmNvbYIScml2ZXJnYXRoZXJpbmcub3Jngh9zb2NpYWwuaWNmZ2xvYmFsMjAxNC1ldXJvcGUub3JnghIqLmlubm9nYW1lc2Nkbi5jb22CDioucGF0aGFibGUuY29tghYqLnN0YWdpbmcucGF0aGFibGUuY29tghEqLmtpY2tzdGFydGVyLmNvbYISc3BhcmtpbmdjaGFuZ2Uub3Jngg93d3cuc3dlZGF2aWEuc2WCEHd3dy5zd2VkYXZpYS5jb22CFWpzLWFnZW50Lm5ld3JlbGljLmNvbYIUKi5mYXN0bHktc3RyZWFtcy5jb22CEWNkbi5icmFuZGlzdHkuY29tghZmYXN0bHkuaGlnaHRhaWxjZG4uY29tghAqLmZsLnllbHBjZG4uY29tghAqLmZlZWRtYWduZXQuY29tggwqLmFjcXVpYS5jb22CDiouc3dhcm1hcHAuY29tggkqLnB5cGEuaW+CB3B5cGEuaW+CEXN0YXRpYy5xYnJhbmNoLnNlggoqLmtyeGQubmV0ggkqLnJvb20uY2+CEioubWV0cm9sb2dpY2FsLmNvbYIHcm9vbS5jb4INY2RuLmV2YnVjLmNvbYIRY2RuLmFkYWdpbGl0eS5jb22CDiouYmFuZHBhZ2UuY29tghYqLmlibXNlcnZpY2VlbmdhZ2UuY29tggwqLnF1aXJreS5jb22CCSoudmVlei5jb4IGKi54Lmlvgg0qLm90b3ljZG4ubmV0ggwqLnNjcmliZC5jb22CDXd3dy5kd2luMS5jb22CFWFwaS5pbWd1ci15c3BvcnRzLmNvbYITaS5pbWd1ci15c3BvcnRzLmNvbYILbGlzdG9yYS5jb22CDSoubGlzdG9yYS5jb22CCmJsZW5kbGUubmyCDCouYmxlbmRsZS5ubIITKi5tb2RlYW5hbHl0aWNzLmNvbYIRbW9kZWFuYWx5dGljcy5jb22CCGtydXguY29tggoqLmtydXguY29tggsqLnVkZW15LmNvbYINKi4xc3RkaWJzLmNvbYIMYXBpLmtlZXAuY29tghB3d3cucGlyaWZvcm0uY29tggwqLnVzdHJlYW0udHaCDnd3dy56aW1iaW8uY29tggxtLnppbWJpby5jb22CC20ubG9ubnkuY29tgg13d3cubG9ubnkuY29tghVhc3NldHMudHJhYmlhbmNkbi5jb22CFCouaGVyaXRhZ2VzdGF0aWMuY29tghEqLnRoZW91dGJvdW5kLmNvbYIPaW1nLnJha3V0ZW4uY29tghJpbWFnZXMucmFrdXRlbi5jb22CC2ltZzEucjEwLmlvggthc3QxLnIxMC5pb4IKc2NyaWJkLmNvbTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMHUGA1UdHwRuMGwwNKAyoDCGLmh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9zaGEyLWhhLXNlcnZlci1nNC5jcmwwNKAyoDCGLmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWhhLXNlcnZlci1nNC5jcmwwQgYDVR0gBDswOTA3BglghkgBhv1sAQEwKjAoBggrBgEFBQcCARYcaHR0cHM6Ly93d3cuZGlnaWNlcnQuY29tL0NQUzCBgwYIKwYBBQUHAQEEdzB1MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wTQYIKwYBBQUHMAKGQWh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFNIQTJIaWdoQXNzdXJhbmNlU2VydmVyQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBAG0uhiZAg3Uc9zTsDKc+t5f1ACyoNdx2p+ufudz1t9+95FsUsXqs2i7o6NKy4nGJPYNGfm2aXFx8jlNUwNivyGPt37c+BwsVg0cxVVO5npBQJzyx7AlhOzLyUeLOBeMcy3imasMYxsd8JK7smVMUtBuT1/G26xQmfLH+Kx4JcFK8gq9Fvm/0fu5icwrqgorsMFtvd7AlGdytm62UZcFo9hGq6AmVaSQ5RjHiNZ5XHtpKHOfO5+U5JO4otqWMCxzDS6Pm/u/EpigKhxu9RA3Bmv9KMSXjcj4EUMzAh1la6lySdTBxvWVLu5355VSy6UN0hmhKbKw0EXUbO71joIqFjvDALwADAAAAAAEBAAA= request-method GET response-head HTTP/1.1 200 OK
+Server: Apache/2.2.15 (CentOS)
+X-Frame-Options: SAMEORIGIN, SAMEORIGIN
+x-ua-compatible: IE=edge,chrome=1
+Link: <https://wp.me/p4Crag-5TC>; rel=shortlink
+Strict-Transport-Security: max-age=31536000
+x-content-type-options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Permitted-Cross-Domain-Policies: master-only
+X-Content-Security-Policy: default-src 'self'; img-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self';
+Content-Type: text/html; charset=UTF-8
+Accept-Ranges: bytes
+Date: Thu, 15 Oct 2015 15:43:43 GMT
+Via: 1.1 varnish
+Age: 0
+X-Served-By: cache-fra1248-FRA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1444923821.799456,VS0,VE1482
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 100 predictor::https://blog.udemy.com/wp-content/uploads/2013/12/13.png 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/12/14.png 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/12/15.png 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/12/16.png 1,1,1444923821,0 predictor::https://platform.twitter.com/widgets.js 1,1,1444923821,0 predictor::https://static.bufferapp.com/js/button.js 1,1,1444923821,0 predictor::https://connect.facebook.net/en_US/all.js#xfbml=1 1,1,1444923821,0 predictor::https://apis.google.com/js/plusone.js 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/plugins/digg-digg//js/diggdigg-floating-bar.js?ver=5.3.6 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/08/webdeveloper.png 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/08/excelmastery.png 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/08/advancedexcel.png 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/08/coding.png 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/08/iosdev.png 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/08/advancedjavaprogramming.png 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2012/02/Build-iphone-app-15x15.jpg 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/plugins/wordpress-popular-posts/no_thumb.jpg 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2011/12/PROGRAMMING-LANGUAGE-3-e1326262537447-15x15.png 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/07/21-15x15.jpg 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/10/howtoaddringtonestoiphone-15x15.jpg 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/06/photodune-4652712-occupation-s-15x15.jpg 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/07/CMSShowdown_final2-15x15.jpg 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/03/bigstock-Icons-in-a-tablet-Vector-33670934-15x15.jpg 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2013/10/advancedexceltutorial-15x15.jpg 1,1,1444923821,0 predictor::https://www.hellobar.com/hellobar.js 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/plugins/wp-code-highlightjs/styles/default.css?ver=0.5.0 1,1,1444923821,0 predictor::https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201542 1,1,1444923821,0 predictor::https://secure.gravatar.com/js/gprofiles.js?ver=2015Octaa 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.3.1 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/plugins/wp-code-highlightjs/highlight.common.pack.js?ver=0.5.0 1,1,1444923821,0 predictor::https://stats.wp.com/e-201542.js 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/themes/epik/js/uri.js 1,1,1444923821,0 predictor::https://bounceexchange.com/tag/858/i.js 1,1,1444923821,0 predictor::https://ssl.google-analytics.com/ga.js 1,1,1444923821,0 predictor::https://connect.facebook.net/en_US/fbds.js 1,1,1444923821,0 predictor::https://ssl.google-analytics.com/r/__utm.gif?utmwv=5.6.7&utms=1&utmn=923014680&utmhn=blog.udemy.com&utmcs=UTF-8&utmsr=1366x768&utmvp=1288x673&utmsc=24-bit&utmul=de&utmje=0&utmfl=-&utmdt=Selenium%20Tutorial%3A%20Learn%20Selenium%20WebDriver&utmhid=1237361202&utmr=https%3A%2F%2Fwww.google.de&utmp=%2Fselenium-ide-tutorial%2F&utmht=1444923824225&utmac=UA-12366301-1&utmcc=__utma%3D106203728.502942363.1444923824.1444923824.1444923824.1%3B%2B__utmz%3D106203728.1444923824.1.1.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3D(not%2520provided)%3B&utmjid=379474352&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAQE~ 1,1,1444923821,0 predictor::https://www.facebook.com/tr/?id=1457291081167286&ev=PixelInitialized&dl=https%3A%2F%2Fblog.udemy.com%2Fselenium-ide-tutorial%2F&rl=https%3A%2F%2Fwww.google.de&if=false&ts=1444923824247 1,1,1444923821,0 predictor::https://b91.yahoo.co.jp/pagead/conversion.js 1,1,1444923821,0 predictor::https://b91.yahoo.co.jp/pagead/conversion/1000204606/?random=1444923831894&cv=8&fst=1444923831894&num=1&fmt=3&value=500&label=OkJyCL6_hlsQv_mGzQM&guid=ON&disvt=true&u_h=768&u_w=1366&u_ah=744&u_aw=1301&u_cd=24&u_his=5&u_tz=120&u_java=false&u_nplug=5&u_nmime=44&frm=0&url=https%3A//blog.udemy.com/selenium-ide-tutorial/&ref=https%3A//www.google.de 1,1,1444923821,0 predictor::https://b90.yahoo.co.jp/c?yahoo_ydn_conv_io=RdbzFngOLDVJ43MekUGf&yahoo_ydn_conv_label=R1D5UMOKNEM25SOEZ6G235913&yahoo_ydn_conv_transaction_id=&yahoo_ydn_conv_amount=500&r=1444923831.0547059 1,1,1444923821,0 predictor::https://www.googleadservices.com/pagead/conversion/966888136/?random=1444923831908&cv=8&fst=1444923831894&num=2&fmt=3&label=SgynCKCv_VoQyJWGzQM&bg=ffffff&hl=en&guid=ON&u_h=768&u_w=1366&u_ah=744&u_aw=1301&u_cd=24&u_his=5&u_tz=120&u_java=false&u_nplug=5&u_nmime=44&frm=0&url=https%3A//blog.udemy.com/selenium-ide-tutorial/&ref=https%3A//www.google.de 1,1,1444923821,0 predictor::https://dsms0mj1bbhn4.cloudfront.net/v2/bf29a6d38b694aad41d253ffbdc1364a35b920e1/shrMain.min.js 1,1,1444923821,0 predictor::https://www.googleadservices.com/pagead/conversion/951369813/?random=1444923831931&cv=8&fst=1444923831894&num=3&fmt=3&label=kUq1CNrK-1oQ1YDTxQM&bg=ffffff&hl=en&guid=ON&u_h=768&u_w=1366&u_ah=744&u_aw=1301&u_cd=24&u_his=5&u_tz=120&u_java=false&u_nplug=5&u_nmime=44&frm=0&url=https%3A//blog.udemy.com/selenium-ide-tutorial/&ref=https%3A//www.google.de 1,1,1444923821,0 predictor::https://www.facebook.com/tr/?id=null&ev=6034528106080&dl=https%3A%2F%2Fblog.udemy.com%2Fselenium-ide-tutorial%2F&rl=https%3A%2F%2Fwww.google.de&if=false&ts=1444923831935&cd[value]=0.00&cd[currency]=JPY 1,1,1444923821,0 predictor::https://ssl.google-analytics.com/__utm.gif?utmwv=5.6.7&utms=2&utmn=1374705947&utmhn=blog.udemy.com&utmcs=UTF-8&utmsr=1366x768&utmvp=1288x673&utmsc=24-bit&utmul=de&utmje=0&utmfl=-&utmdt=Selenium%20Tutorial%3A%20Learn%20Selenium%20WebDriver&utmhid=1237361202&utmr=https%3A%2F%2Fwww.google.de&utmp=%2Fselenium-ide-tutorial%2F&utmht=1444923831940&utmac=UA-12366301-2&utmdid=i9k95&utmcc=__utma%3D106203728.502942363.1444923824.1444923824.1444923824.1%3B%2B__utmz%3D106203728.1444923824.1.1.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3D(not%2520provided)%3B&utmjid=&utmmt=1&utmu=qAAAAAAAAAAAAAAAAAAAAAQE~ 1,1,1444923821,0 predictor::https://fonts.googleapis.com/css?family=Lora:400,700,400italic 1,1,1444923821,0 predictor::https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.woff?v=4.2.0 1,1,1444923821,0 predictor::https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2 1,1,1444923821,0 predictor::https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2 1,1,1444923821,0 predictor::https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2 1,1,1444923821,0 predictor::https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2 1,1,1444923821,0 predictor::https://fonts.gstatic.com/s/lora/v9/4vqKRIwnQQGUQQh-PnvdMA.woff2 1,1,1444923821,0 predictor::https://fonts.gstatic.com/s/lora/v9/P18Nsu9EiYldSvHIj_0e5w.woff2 1,1,1444923821,0 predictor::https://fonts.gstatic.com/s/lora/v9/_RSiB1sBuflZfa9fxV8cOg.woff2 1,1,1444923821,0 predictor::https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js 1,1,1444923821,0 predictor::https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.de.rPU_O66hFXQ.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCMc-hpistHsY0aI-S7PCPrlJcrMKw/t=zcms/cb=gapi.loaded_0 1,1,1444923821,0 predictor::https://www.google-analytics.com/analytics.js 1,1,1444923821,0 predictor::https://shareaholic.com/v2/user_info?callback=jQuery213009961008020635775_1444923832706&_=1444923832707 1,1,1444923821,0 predictor::https://analytics.shareaholic.com/dough/1.0/pageview.gif?referrer=https%3A%2F%2Fwww.google.de 1,1,1444923821,0 predictor::https://script.crazyegg.com/pages/scripts/0020/4338.js 1,1,1444923821,0 predictor::https://my.hellobar.com/68118_112497.js 1,1,1444923821,0 predictor::https://cdn.viglink.com/api/vglnk.js 1,1,1444923821,0 predictor::https://partner.shareaholic.com/partners.js?location=https%3A%2F%2Fblog.udemy.com%2Fselenium-ide-tutorial%2F&canonical=https%3A%2F%2Fblog.udemy.com%2Fselenium-ide-tutorial%2F&referrer=https%3A%2F%2Fwww.google.de&site=c6fe6c191302e91808fdf06127767340 1,1,1444923821,0 predictor::https://s3.amazonaws.com/ki.js/34436/6GL.js 1,1,1444923821,0 predictor::https://cdn.viglink.com/images/pixel.gif?ch=1&rn=9.091144067452625 1,1,1444923821,0 predictor::https://cdn.viglink.com/images/pixel.gif?ch=2&rn=9.091144067452625 1,1,1444923821,0 predictor::https://my.hellobar.com/68118_104827.js 1,1,1444923821,0 predictor::https://secure.gravatar.com/css/hovercard.css?ver=2015Octaa 1,1,1444923821,0 predictor::https://secure.gravatar.com/css/services.css?ver=2015Octaa 1,1,1444923821,0 predictor::https://platform.twitter.com/js/button.aec556e1a316f63b43fda3ae1e6a3e10.js 1,1,1444923821,0 predictor::https://old.hellobar.com/hellobar-68118-112497.js 1,1,1444923821,0 predictor::https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.de.rPU_O66hFXQ.O/m=auth/exm=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCMc-hpistHsY0aI-S7PCPrlJcrMKw/t=zcms/cb=gapi.loaded_1 1,1,1444923821,0 predictor::https://pixel.wp.com/g.gif?v=ext&j=1%3A3.7&blog=68266232&post=22668&tz=-7&srv=blog.udemy.com&host=blog.udemy.com&ref=https%3A%2F%2Fwww.google.de&rand=0.008710608245787066 1,1,1444923821,0 predictor::https://sb.scorecardresearch.com/beacon.js 1,1,1444923821,0 predictor::https://px.owneriq.net/stas/s/sholic.js 1,1,1444923821,0 predictor::https://sb.scorecardresearch.com/b?c1=7&c2=19376307&c3=1&ns__t=1444923835686&ns_c=UTF-8&c8=Selenium%20Tutorial%3A%20Learn%20Selenium%20WebDriver&c7=https%3A%2F%2Fblog.udemy.com%2Fselenium-ide-tutorial%2F&c9=https%3A%2F%2Fwww.google.de 1,1,1444923821,0 predictor::https://ssl.google-analytics.com/__utm.gif?utmwv=5.6.7&utms=3&utmn=1490767411&utmhn=blog.udemy.com&utmt=event&utme=5(15_seconds*read)&utmcs=UTF-8&utmsr=1366x768&utmvp=1288x673&utmsc=24-bit&utmul=de&utmje=0&utmfl=-&utmdt=Selenium%20Tutorial%3A%20Learn%20Selenium%20WebDriver&utmhid=1237361202&utmr=https%3A%2F%2Fwww.google.de&utmp=%2Fselenium-ide-tutorial%2F&utmht=1444923839199&utmac=UA-12366301-2&utmdid=i9k95&utmcc=__utma%3D106203728.502942363.1444923824.1444923824.1444923824.1%3B%2B__utmz%3D106203728.1444923824.1.1.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3D(not%2520provided)%3B&utmjid=&utmmt=1&utmu=6AAAAAAAAAAAAAAAAAAAAAQE~ 1,1,1444923821,0 predictor::https://px.owneriq.net/j/?pt=sholic&t=d%7C%22Consumer%2520Electronics%22&s=inte 1,1,1444923821,0 predictor::https://px.owneriq.net/eexelate.js?pc=sholic 1,1,1444923821,0 predictor::https://px.owneriq.net/ep?sid%5B%5D=3906811553&sid%5B%5D=3585802694&sid%5B%5D=3588953253&pt=sholic 1,1,1444923821,0 predictor::https://js-agent.newrelic.com/nr-686.min.js 1,1,1444923821,0 predictor::https://s.adroll.com/j/roundtrip.js 1,1,1444923821,0 predictor::https://old.hellobar.com/hellobar-68118-104827.js 1,1,1444923821,0 predictor::https://bam.nr-data.net/1/3bb663a57e?a=10345758&pl=1444923821643&v=686.b365e66&to=NVJWNRdVDEICVBVRDQwYdQIRXQ1fTEQIVgUOUg%3D%3D&ap=1160&be=1853&fe=22728&dc=10149&f=%5B%22err%22,%22xhr%22,%22stn%22,%22ins%22%5D&perf=%7B%22timing%22:%7B%22of%22:1444923821643,%22n%22:0,%22dl%22:1816,%22di%22:11996,%22ds%22:12001,%22de%22:12469,%22dc%22:24572,%22l%22:24579,%22le%22:24586,%22f%22:3,%22dn%22:3,%22dne%22:56,%22c%22:56,%22ce%22:56,%22rq%22:129,%22rp%22:165,%22rpe%22:165%7D,%22navigation%22:%7B%7D%7D&at=GRVVQ19PH0w%3D&jsonp=NREUM.setToken 1,1,1444923821,0 predictor::https://hb-assets.s3.amazonaws.com/system/modules/hellobar/lib/sprite-8bit.png 1,1,1444923821,0 predictor::https://d.adroll.com/pixel/554CPNW4XBAX5EYKBL4HVU/OKLCQMMNANCRNGGEOKKR5M?pv=22733579452.230667&cookie=&keyw= 1,1,1444923821,0 predictor::https://ping.hellobar.com/?_h=106164&_e=impression&_sb=1444923846&_d=blog.udemy.com&_exclude=none&_unique=true 1,1,1444923821,0 predictor::https://d.adroll.com/cm/r/out 1,1,1444923821,0 predictor::https://d.adroll.com/cm/f/out 1,1,1444923821,0 predictor::https://d.adroll.com/cm/b/out 1,1,1444923821,0 predictor::https://d.adroll.com/cm/x/out 1,1,1444923821,0 predictor::https://d.adroll.com/cm/l/out 1,1,1444923821,0 predictor::https://d.adroll.com/cm/o/out 1,1,1444923821,0 predictor::https://d.adroll.com/cm/g/out?google_nid=adroll2 1,1,1444923821,0 predictor::https://www.facebook.com/tr?id=304647029721873&cd[segment_eid]=2LR6L6STHFB3RO642XIQLO&ev=NoScript 1,1,1444923821,0 predictor::https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1011350631/?label=K37kCNmgpQMQ5_if4gM&guid=ON&script=0&ord=5893420902026235 1,1,1444923821,0 predictor::https://secure.adnxs.com/seg?add=324915&t=2 1,1,1444923821,0 predictor::https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/fancybox_overlay.png 1,1,1444923821,0 predictor::https://blog.udemy.com/wp-content/uploads/2015/06/discount-popup-bg.png 1,1,1444923821,0 predictor::https://fonts.gstatic.com/s/anton/v7/o-91-t7-bPc7W26HmS2N4Q.woff2 1,1,1444923821,0  ��

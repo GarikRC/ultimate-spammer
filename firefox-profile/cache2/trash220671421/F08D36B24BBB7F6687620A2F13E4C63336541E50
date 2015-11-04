@@ -1,0 +1,755 @@
+
+<aside class="secondary addon-reviews c">
+      <div>
+        <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+      Durchschnitt
+    </div>
+      <div>
+    <ul class="grouped_ratings" data-total="17">
+                <li class="c">  <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="11">
+          <span class="bar" style="width:64.0%">
+            <span class="num_ratings">11</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="5">
+          <span class="bar" style="width:29.0%">
+            <span class="num_ratings">5</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-3" title="Bewertet mit 3 von 5 Sternen">Bewertet mit 3 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="0">
+          <span class="bar" style="width:0.0%">
+            <span class="num_ratings">0</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-2" title="Bewertet mit 2 von 5 Sternen">Bewertet mit 2 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="1">
+          <span class="bar" style="width:5.0%">
+            <span class="num_ratings">1</span>
+          </span>
+        </div>
+      </li>
+                <li class="c">  <span class="stars stars-1" title="Bewertet mit 1 von 5 Sternen">Bewertet mit 1 von 5 Sternen</span>
+
+        <div class="rating_bar" data-num-reviews="0">
+          <span class="bar" style="width:0.0%">
+            <span class="num_ratings">0</span>
+          </span>
+        </div>
+      </li>
+        </ul>
+  </div>
+      <div>
+      <a class="button" id="add-review" href="/de/firefox/addon/cookies-exportimport/reviews/add">Eine Bewertung schreiben</a>
+    </div>
+    <a id="report-abuse" href="/de/developers/docs/policies/contact"
+     class="abuse-image">Missbrauch melden</a>
+</aside>
+
+<section id="reviews" class="primary island c">
+  <h2>Bewertungen</h2>
+                  <div class="review">
+        <h3>
+                      <b>Funciona muy bien</b>
+                      <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+        </h3>
+        <p class="byline">
+          von <a href="/de/firefox/user/Godiesc_25/" title="Godiesc25">Godiesc25</a> am October  4, 2015          &middot;
+          <a class="permalink"
+             href="/de/firefox/addon/cookies-exportimport/reviews/752494/">Permanentlink</a>
+                      &middot;
+            <a class="translate" rel="nofollow" target="_blank"
+               href="/de/firefox/addon/cookies-exportimport/reviews/752494/translate/de">Übersetzen</a>
+                  </p>
+        <p class="description">Excelente complemento, sería bueno que se pudiera exportar los Cookies para otros navegadores, o exportaras (crear) este complemento para chrome para poder importarlos de ahí.</p>
+              </div>
+          <div class="review">
+        <h3>
+                      <b>It is very good but not supported on Android Tablet</b>
+                      <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+        </h3>
+        <p class="byline">
+          von <a href="/de/firefox/user/ManuelPena/" title="Maniche">Maniche</a> am September 11, 2015          &middot;
+          <a class="permalink"
+             href="/de/firefox/addon/cookies-exportimport/reviews/745880/">Permanentlink</a>
+                      &middot;
+            <a class="translate" rel="nofollow" target="_blank"
+               href="/de/firefox/addon/cookies-exportimport/reviews/745880/translate/de">Übersetzen</a>
+                  </p>
+        <p class="description">It&#39;s great addon.<br>but it is not compatible with version 40.0.3 on a firefox a tablet with android.<br>It displays an error message unsupported and can not install.<br>Good would solve this problem.<br>thank you.</p>
+              </div>
+          <div class="review">
+        <h3>
+                      <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+        </h3>
+        <p class="byline">
+          von <a href="/de/firefox/user/hessambro/" title="co222">co222</a> am March  6, 2015          &middot;
+          <a class="permalink"
+             href="/de/firefox/addon/cookies-exportimport/reviews/683604/">Permanentlink</a>
+                      &middot;
+            <a class="translate" rel="nofollow" target="_blank"
+               href="/de/firefox/addon/cookies-exportimport/reviews/683604/translate/de">Übersetzen</a>
+                  </p>
+        <p class="description">can you add option to give it path for backup<br>and restore it on start of firefox?automatic backup on exit automatic restore on start</p>
+              </div>
+              <p>
+        <a class="more-info" href="/de/firefox/addon/cookies-exportimport/reviews/">
+          Alle 17 Bewertungen von Benutzern ansehen        </a>
+      </p>
+      
+</section>
+
+<aside id="related" class="secondary metadata c">
+            <h3>Verwandte Kategorien</h3>
+      <ul>
+                <li>
+          <a href="/de/firefox/extensions/privacy-security/">
+            Datenschutz &amp; Sicherheit
+          </a>
+        </li>
+              </ul>
+        <div class="clearboth">
+  <h3 class="compact-bottom">Tags</h3>
+
+  <div id="tagbox">
+    
+  <ul class="addon-tags nojs" id="addonid-344927">
+          <li id="taglink-2042" class="tag">
+      <a href="/de/firefox/tag/cookies" class="tagitem">
+      cookies
+    </a>
+  </li>
+          <li id="taglink-325" class="tag">
+      <a href="/de/firefox/tag/export" class="tagitem">
+      export
+    </a>
+  </li>
+          <li id="taglink-326" class="tag">
+      <a href="/de/firefox/tag/import" class="tagitem">
+      import
+    </a>
+  </li>
+          <li id="taglink-27604" class="tag">
+      <a href="/de/firefox/tag/restartless" class="tagitem">
+      restartless
+    </a>
+  </li>
+      </ul>
+
+  </div>
+</div>
+
+</aside>
+
+  <section class="primary island c">
+          <section id="recommendations-grid">
+        <h2 class="compact-bottom">Oft verwendet mit&hellip;</h2>
+        <ul class="listing-grid c cols-3">
+    <section>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/permit-cookies/?src=dp-dl-oftenusedwith">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für Permit Cookies">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/permit-cookies/?src=dp-dl-oftenusedwith">
+        <h3>Permit Cookies</h3>
+                              <div class="category more-info">Datenschutz &amp; Sicherheit</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/permit-cookies/reviews/">(40)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="44"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/permit-cookies/developers"
+  data-versions="/de/firefox/addon/44/versions/"
+  data-name="Permit Cookies"
+  
+  data-min="1.5.0.*"
+  data-max="3.0a6"
+  data-is-compatible="true"
+  data-is-compatible-app="false"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:56daa033285042837a224726b167d3bf4d3050d93eecd52a73c227e75850f897"
+      href="/firefox/downloads/latest/44/addon-44-latest.xpi?src=dp-hc-oftenusedwith"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      Set cookie permissions for the site you are viewing.
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/daniel-lindkvist/" title="Daniel Lindkvist">Daniel Lindkvist</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    243 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/open-long-url/?src=dp-dl-oftenusedwith">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für Open Long Url">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/open-long-url/?src=dp-dl-oftenusedwith">
+        <h3>Open Long Url</h3>
+                                </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-5" title="Bewertet mit 5 von 5 Sternen">Bewertet mit 5 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/open-long-url/reviews/">(7)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="132"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/open-long-url/developers"
+  data-versions="/de/firefox/addon/132/versions/"
+  data-name="Open Long Url"
+  
+  data-min="1.0"
+  data-max="3.6.*"
+  data-is-compatible="true"
+  data-is-compatible-app="false"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:3440aac953a30bfd346cc695b3591164d90a90641100ce2d9c48dd5e9a1c864e"
+      href="/firefox/downloads/latest/132/addon-132-latest.xpi?src=dp-hc-oftenusedwith"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      Adds an option to your File menu to allow you to open long, multi-line...
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/jeremy-gillick/" title="Jeremy Gillick">Jeremy Gillick</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    160 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/loremipsum-content-generator/?src=dp-dl-oftenusedwith">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für LoremIpsum Content Generator">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/loremipsum-content-generator/?src=dp-dl-oftenusedwith">
+        <h3>LoremIpsum Content Generator</h3>
+                                </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/loremipsum-content-generator/reviews/">(6)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="198"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/loremipsum-content-generator/developers"
+  data-versions="/de/firefox/addon/198/versions/"
+  data-name="LoremIpsum Content Generator"
+  
+  data-min="1.0"
+  data-max="3.6.*"
+  data-is-compatible="true"
+  data-is-compatible-app="false"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:6541ab71d2328b86ba4c58c94d703cba76b5d7daa387ef1ec8f77db154f75f27"
+      href="/firefox/downloads/latest/198/addon-198-latest.xpi?src=dp-hc-oftenusedwith"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      Uses latin-like words to create filler...
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/jeremy-gillick/" title="Jeremy Gillick">Jeremy Gillick</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    230 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/searchbox-companion/?src=dp-dl-oftenusedwith">
+            <img src="https://addons.cdn.mozilla.net/user-media/addon_icons/0/377-32.png?modified=1275608348" alt="Symbol für SearchBox Companion">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/searchbox-companion/?src=dp-dl-oftenusedwith">
+        <h3>SearchBox Companion</h3>
+                              <div class="category more-info">Suchwerkzeuge</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/searchbox-companion/reviews/">(32)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="377"
+  data-icon="https://addons.cdn.mozilla.net/user-media/addon_icons/0/377-32.png?modified=1275608348"
+  data-developers="/de/firefox/addon/searchbox-companion/developers"
+  data-versions="/de/firefox/addon/377/versions/"
+  data-name="SearchBox Companion"
+  
+  data-min="1.5"
+  data-max="3.5.*"
+  data-is-compatible="true"
+  data-is-compatible-app="false"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:09a3df1602f75ca4b0cd0a1b04a737bf899c303fabe75f8048a007d1732be932"
+      href="/firefox/downloads/latest/377/addon-377-latest.xpi?src=dp-hc-oftenusedwith"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      Le compagnon de la la boite de recherche, pour trouver et surligner facilement les mots recherchés
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/marcelochong/" title="Marcelo.chong">Marcelo.chong</a>, <a href="/de/firefox/user/pcdingo/" title=" PCDingo"> PCDingo</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    446 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/phplangeditor/?src=dp-dl-oftenusedwith">
+            <img src="https://addons.cdn.mozilla.net/user-media/addon_icons/0/687-32.png?modified=1322771896" alt="Symbol für phplangeditor">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/phplangeditor/?src=dp-dl-oftenusedwith">
+        <h3>phplangeditor</h3>
+                              <div class="category more-info">Webentwicklung</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/phplangeditor/reviews/">(5)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="687"
+  data-icon="https://addons.cdn.mozilla.net/user-media/addon_icons/0/687-32.png?modified=1322771896"
+  data-developers="/de/firefox/addon/phplangeditor/developers"
+  data-versions="/de/firefox/addon/687/versions/"
+  data-name="phplangeditor"
+  
+  data-min="2.0"
+  data-max="3.6.*"
+  data-is-compatible="true"
+  data-is-compatible-app="false"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:4d1ad176c80d6436780289c44836af380a6f979876f6a890a648e3b06b1873a0"
+      href="/firefox/downloads/latest/687/addon-687-latest.xpi?src=dp-hc-oftenusedwith"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      GUI for translation of language files of your PHP scripts.  By language file I mean files containing all translated strings of your script...
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/fragile/" title="Fragile">Fragile</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    143 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/fancy-numbered-tabs/?src=dp-dl-oftenusedwith">
+            <img src="https://addons.cdn.mozilla.net/user-media/addon_icons/5/5861-32.png?modified=1353043339" alt="Symbol für Fancy Numbered Tabs">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/fancy-numbered-tabs/?src=dp-dl-oftenusedwith">
+        <h3>Fancy Numbered Tabs</h3>
+                              <div class="category more-info">Tabs</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/fancy-numbered-tabs/reviews/">(70)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="5861"
+  data-icon="https://addons.cdn.mozilla.net/user-media/addon_icons/5/5861-32.png?modified=1353043339"
+  data-developers="/de/firefox/addon/fancy-numbered-tabs/developers"
+  data-versions="/de/firefox/addon/5861/versions/"
+  data-name="Fancy Numbered Tabs"
+  
+  data-min="3.0"
+  data-max="3.6.*"
+  data-is-compatible="true"
+  data-is-compatible-app="false"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:ae065bb1e7b9cca90077e36e4dc96b2f0d9902445ab31f4c8045e4361389b966"
+      href="/firefox/downloads/latest/5861/addon-5861-latest.xpi?src=dp-hc-oftenusedwith"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      Replaces the close tab graphic with numbers to help with quick tab navigation via CTRL + [1-8] or Alt + [1-8].
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/chris-gaunt/" title="Chris Gaunt">Chris Gaunt</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    236 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+    </section>
+</ul>
+      </section>
+              <section id="collections-grid">
+        <h2>Teile dieser Sammlungen</h2>
+        <ul class="listing-grid c cols-3">
+    <section>
+      <li>
+      <div class="hovercard collection addon">
+        <a href="/de/firefox/collections/dieter-ferdinand/5c2e7559-c785-3072-cc79-aacdf8/">
+          <div class="icon">
+                          <img src="https://addons.cdn.mozilla.net/static/img/icons/collection.png" alt="">
+                      </div>
+          <div class="summary">
+            <h3>standard d_ferdi</h3>
+            <p class="desc">Eine automatisch erzeugte Liste meiner installierten Add-ons</p>
+          </div>
+        </a>
+        <div class="more">
+                    <span>34</span> Add-ons          &middot;
+                    <span>4</span> Beobachter        </div>
+      </div>
+    </li>
+      <li>
+      <div class="hovercard collection addon">
+        <a href="/de/firefox/collections/tarotarotaro/031a3e08-dda6-e9f5-90db-0ef470/">
+          <div class="icon">
+                          <img src="https://addons.cdn.mozilla.net/static/img/icons/collection.png" alt="">
+                      </div>
+          <div class="summary">
+            <h3>aaaa</h3>
+            <p class="desc">An automatically generated list of my installed add-ons</p>
+          </div>
+        </a>
+        <div class="more">
+                    <span>15</span> Add-ons          &middot;
+                    <span>2</span> Beobachter        </div>
+      </div>
+    </li>
+      <li>
+      <div class="hovercard collection addon">
+        <a href="/de/firefox/collections/truongphi1/my-collections-add-on-ff/">
+          <div class="icon">
+                          <img src="https://addons.cdn.mozilla.net/static/img/icons/collection.png" alt="">
+                      </div>
+          <div class="summary">
+            <h3>add-on FF popular</h3>
+            <p class="desc">everything you need</p>
+          </div>
+        </a>
+        <div class="more">
+                    <span>42</span> Add-ons          &middot;
+                    <span>1</span> Beobachter        </div>
+      </div>
+    </li>
+    </section>
+</ul>
+
+      </section>
+                <section id="author-addons">
+        <h2>
+                      Weitere Add-ons von <a href="/de/firefox/user/Ewind2000/" title="Ewind">Ewind</a>                  </h2>
+        <ul class="listing-grid c cols-3">
+    <section>
+      <li>
+      <div class="addon hovercard">
+    <div class="icon">
+      <a href="/de/firefox/addon/restartless-context-search/?src=dp-dl-othersby">
+            <img src="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png" alt="Symbol für Restartless Context Search">
+            </a>
+    </div>
+    <div class="summary">
+      <a href="/de/firefox/addon/restartless-context-search/?src=dp-dl-othersby">
+        <h3>Restartless Context Search</h3>
+                              <div class="category more-info">Tauschen und Veröffentlichen</div>
+                        </a>
+        <div class="vital">
+            
+<span class="rating">
+              <span class="stars stars-4" title="Bewertet mit 4 von 5 Sternen">Bewertet mit 4 von 5 Sternen</span>
+
+      <a href="/de/firefox/addon/restartless-context-search/reviews/">(9)</a>
+      </span>
+      </div>
+
+          </div>
+  <div class="more">
+    
+<div class="install-shell">
+<div class="install "
+       data-addon="347811"
+  data-icon="https://addons.cdn.mozilla.net/static/img/addon-icons/default-32.png"
+  data-developers="/de/firefox/addon/restartless-context-search/developers"
+  data-versions="/de/firefox/addon/347811/versions/"
+  data-name="Restartless Context Search"
+  
+  data-min="4.0"
+  data-max="26.*"
+  data-is-compatible="true"
+  data-is-compatible-app="true"
+  data-compat-overrides="[]"
+>
+  <p class="install-button">
+                            <a class="button  download "
+  data-hash="sha256:85cff4ff4fba858cabe214b47028715be618d412488e4b1719a731a58941c373"
+      href="/firefox/downloads/latest/347811/addon-347811-latest.xpi?src=dp-hc-othersby"
+  >
+      <b></b>
+    <span>
+      Jetzt herunterladen
+          </span>
+  </a>
+      </p>
+</div> 
+
+      <div class="d2c-reasons-popup popup">
+      <p>Dieses Add-on ist aus folgendem Grund nicht mit Ihrer Firefox-Version kompatibel:</p>
+      <ul></ul>
+    </div>
+  <p>
+    <a id="downloadAnyway" hidden="true">Download Anyway</a>
+</p>
+</div> 
+    <span class="addon-summary">
+      Base on Context Search
+    </span>
+    <div class="byline">
+      von <a href="/de/firefox/user/Ewind2000/" title="Ewind">Ewind</a>    </div>
+          <div class="vitals">
+          <div class="vital">
+                  <span class="adu">
+                    84 Benutzer        </span>
+            </div>
+
+      </div>
+      </div>
+</div>
+    </li>
+    </section>
+</ul>
+      </section>
+      </section>
+
+ F v�       V�V�;�Є       F:https://addons.mozilla.org/de/firefox/addon/cookies-exportimport/more security-info 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 request-method GET request-X-Requested-With XMLHttpRequest request-User-Agent Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0 response-head HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 12 Oct 2015 20:49:26 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-Requested-With, X-Mobile, User-Agent
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=31536000
+X-Backend-Server: web5
+ uncompressed-len 0   d�

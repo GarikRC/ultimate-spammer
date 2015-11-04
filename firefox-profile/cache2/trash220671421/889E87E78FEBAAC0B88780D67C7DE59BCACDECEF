@@ -1,0 +1,434 @@
+/*!
+ * jsUri
+ * https://github.com/derek-watson/jsUri
+ *
+ * Copyright 2013, Derek Watson
+ * Released under the MIT license.
+ *
+ * Includes parseUri regular expressions
+ * http://blog.stevenlevithan.com/archives/parseuri
+ * Copyright 2007, Steven Levithan
+ * Released under the MIT license.
+ */
+
+ /*globals define, module */
+
+(function(global) {
+
+  var re = {
+    starts_with_slashes: /^\/+/,
+    ends_with_slashes: /\/+$/,
+    pluses: /\+/g,
+    query_separator: /[&;]/,
+    uri_parser: /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
+  };
+
+  /**
+   * Define forEach for older js environments
+   * @see https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach#Compatibility
+   */
+  if (!Array.prototype.forEach) {
+    Array.prototype.forEach = function(fn, scope) {
+      for (var i = 0, len = this.length; i < len; ++i) {
+        fn.call(scope || this, this[i], i, this);
+      }
+    };
+  }
+
+  /**
+   * unescape a query param value
+   * @param  {string} s encoded value
+   * @return {string}   decoded value
+   */
+  function decode(s) {
+    if (s) {
+      s = decodeURIComponent(s);
+      s = s.replace(re.pluses, ' ');
+    }
+    return s;
+  }
+
+  /**
+   * Breaks a uri string down into its individual parts
+   * @param  {string} str uri
+   * @return {object}     parts
+   */
+  function parseUri(str) {
+    var parser = re.uri_parser;
+    var parserKeys = ["source", "protocol", "authority", "userInfo", "user", "password", "host", "port", "relative", "path", "directory", "file", "query", "anchor"];
+    var m = parser.exec(str || '');
+    var parts = {};
+
+    parserKeys.forEach(function(key, i) {
+      parts[key] = m[i] || '';
+    });
+
+    return parts;
+  }
+
+  /**
+   * Breaks a query string down into an array of key/value pairs
+   * @param  {string} str query
+   * @return {array}      array of arrays (key/value pairs)
+   */
+  function parseQuery(str) {
+    var i, ps, p, n, k, v;
+    var pairs = [];
+
+    if (typeof(str) === 'undefined' || str === null || str === '') {
+      return pairs;
+    }
+
+    if (str.indexOf('?') === 0) {
+      str = str.substring(1);
+    }
+
+    ps = str.toString().split(re.query_separator);
+
+    for (i = 0; i < ps.length; i++) {
+      p = ps[i];
+      n = p.indexOf('=');
+
+      if (n !== 0) {
+        k = decodeURIComponent(p.substring(0, n));
+        v = decodeURIComponent(p.substring(n + 1));
+        pairs.push(n === -1 ? [p, null] : [k, v]);
+      }
+
+    }
+    return pairs;
+  }
+
+  /**
+   * Creates a new Uri object
+   * @constructor
+   * @param {string} str
+   */
+  function Uri(str) {
+    this.uriParts = parseUri(str);
+    this.queryPairs = parseQuery(this.uriParts.query);
+    this.hasAuthorityPrefixUserPref = null;
+  }
+
+  /**
+   * Define getter/setter methods
+   */
+  ['protocol', 'userInfo', 'host', 'port', 'path', 'anchor'].forEach(function(key) {
+    Uri.prototype[key] = function(val) {
+      if (typeof val !== 'undefined') {
+        this.uriParts[key] = val;
+      }
+      return this.uriParts[key];
+    };
+  });
+
+  /**
+   * if there is no protocol, the leading // can be enabled or disabled
+   * @param  {Boolean}  val
+   * @return {Boolean}
+   */
+  Uri.prototype.hasAuthorityPrefix = function(val) {
+    if (typeof val !== 'undefined') {
+      this.hasAuthorityPrefixUserPref = val;
+    }
+
+    if (this.hasAuthorityPrefixUserPref === null) {
+      return (this.uriParts.source.indexOf('//') !== -1);
+    } else {
+      return this.hasAuthorityPrefixUserPref;
+    }
+  };
+
+  /**
+   * Serializes the internal state of the query pairs
+   * @param  {string} [val]   set a new query string
+   * @return {string}         query string
+   */
+  Uri.prototype.query = function(val) {
+    var s = '', i, param;
+
+    if (typeof val !== 'undefined') {
+      this.queryPairs = parseQuery(val);
+    }
+
+    for (i = 0; i < this.queryPairs.length; i++) {
+      param = this.queryPairs[i];
+      if (s.length > 0) {
+        s += '&';
+      }
+      if (param[1] === null) {
+        s += param[0];
+      } else {
+        s += param[0];
+        s += '=';
+        if (param[1]) {
+          s += encodeURIComponent(param[1]);
+        }
+      }
+    }
+    return s.length > 0 ? '?' + s : s;
+  };
+
+  /**
+   * returns the first query param value found for the key
+   * @param  {string} key query key
+   * @return {string}     first value found for key
+   */
+  Uri.prototype.getQueryParamValue = function (key) {
+    var param, i;
+    for (i = 0; i < this.queryPairs.length; i++) {
+      param = this.queryPairs[i];
+      if (key === param[0]) {
+        return param[1];
+      }
+    }
+  };
+
+  /**
+   * returns an array of query param values for the key
+   * @param  {string} key query key
+   * @return {array}      array of values
+   */
+  Uri.prototype.getQueryParamValues = function (key) {
+    var arr = [], i, param;
+    for (i = 0; i < this.queryPairs.length; i++) {
+      param = this.queryPairs[i];
+      if (key === param[0]) {
+        arr.push(param[1]);
+      }
+    }
+    return arr;
+  };
+
+  /**
+   * removes query parameters
+   * @param  {string} key     remove values for key
+   * @param  {val}    [val]   remove a specific value, otherwise removes all
+   * @return {Uri}            returns self for fluent chaining
+   */
+  Uri.prototype.deleteQueryParam = function (key, val) {
+    var arr = [], i, param, keyMatchesFilter, valMatchesFilter;
+
+    for (i = 0; i < this.queryPairs.length; i++) {
+
+      param = this.queryPairs[i];
+      keyMatchesFilter = decode(param[0]) === decode(key);
+      valMatchesFilter = param[1] === val;
+
+      if ((arguments.length === 1 && !keyMatchesFilter) || (arguments.length === 2 && (!keyMatchesFilter || !valMatchesFilter))) {
+        arr.push(param);
+      }
+    }
+
+    this.queryPairs = arr;
+
+    return this;
+  };
+
+  /**
+   * adds a query parameter
+   * @param  {string}  key        add values for key
+   * @param  {string}  val        value to add
+   * @param  {integer} [index]    specific index to add the value at
+   * @return {Uri}                returns self for fluent chaining
+   */
+  Uri.prototype.addQueryParam = function (key, val, index) {
+    if (arguments.length === 3 && index !== -1) {
+      index = Math.min(index, this.queryPairs.length);
+      this.queryPairs.splice(index, 0, [key, val]);
+    } else if (arguments.length > 0) {
+      this.queryPairs.push([key, val]);
+    }
+    return this;
+  };
+
+  /**
+   * replaces query param values
+   * @param  {string} key         key to replace value for
+   * @param  {string} newVal      new value
+   * @param  {string} [oldVal]    replace only one specific value (otherwise replaces all)
+   * @return {Uri}                returns self for fluent chaining
+   */
+  Uri.prototype.replaceQueryParam = function (key, newVal, oldVal) {
+    var index = -1, i, param;
+
+    if (arguments.length === 3) {
+      for (i = 0; i < this.queryPairs.length; i++) {
+        param = this.queryPairs[i];
+        if (decode(param[0]) === decode(key) && decodeURIComponent(param[1]) === decode(oldVal)) {
+          index = i;
+          break;
+        }
+      }
+      this.deleteQueryParam(key, oldVal).addQueryParam(key, newVal, index);
+    } else {
+      for (i = 0; i < this.queryPairs.length; i++) {
+        param = this.queryPairs[i];
+        if (decode(param[0]) === decode(key)) {
+          index = i;
+          break;
+        }
+      }
+      this.deleteQueryParam(key);
+      this.addQueryParam(key, newVal, index);
+    }
+    return this;
+  };
+
+  /**
+   * Define fluent setter methods (setProtocol, setHasAuthorityPrefix, etc)
+   */
+  ['protocol', 'hasAuthorityPrefix', 'userInfo', 'host', 'port', 'path', 'query', 'anchor'].forEach(function(key) {
+    var method = 'set' + key.charAt(0).toUpperCase() + key.slice(1);
+    Uri.prototype[method] = function(val) {
+      this[key](val);
+      return this;
+    };
+  });
+
+  /**
+   * Scheme name, colon and doubleslash, as required
+   * @return {string} http:// or possibly just //
+   */
+  Uri.prototype.scheme = function() {
+    var s = '';
+
+    if (this.protocol()) {
+      s += this.protocol();
+      if (this.protocol().indexOf(':') !== this.protocol().length - 1) {
+        s += ':';
+      }
+      s += '//';
+    } else {
+      if (this.hasAuthorityPrefix() && this.host()) {
+        s += '//';
+      }
+    }
+
+    return s;
+  };
+
+  /**
+   * Same as Mozilla nsIURI.prePath
+   * @return {string} scheme://user:password@host:port
+   * @see  https://developer.mozilla.org/en/nsIURI
+   */
+  Uri.prototype.origin = function() {
+    var s = this.scheme();
+
+    if (s == 'file://') {
+      return s + this.uriParts.authority;
+    }
+
+    if (this.userInfo() && this.host()) {
+      s += this.userInfo();
+      if (this.userInfo().indexOf('@') !== this.userInfo().length - 1) {
+        s += '@';
+      }
+    }
+
+    if (this.host()) {
+      s += this.host();
+      if (this.port()) {
+        s += ':' + this.port();
+      }
+    }
+
+    return s;
+  };
+
+  /**
+   * Adds a trailing slash to the path
+   */
+  Uri.prototype.addTrailingSlash = function() {
+    var path = this.path() || '';
+
+    if (path.substr(-1) !== '/') {
+      this.path(path + '/');
+    }
+
+    return this;
+  };
+
+  /**
+   * Serializes the internal state of the Uri object
+   * @return {string}
+   */
+  Uri.prototype.toString = function() {
+    var path, s = this.origin();
+
+    if (this.path()) {
+      path = this.path();
+      if (!(re.ends_with_slashes.test(s) || re.starts_with_slashes.test(path))) {
+        s += '/';
+      } else {
+        if (s) {
+          s.replace(re.ends_with_slashes, '/');
+        }
+        path = path.replace(re.starts_with_slashes, '/');
+      }
+      s += path;
+    } else {
+      if (this.host() && (this.query().toString() || this.anchor())) {
+        s += '/';
+      }
+    }
+    if (this.query().toString()) {
+      if (this.query().toString().indexOf('?') !== 0) {
+        s += '?';
+      }
+      s += this.query().toString();
+    }
+
+    if (this.anchor()) {
+      if (this.anchor().indexOf('#') !== 0) {
+        s += '#';
+      }
+      s += this.anchor();
+    }
+
+    return s;
+  };
+
+  /**
+   * Clone a Uri object
+   * @return {Uri} duplicate copy of the Uri
+   */
+  Uri.prototype.clone = function() {
+    return new Uri(this.toString());
+  };
+
+  /**
+   * export via AMD or CommonJS, otherwise leak a global
+   */
+  if (typeof define === 'function' && define.amd) {
+    define(function() {
+      return Uri;
+    });
+  } else if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = Uri;
+  } else {
+    global.Uri = Uri;
+  }
+}(this));
+…æOý~      VÉ¯VÉ¯;²\ªVdp°   8:https://blog.udemy.com/wp-content/themes/epik/js/uri.js necko:classified 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAQAAgAAAAAAAAAAAAAAAAAAAAAB4vFIJp5wRkeyPxAQ9RJGKPqbqVvKO0mKuIl8ec8o/uhmCjImkVxP+7sgiYWmMt8F+O2DZM7ZTG6GukivU8OT5gAAAAAAAAtRMIILTTCCCjWgAwIBAgIQCu5ejWwMGy6d3lQxQZyOiDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMS8wLQYDVQQDEyZEaWdpQ2VydCBTSEEyIEhpZ2ggQXNzdXJhbmNlIFNlcnZlciBDQTAeFw0xNTAzMDMwMDAwMDBaFw0xNjA0MDYxMjAwMDBaMG4xCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRUwEwYDVQQKEwxGYXN0bHksIEluYy4xGzAZBgNVBAMMEiouYy5zc2wuZmFzdGx5Lm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOHWjdkuEag2aL5dJ80aPtL5hmgjzGAz2YdVcvgC/BstoiXqZJOZpgSSCpHyy0s6omUlWllr9MmQ82ndnBM6TQ7n5B+Wli2ssywVpgYLdZo1eg79x+kPs+syAqaNTnhpRycMJk38/fviqbrX16Re6ZXHGEnKwnWcXGBNBDnR70KsxEZCcO+aiZOz+yW4prAyPbGhf71kFey98aqUWIp2HPQnuRCzeBzoBi16bAEFa5NEuojFFox2ZrW2v557AV3zVaRZrKTCGG76zdOO5k11PXpp72RX+bSilYdGzSBFkjpzIXQOL5hAPMBrchL6CMYyCT/JGO0EUi6qXXNnbFKRmA8CAwEAAaOCB+MwggffMB8GA1UdIwQYMBaAFFFo/5CvAgd1PMzZZWRiohK4WXI7MB0GA1UdDgQWBBT29F+NSEY/eCd2iLurG2Idwnd6/DCCBh0GA1UdEQSCBhQwggYQghIqLmMuc3NsLmZhc3RseS5uZXSCEGMuc3NsLmZhc3RseS5uZXSCDCoudGFyZ2V0LmNvbYIIKi52aHgudHaCDiouc25hcHB5dHYuY29tgg8qLmF0bGFzc2lhbi5uZXSCFHNlY3VyZS5sZXNzdGhhbjMuY29tgg8qLmF0bGFzc2lhbi5jb22CD2Euc2VsbHBvaW50Lm5ldIIPY2RuLnVwdGhlcmUuY29tggwqLnRpc3N1dS5jb22CCyouaXNzdXUuY29tggwqLnB5dGhvbi5vcmeCDioudGhldmVyZ2UuY29tgg4qLnNibmF0aW9uLmNvbYINKi5wb2x5Z29uLmNvbYIVKi50d29icmlnaHRsaWdodHMuY29tghQqLjJicmlnaHRsaWdodHMuaW5mb4IJKi52b3guY29tghdzdGFnaW5nLWNkbi51cHRoZXJlLmNvbYIMKi56ZWVib3guY29tggwqLmJlYW1seS5jb22CDSouYXRpY3Bhbi5vcmeCF3N0cmVhbS5zdmMuN2RpZ2l0YWwubmV0ghxzdHJlYW0tdGVzdC5zdmMuN2RpZ2l0YWwubmV0ghAqLmFydGljdWxhdGUuY29tggZzLnQuc3SCEXZpZC50aGVzdHJlZXQuY29tghEqLnBsYW5ldC1sYWJzLmNvbYINKi51cmwycG5nLmNvbYIIdHVybi5jb22CDHd3dy50dXJuLmNvbYIScml2ZXJnYXRoZXJpbmcub3Jngh9zb2NpYWwuaWNmZ2xvYmFsMjAxNC1ldXJvcGUub3JnghIqLmlubm9nYW1lc2Nkbi5jb22CDioucGF0aGFibGUuY29tghYqLnN0YWdpbmcucGF0aGFibGUuY29tghEqLmtpY2tzdGFydGVyLmNvbYISc3BhcmtpbmdjaGFuZ2Uub3Jngg93d3cuc3dlZGF2aWEuc2WCEHd3dy5zd2VkYXZpYS5jb22CFWpzLWFnZW50Lm5ld3JlbGljLmNvbYIUKi5mYXN0bHktc3RyZWFtcy5jb22CEWNkbi5icmFuZGlzdHkuY29tghZmYXN0bHkuaGlnaHRhaWxjZG4uY29tghAqLmZsLnllbHBjZG4uY29tghAqLmZlZWRtYWduZXQuY29tggwqLmFjcXVpYS5jb22CDiouc3dhcm1hcHAuY29tggkqLnB5cGEuaW+CB3B5cGEuaW+CEXN0YXRpYy5xYnJhbmNoLnNlggoqLmtyeGQubmV0ggkqLnJvb20uY2+CEioubWV0cm9sb2dpY2FsLmNvbYIHcm9vbS5jb4INY2RuLmV2YnVjLmNvbYIRY2RuLmFkYWdpbGl0eS5jb22CDiouYmFuZHBhZ2UuY29tghYqLmlibXNlcnZpY2VlbmdhZ2UuY29tggwqLnF1aXJreS5jb22CCSoudmVlei5jb4IGKi54Lmlvgg0qLm90b3ljZG4ubmV0ggwqLnNjcmliZC5jb22CDXd3dy5kd2luMS5jb22CFWFwaS5pbWd1ci15c3BvcnRzLmNvbYITaS5pbWd1ci15c3BvcnRzLmNvbYILbGlzdG9yYS5jb22CDSoubGlzdG9yYS5jb22CCmJsZW5kbGUubmyCDCouYmxlbmRsZS5ubIITKi5tb2RlYW5hbHl0aWNzLmNvbYIRbW9kZWFuYWx5dGljcy5jb22CCGtydXguY29tggoqLmtydXguY29tggsqLnVkZW15LmNvbYINKi4xc3RkaWJzLmNvbYIMYXBpLmtlZXAuY29tghB3d3cucGlyaWZvcm0uY29tggwqLnVzdHJlYW0udHaCDnd3dy56aW1iaW8uY29tggxtLnppbWJpby5jb22CC20ubG9ubnkuY29tgg13d3cubG9ubnkuY29tghVhc3NldHMudHJhYmlhbmNkbi5jb22CFCouaGVyaXRhZ2VzdGF0aWMuY29tghEqLnRoZW91dGJvdW5kLmNvbYIPaW1nLnJha3V0ZW4uY29tghJpbWFnZXMucmFrdXRlbi5jb22CC2ltZzEucjEwLmlvggthc3QxLnIxMC5pb4IKc2NyaWJkLmNvbTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMHUGA1UdHwRuMGwwNKAyoDCGLmh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9zaGEyLWhhLXNlcnZlci1nNC5jcmwwNKAyoDCGLmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWhhLXNlcnZlci1nNC5jcmwwQgYDVR0gBDswOTA3BglghkgBhv1sAQEwKjAoBggrBgEFBQcCARYcaHR0cHM6Ly93d3cuZGlnaWNlcnQuY29tL0NQUzCBgwYIKwYBBQUHAQEEdzB1MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wTQYIKwYBBQUHMAKGQWh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFNIQTJIaWdoQXNzdXJhbmNlU2VydmVyQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBAG0uhiZAg3Uc9zTsDKc+t5f1ACyoNdx2p+ufudz1t9+95FsUsXqs2i7o6NKy4nGJPYNGfm2aXFx8jlNUwNivyGPt37c+BwsVg0cxVVO5npBQJzyx7AlhOzLyUeLOBeMcy3imasMYxsd8JK7smVMUtBuT1/G26xQmfLH+Kx4JcFK8gq9Fvm/0fu5icwrqgorsMFtvd7AlGdytm62UZcFo9hGq6AmVaSQ5RjHiNZ5XHtpKHOfO5+U5JO4otqWMCxzDS6Pm/u/EpigKhxu9RA3Bmv9KMSXjcj4EUMzAh1la6lySdTBxvWVLu5355VSy6UN0hmhKbKw0EXUbO71joIqFjvDALwADAAAAAAEBAAA= request-method GET response-head HTTP/1.1 200 OK
+Server: Apache/2.2.15 (CentOS)
+X-Frame-Options: SAMEORIGIN
+Last-Modified: Mon, 12 May 2014 17:49:15 GMT
+Etag: "1e0f0-2982-4f93790d15cc0"
+Strict-Transport-Security: max-age=31536000
+x-content-type-options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Permitted-Cross-Domain-Policies: master-only
+X-Content-Security-Policy: default-src 'self'; img-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self';
+Content-Type: text/javascript
+Content-Length: 10626
+Accept-Ranges: bytes
+Date: Thu, 15 Oct 2015 15:43:43 GMT
+Via: 1.1 varnish
+Age: 1485
+X-Served-By: cache-fra1248-FRA
+X-Cache: HIT
+X-Cache-Hits: 11
+X-Timer: S1444923823.937588,VS0,VE0
+ uncompressed-len 0   )‚
