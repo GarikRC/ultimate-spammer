@@ -141,7 +141,7 @@ def GetIpAddress():
             print "[-] This target doesnt exist!"
             print
         except KeyboardInterrupt:
-            print "[+] Aborted programm"
+            print "[+] Aborted program"
             raw_input("Press any key to continue...")
             menu_actions['main_menu']()
 
@@ -162,6 +162,9 @@ def UploadTextMenu():
 
     except Skype4Py.SkypeAPIError:
         print "[-] Connection issues with skype. Is this program whitelisted ?"
+
+    except KeyboardInterrupt:
+        print "[+] Aborted program"
 
     finally:
         raw_input("Press any key to continue...")
@@ -184,6 +187,9 @@ def AutoTypeTextMenu():
 
     except Skype4Py.SkypeAPIError:
         print "[-] Connection issues with skype. Is this program whitelisted ?"
+
+    except KeyboardInterrupt:
+        print "[+] Aborted program"
 
     finally:
         raw_input("Press any key to continue...")
@@ -310,7 +316,7 @@ def WhatsAppSpammerMenu():
         print '[-] Timout error: Something took too long '
 
     except KeyboardInterrupt:
-        print '[+] Aborted programm'
+        print '[+] Aborted program'
 
     except NoSuchElementException:
         print '[-] An element id is missing or has been changed'
