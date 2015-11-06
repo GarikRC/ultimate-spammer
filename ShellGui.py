@@ -161,7 +161,7 @@ def UploadTextMenu():
         print "[-] Skype raised an unexpected problem, please try again."
 
     except Skype4Py.SkypeAPIError:
-        print "[-] Connection issues with skype. Is this programm whitelisted ?"
+        print "[-] Connection issues with skype. Is this program whitelisted ?"
 
     finally:
         raw_input("Press any key to continue...")
@@ -183,7 +183,7 @@ def AutoTypeTextMenu():
         print "[-] Skype raised an unexpected problem, please try again."
 
     except Skype4Py.SkypeAPIError:
-        print "[-] Connection issues with skype. Is this programm whitelisted ?"
+        print "[-] Connection issues with skype. Is this program whitelisted ?"
 
     finally:
         raw_input("Press any key to continue...")
@@ -209,7 +209,7 @@ def ClearChatMenu():
         print "[-] Skype raised an unexpected problem, please try again."
 
     except Skype4Py.SkypeAPIError:
-        print "[-] Connection issues with skype. Is this programm whitelisted ?"
+        print "[-] Connection issues with skype. Is this program whitelisted ?"
 
     finally:
         raw_input("Press any key to continue...")
@@ -298,7 +298,7 @@ def WhatsAppSpammerMenu():
             print '[-] Invalid input please try again!'
             print
         except KeyboardInterrupt:
-            print "[+] Aborted programm"
+            print "[+] Aborted program"
             raw_input("Press any key to continue...")
             menu_actions['main_menu']()
 
@@ -355,7 +355,7 @@ def FacebookSpammerMenu():
             print '[-] Invalid input please try again!'
             print
         except KeyboardInterrupt:
-            print "[+] Aborted programm"
+            print "[+] Aborted program"
             raw_input("Press any key to continue...")
             menu_actions['main_menu']()
 
@@ -364,10 +364,10 @@ def FacebookSpammerMenu():
         print '[+] Sucessfully send ' + str(quantity) + " messages to " + target
 
     except TimeoutException:
-        print '[-] Timout error: Something took too long '
+        print '[-] Timeout error: Something took too long '
 
     except KeyboardInterrupt:
-        print '[+] Aborted programm'
+        print '[+] Aborted program'
 
     except NoSuchElementException:
         print '[-] An element id is missing or has been changed'
@@ -453,7 +453,7 @@ def EmailSpammerMenu():
             print '[-] Invalid input please try again!'
             print
         except KeyboardInterrupt:
-            print "[+] Aborted programm."
+            print "[+] Aborted program."
             raw_input("Press any key to continue...")
             menu_actions['main_menu']()
 
@@ -465,7 +465,7 @@ def EmailSpammerMenu():
         print "[-] Log in credentials are wrong."
 
     except smtplib.SMTPConnectError:
-        print "[-] Couldnt connect to server."
+        print "[-] Couldn't connect to server."
 
     except smtplib.SMTPRecipientsRefused:
         print "[-] Target doesnt exist."
