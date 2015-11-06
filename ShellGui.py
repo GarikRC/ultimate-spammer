@@ -318,6 +318,9 @@ def WhatsAppSpammerMenu():
     except IndexError:
         print '[-] Wrong target name / Please chat with the target least once.'
 
+    except WebDriverException as er:
+        print '[-] An unexpected error was raised : ' + str(er)
+
     finally:
         raw_input("Press any key to continue...")
         menu_actions['main_menu']()
@@ -368,6 +371,9 @@ def FacebookSpammerMenu():
 
     except NoSuchElementException:
         print '[-] An element id is missing or has been changed'
+
+    except WebDriverException as er:
+        print '[-] An unexpected error was raised : ' + str(er)
 
     finally:
         raw_input("Press any key to continue...")

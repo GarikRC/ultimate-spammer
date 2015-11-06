@@ -4,8 +4,8 @@ import time
 
 __author__ = 'Qubasa'
 
-def EmailSpammer(server, port, username, password, targetemail, fromemail, subject, msg, quantity):
 
+def EmailSpammer(server, port, username, password, targetemail, fromemail, subject, msg, quantity):
 
     body = MIMEText(msg, 'plain')
     body['Subject'] = subject

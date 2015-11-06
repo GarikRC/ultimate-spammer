@@ -57,10 +57,8 @@ def AutoTypeText(friendlist, target, msg, quantity):
             time.sleep(0.1)
 
 
-
-
 def DoExit(closeskype):
-    if closeskype == True:
+    if closeskype is True:
         skype.Client.Shutdown()
         sys.exit()
     else:
