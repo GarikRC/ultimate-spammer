@@ -1,6 +1,6 @@
 try:
     import os
-    import platforms
+    import platform
 
     from SkypeFunctions import *
     from SocialPlattformFunctions import *
