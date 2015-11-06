@@ -5,7 +5,7 @@ A spammer written in Python 2.7 for Whatsapp, Skype, Facebook and Email. It has 
 skype4py,
 selenium,
 requests,
-pyqutogui
+pyautogui
 
 # Required Programms
 Skype,
