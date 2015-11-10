@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 try:
     import os
     import platform
@@ -5,6 +6,7 @@ try:
     from SkypeFunctions import *
     from SocialPlattformFunctions import *
     from EmailFunctions import *
+    from GitConnect import *
 
 except ImportError, error:
     import sys
@@ -14,9 +16,8 @@ except ImportError, error:
 
 __author__ = 'Qubasa'
 
-systemOS = platform.system()
 
-if systemOS == 'Windows':
+if platform.system() == 'Windows':
     clearCommand = 'cls'
 else:
     clearCommand = 'clear'
@@ -95,7 +96,7 @@ def InitSkype():
             print
 
     except Skype4Py.SkypeAPIError:
-        print "[-] Programm couldn't connect to skype. Please whitelist this programm in skype!"
+        print "[-] Program couldn't connect to skype. Please whitelist this programm in skype!"
         raw_input("Press any key to continue...")
         menu_actions['main_menu']()
 
@@ -310,7 +311,7 @@ def WhatsAppSpammerMenu():
 
     try:
         WhatsAppSpammer(target, msg, quantity)
-        print '[+] Sucessfully send ' + quantity + " messages to " + target
+        print '[+] Sucessfully send ' + str(quantity) + " messages to " + target
 
     except TimeoutException:
         print '[-] Timout error: Something took too long '
@@ -484,6 +485,10 @@ def EmailSpammerMenu():
         menu_actions['main_menu']()
 
 
+def UpdateMenu():
+    CheckRepo(os.path.dirname(os.path.abspath(__file__)))
+
+
 menu_actions = {
     'main_menu': MainMenu,
     '1': UploadTextMenu,
@@ -493,6 +498,7 @@ menu_actions = {
     '5': WhatsAppSpammerMenu,
     '6': FacebookSpammerMenu,
     '7': EmailSpammerMenu,
+    '8': UpdateMenu,
     '99': DoExitMenu,
 }
 
