@@ -9,6 +9,13 @@ import time
 __author__ = 'qubasa'
 
 
+def githash(data):
+    sha1 = hashlib.sha1()
+    sha1.update("blob %u\0" % len(data))
+    sha1.update(data)
+    return sha1.hexdigest()
+
+
 def CheckRepo(dirpath):
 
     # Method variables
@@ -66,9 +73,9 @@ def CheckRepo(dirpath):
             if r.status_code is requests.codes.ok:
 
                 datalist = r.text.split(',')
-                checksum = datalist[2].strip('"sha": "').strip('"')
+                onlinechecksum = datalist[2].strip('"sha": "').strip('"')
                 saveSHA = open(textfilename, 'ab')
-                saveSHA.write(currentfile + ":" + checksum + ":" + currentdate + "|")
+                saveSHA.write(currentfile + ":" + onlinechecksum + ":" + currentdate + "|")
                 saveSHA.close()
                 print "Download Sha"
 
@@ -76,22 +83,28 @@ def CheckRepo(dirpath):
                 print "Connection error " + currentfile + " " + r.text
         else:
             saveSHA = open(textfilename, 'rb')
-            checksum = saveSHA.readline().split("|")[iterations].split(":")[1]
+            onlinechecksum = saveSHA.readline().split("|")[iterations].split(":")[1]
             saveSHA.close()
 
         # Calculate SHA from local file
         try:
             f = open(textfilename, 'rb')
             #  Get SHA with sha1.hexdigest()
-            sha1.update("blob " + str(os.path.getsize(textfilename)) + f.read())
+            localchecksum = githash(f.read())
 
         finally:
             f.close()
 
-        if sha1.hexdigest() is not checksum:
+        if localchecksum is not onlinechecksum:
             print "[+] " + currentfile + " has to be updated"
-            print "Githubhash: " + checksum
-            print "Localhash:  " + sha1.hexdigest()
+            print "Githubhash: " + onlinechecksum
+            print "Localhash:  " + localchecksum
             print
+        else:
+            print "!!!Checksum is equal of: " + currentfile
+            print "Githubhash: " + onlinechecksum
+            print "Localhash:  " + localchecksum
+
+
 
     saveSHA.close()
