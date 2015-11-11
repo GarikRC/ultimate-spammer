@@ -19,19 +19,17 @@ def GitHash(data):
 def GetFilesInDir(dirpath, allowedfiles, filterfiles=True):
 
     files = os.listdir(dirpath)
+    excludefiles = []
 
     if filterfiles:
         # Exclude unallowed file endings
         for currentfile in files:
 
             if not currentfile.endswith(tuple(allowedfiles)):
-                files.remove(currentfile)
+                excludefiles.append(currentfile)
 
-        # Repeat if not done some .pyc files remain (bug ?)
-        for currentfile in files:
-
-            if not currentfile.endswith(tuple(allowedfiles)):
-                files.remove(currentfile)
+        for currentfile in excludefiles:
+            files.remove(currentfile)
 
     return files
 
@@ -125,6 +123,6 @@ def PullRepo(files, shalink, downloadlink, applypatch=True, textfilename="saveSH
             if applypatch:
                 UpdateFile(downloadlink, currentfile)
             else:
-                raise UpdatesAvailable
+                raise UpdatesAvailable("Updates available")
         else:
-            raise NoUpdatesAvailable
+            raise NoUpdatesAvailable("No updates available")

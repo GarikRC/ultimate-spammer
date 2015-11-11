@@ -54,11 +54,13 @@ def MainMenu():
 
 4) Get Ip of skype friend
 
-5) WhatsApp Web automated typing
+5) WhatsApp web automated typing
 
 6) Facebook automated typing
 
 7) Email spammer
+
+8) Update
 
 99) Quit
     '''
@@ -101,6 +103,10 @@ def InitSkype():
         raw_input("Press any key to continue...")
         menu_actions['main_menu']()
 
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
+        raw_input("Press any key to continue...")
+
 
 def GetIpAddress():
 
@@ -120,6 +126,10 @@ def GetIpAddress():
         raw_input("Press any key to continue...")
         menu_actions['main_menu']()
 
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
+        raw_input("Press any key to continue...")
+
     while True:
         try:
             print 'Target number:'
@@ -134,18 +144,25 @@ def GetIpAddress():
             print "The IP of " + friendlist[target][x] + " is: " + GetIp(friendlist[target][0])
             raw_input("Press any key to continue...")
             menu_actions['main_menu']()
+
         except ValueError:
             print
             print '[-] Invalid input please try again!'
             print
+
         except KeyError:
             print
             print "[-] This target doesnt exist!"
             print
+
         except KeyboardInterrupt:
             print "[+] Aborted program"
             raw_input("Press any key to continue...")
             menu_actions['main_menu']()
+
+        except Exception as er:
+            print "[-] An unexpected error was raised: " + str(er)
+            raw_input("Press any key to continue...")
 
 
 def UploadTextMenu():
@@ -167,6 +184,9 @@ def UploadTextMenu():
 
     except KeyboardInterrupt:
         print "[+] Aborted program"
+
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
 
     finally:
         raw_input("Press any key to continue...")
@@ -192,6 +212,9 @@ def AutoTypeTextMenu():
 
     except KeyboardInterrupt:
         print "[+] Aborted program"
+
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
 
     finally:
         raw_input("Press any key to continue...")
@@ -219,23 +242,32 @@ def ClearChatMenu():
     except Skype4Py.SkypeAPIError:
         print "[-] Connection issues with skype. Is this program whitelisted ?"
 
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
+
     finally:
         raw_input("Press any key to continue...")
         menu_actions['main_menu']()
 
 
 def DoExitMenu():
-    if skype.Client.IsRunning:
-        choice = raw_input("Do you wan to close skype ?[y/n]")
-        if choice == "y":
-            DoExit(True)
+    try:
+        if skype.Client.IsRunning:
+            choice = raw_input("Do you wan to close skype ?[y/n]")
+            if choice == "y":
+                DoExit(True)
+            else:
+                DoExit(False)
         else:
             DoExit(False)
-    else:
-        DoExit(False)
+
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
+        raw_input("Press any key to continue...")
 
 
 def Exec_Menu(choice):
+
     os.system(clearCommand)
     if choice == '':
         menu_actions['main_menu']()
@@ -269,20 +301,30 @@ def InputForm():
             print
             print '[-] Invalid input please try again!'
             print
+
         except KeyboardInterrupt:
             print "[+] Aborted programm"
             raw_input("Press any key to continue...")
             menu_actions['main_menu']()
 
+        except Exception as er:
+            print "[-] An unexpected error was raised: " + str(er)
+            raw_input("Press any key to continue...")
+
 
 def FriendMenu(friendlist):
-    for index in friendlist:
-        if friendlist[index][2] == '':
-            x = 0
-        else:
-            x = 2
-        print str(index) + ') ' + friendlist[index][x] + ' : ' + friendlist[index][1]
-    print
+    try:
+        for index in friendlist:
+            if friendlist[index][2] == '':
+                x = 0
+            else:
+                x = 2
+            print str(index) + ') ' + friendlist[index][x] + ' : ' + friendlist[index][1]
+        print
+
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
+        raw_input("Press any key to continue...")
 
 
 def WhatsAppSpammerMenu():
@@ -301,14 +343,20 @@ def WhatsAppSpammerMenu():
             quantity = int(quantity)
             print
             break
+
         except ValueError:
             print
             print '[-] Invalid input please try again!'
             print
+
         except KeyboardInterrupt:
             print "[+] Aborted program"
             raw_input("Press any key to continue...")
             menu_actions['main_menu']()
+
+        except Exception as er:
+            print "[-] An unexpected error was raised: " + str(er)
+            raw_input("Press any key to continue...")
 
     try:
         WhatsAppSpammer(target, msg, quantity)
@@ -326,8 +374,8 @@ def WhatsAppSpammerMenu():
     except IndexError:
         print '[-] Wrong target name / Please chat with the target least once.'
 
-    except WebDriverException as er:
-        print '[-] An unexpected error was raised : ' + str(er)
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
 
     finally:
         raw_input("Press any key to continue...")
@@ -358,14 +406,20 @@ def FacebookSpammerMenu():
             quantity = int(quantity)
             print
             break
+
         except ValueError:
             print
             print '[-] Invalid input please try again!'
             print
+
         except KeyboardInterrupt:
             print "[+] Aborted program"
             raw_input("Press any key to continue...")
             menu_actions['main_menu']()
+
+        except Exception as er:
+            print "[-] An unexpected error was raised: " + str(er)
+            raw_input("Press any key to continue...")
 
     try:
         FacebookSpammer(email, password, target, msg, quantity)
@@ -380,8 +434,8 @@ def FacebookSpammerMenu():
     except NoSuchElementException:
         print '[-] An element id is missing or has been changed'
 
-    except WebDriverException as er:
-        print '[-] An unexpected error was raised : ' + str(er)
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
 
     finally:
         raw_input("Press any key to continue...")
@@ -403,11 +457,17 @@ def EmailSpammerMenu():
         8: ['Sxmail', 'smtp.sxmail.de', 587]
     }
 
-    for index in range(len(server_dictionary)):
-        print str(index + 1) + ") " + server_dictionary[index + 1][0]
+    try:
+        for index in range(len(server_dictionary)):
+            print str(index + 1) + ") " + server_dictionary[index + 1][0]
+
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
+        raw_input("Press any key to continue...")
 
     print
     print "Choose server:"
+
     while True:
         try:
             choice = raw_input(">> ")
@@ -424,6 +484,9 @@ def EmailSpammerMenu():
             print
             print '[-] Invalid selection please try again!'
             print
+        except Exception as er:
+            print "[-] An unexpected error was raised: " + str(er)
+            raw_input("Press any key to continue...")
 
     while True:
         try:
@@ -464,6 +527,9 @@ def EmailSpammerMenu():
             print "[+] Aborted program."
             raw_input("Press any key to continue...")
             menu_actions['main_menu']()
+        except Exception as er:
+            print "[-] An unexpected error was raised: " + str(er)
+            raw_input("Press any key to continue...")
 
     try:
         EmailSpammer(server, port, username, password, targetemail, fromemail, subject, msg, quantity)
@@ -478,8 +544,8 @@ def EmailSpammerMenu():
     except smtplib.SMTPRecipientsRefused:
         print "[-] Target doesnt exist."
 
-    except smtplib.SMTPException:
-        print "[-] An unexpected error was raised, please try again."
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
 
     finally:
         raw_input("Press any key to continue...")
@@ -488,14 +554,30 @@ def EmailSpammerMenu():
 
 def UpdateMenu():
 
-    currentpath = os.path.dirname(os.path.abspath(__file__))
-    downloadlink = 'https://raw.githubusercontent.com/Qubasa/ultimate-spammer/master/'
-    repolink = 'https://api.github.com/repos/Qubasa/ultimate-spammer/contents/'
-    allowedfiles = ['.py', '.md']
-    files = GetFilesInDir(currentpath, allowedfiles)
+    try:
+        currentpath = os.path.dirname(os.path.abspath(__file__))
+        downloadlink = 'https://raw.githubusercontent.com/Qubasa/ultimate-spammer/master/'
+        repolink = 'https://api.github.com/repos/Qubasa/ultimate-spammer/contents/'
+        allowedfiles = ['py', 'md']
+        files = GetFilesInDir(currentpath, allowedfiles)
 
-    PullRepo(files, repolink, downloadlink)
+        PullRepo(files, repolink, downloadlink)
 
+    except LookupError as er:
+        print er
+
+    except NoUpdatesAvailable:
+        print "[+] No updates available."
+        print
+
+    """
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
+
+    finally:
+        raw_input("Press any key to continue...")
+        menu_actions['main_menu']()
+    """
 
 menu_actions = {
     'main_menu': MainMenu,

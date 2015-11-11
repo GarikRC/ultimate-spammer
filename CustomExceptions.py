@@ -3,7 +3,7 @@
 __author__ = 'Qubasa'
 
 
-class CustomBaseException(Exception):
+class CustomBaseException(BaseException):
     def __init__(self, *args, **kwargs): # real signature unknown
         pass
 
