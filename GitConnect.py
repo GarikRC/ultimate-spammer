@@ -87,24 +87,26 @@ def CheckRepo(dirpath):
             saveSHA.close()
 
         # Calculate SHA from local file
-        try:
-            f = open(textfilename, 'rb')
-            #  Get SHA with sha1.hexdigest()
-            localchecksum = githash(f.read())
 
-        finally:
-            f.close()
+        f = open(currentfile, 'rb')
+        #  Get SHA with sha1.hexdigest()
+        localchecksum = githash(f.read())
+        f.close()
 
-        if localchecksum is not onlinechecksum:
+        if localchecksum != onlinechecksum:
             print "[+] " + currentfile + " has to be updated"
             print "Githubhash: " + onlinechecksum
             print "Localhash:  " + localchecksum
             print
+
+            r2 = requests.get(downloadlink + currentfile)
+            if r2.status_code is requests.codes.ok:
+                codefile = r2.text.encode("utf-8")
+                print codefile
+
         else:
             print "!!!Checksum is equal of: " + currentfile
             print "Githubhash: " + onlinechecksum
             print "Localhash:  " + localchecksum
+            print
 
-
-
-    saveSHA.close()
