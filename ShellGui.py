@@ -486,7 +486,14 @@ def EmailSpammerMenu():
 
 
 def UpdateMenu():
-    CheckRepo(os.path.dirname(os.path.abspath(__file__)))
+
+    currentpath = os.path.dirname(os.path.abspath(__file__))
+    downloadlink = 'https://raw.githubusercontent.com/Qubasa/ultimate-spammer/master/'
+    repolink = 'https://api.github.com/repos/Qubasa/ultimate-spammer/contents/'
+    allowedfiles = ['.py', '.md']
+    files = GetFilesInDir(currentpath, allowedfiles)
+
+    CheckRepo(files, repolink, downloadlink)
 
 
 menu_actions = {
