@@ -3,9 +3,9 @@ import hashlib
 import requests
 import os
 import time
+from CustomExceptions import *
 
-
-__author__ = 'qubasa'
+__author__ = 'Qubasa'
 
 
 def GitHash(data):
@@ -37,19 +37,24 @@ def GetFilesInDir(dirpath, allowedfiles, filterfiles=True):
 
 
 # Get date out of saved hashes
-def GetLastUpdate(textfilename, currentdate):
+def GetLastUpdate(textfilename):
 
     saveSHA = open(textfilename, 'rb')
-    if os.path.getsize(textfilename) > 0:   # If file is not empty
+    try:
+        if os.path.getsize(textfilename) > 0:   # If file is not empty
 
-        filedate = saveSHA.readline().split("|")[0].split(":")[2]   # Get date of first entry
-        print "Filedate: " + filedate + " Currentdate: " + currentdate
+            lastupdate = saveSHA.readline().split("|")[0].split(":")[2]   # Get date of first entry
 
-    else:
-        filedate = None
-        print "No entries were detected"
-    saveSHA.close()
-    return filedate
+        else:
+            lastupdate = None
+
+        return lastupdate
+
+    except Exception, error:
+        raise error
+
+    finally:
+        saveSHA.close()
 
 
 # Get hash from Github
@@ -68,29 +73,27 @@ def DownloadSHA(filename, shalink, textfilename="saveSHA.txt"):
 
         return onlinechecksum
     else:
-        print "Connection error " + filename + " " + r.text
+        raise LookupError("Cant connect to " + shalink + "\n Error: " + r.text)
 
 
 # Download code and apply patch
 def UpdateFile(downloadlink, filename):
 
-    response = requests.get(downloadlink + filename)
+    r = requests.get(downloadlink + filename)
 
-    if response.status_code is requests.codes.ok:
-        code = response.text.encode("utf-8")
-        #f = open(filename, "wb")
-        #f.write(code)
-        print "[+] Done updating " + filename
-        print
+    if r.status_code is requests.codes.ok:
+        pass
+        # f = open(filename, "wb")
+        # f.write(r.text.encode("utf-8"))
     else:
-        print "[-] Error downloading file!"
+        raise LookupError("Cant connect to " + downloadlink + "\n Error: " + r.text)
 
 
-def CheckRepo(files, shalink, downloadlink, textfilename="saveSHA.txt"):
+def PullRepo(files, shalink, downloadlink, applypatch=True, textfilename="saveSHA.txt"):
 
     # Method variables
     currentdate = time.strftime("%d/%m/%Y")
-    lastupdate = GetLastUpdate(textfilename, currentdate)
+    lastupdate = GetLastUpdate(textfilename)
     iterations = -1
 
     # Delete old text entries in saveSHA
@@ -119,9 +122,9 @@ def CheckRepo(files, shalink, downloadlink, textfilename="saveSHA.txt"):
 
         # Update if necessary
         if localchecksum != onlinechecksum:
-            print "[-] " + currentfile + " has to be updated"
-            UpdateFile(downloadlink, currentfile)
+            if applypatch:
+                UpdateFile(downloadlink, currentfile)
+            else:
+                raise UpdatesAvailable
         else:
-            print "[+] Already up to date: " + currentfile
-
-
+            raise NoUpdatesAvailable

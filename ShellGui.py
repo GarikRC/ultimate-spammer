@@ -7,6 +7,7 @@ try:
     from SocialPlattformFunctions import *
     from EmailFunctions import *
     from GitConnect import *
+    from CustomExceptions import *
 
 except ImportError, error:
     import sys
@@ -493,7 +494,7 @@ def UpdateMenu():
     allowedfiles = ['.py', '.md']
     files = GetFilesInDir(currentpath, allowedfiles)
 
-    CheckRepo(files, repolink, downloadlink)
+    PullRepo(files, repolink, downloadlink)
 
 
 menu_actions = {
