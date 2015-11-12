@@ -29,6 +29,21 @@ def Empty(value):
 
 
 def MainMenu():
+
+    """
+    currentpath = os.path.dirname(os.path.abspath(__file__))
+    downloadlink = 'https://raw.githubusercontent.com/Qubasa/ultimate-spammer/master/'
+    repolink = 'https://api.github.com/repos/Qubasa/ultimate-spammer/contents/'
+    allowedfiles = ['py', 'md']
+    files = GetFilesInDir(currentpath, allowedfiles)
+    allfiles = PullRepo(files, repolink, downloadlink, applypatch=False)
+
+    if len(allfiles[1]) > 0:
+        popup = "   <<< New Version Available"
+    else:
+        popup = ""
+    """
+
     os.system(clearCommand)
 
     print '''
@@ -59,7 +74,7 @@ def MainMenu():
 
 7) Email spammer
 
-8) Update
+8) Update ''' + popup + '''
 
 99) Quit
     '''
