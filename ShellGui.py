@@ -570,7 +570,7 @@ def UpdateMenu():
 
         print
 
-        if len(allfiles[0]) <= 0:
+        if len(allfiles[1]) <= 0:
             print "[+] No updates available."
 
     except LookupError as er:
