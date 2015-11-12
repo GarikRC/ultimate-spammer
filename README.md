@@ -55,6 +55,8 @@ The automated typing attack works on everyone ^^.
 
 7) Email spammer
 
+8) Update
+
 99) Quit
 
 >> 
