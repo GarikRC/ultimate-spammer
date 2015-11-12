@@ -74,7 +74,7 @@ def MainMenu():
 
 7) Email spammer
 
-8) Update ''' + popup + '''
+8) Update
 
 99) Quit
     '''
