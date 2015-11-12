@@ -3,7 +3,6 @@ import hashlib
 import requests
 import os
 import time
-from CustomExceptions import *
 
 __author__ = 'Qubasa'
 
@@ -13,6 +12,12 @@ def GitHash(data):
     sha1.update("blob %u\0" % len(data))
     sha1.update(data)
     return sha1.hexdigest()
+
+
+def CreateFile(filename):
+    if not os.path.isfile(filename):
+        f = open(filename, 'wb')
+        f.close()
 
 
 # Index only permitted files in directory
@@ -37,6 +42,8 @@ def GetFilesInDir(dirpath, allowedfiles, filterfiles=True):
 # Get date out of saved hashes
 def GetLastUpdate(textfilename):
 
+    CreateFile(textfilename)
+
     saveSHA = open(textfilename, 'rb')
     try:
         if os.path.getsize(textfilename) > 0:   # If file is not empty
@@ -58,6 +65,7 @@ def GetLastUpdate(textfilename):
 # Get hash from Github
 def DownloadSHA(filename, shalink, textfilename="saveSHA.txt"):
 
+    CreateFile(textfilename)
     currentdate = time.strftime("%d/%m/%Y")
 
     r = requests.get(shalink + filename)
@@ -81,22 +89,25 @@ def UpdateFile(downloadlink, filename):
 
     if r.status_code is requests.codes.ok:
         pass
-        # f = open(filename, "wb")
-        # f.write(r.text.encode("utf-8"))
+        f = open(filename, "wb")
+        f.write(r.text.encode("utf-8"))
     else:
         raise LookupError("Cant connect to " + downloadlink + "\n Error: " + r.text)
 
 
+# Checks for updates with allowed files in dir return tuple-array (untouchedfiles, updatedfiles)
 def PullRepo(files, shalink, downloadlink, applypatch=True, textfilename="saveSHA.txt"):
 
     # Method variables
     currentdate = time.strftime("%d/%m/%Y")
     lastupdate = GetLastUpdate(textfilename)
     iterations = -1
+    untouched = []
+    updated = []
+    allfiles = (untouched, updated)
 
     # Delete old text entries in saveSHA
     if currentdate != lastupdate:
-        print "Delete old Entries"
         saveSHA = open(textfilename, 'wb')
         saveSHA.close()
 
@@ -122,7 +133,13 @@ def PullRepo(files, shalink, downloadlink, applypatch=True, textfilename="saveSH
         if localchecksum != onlinechecksum:
             if applypatch:
                 UpdateFile(downloadlink, currentfile)
+                updated.append(currentfile)
             else:
-                raise UpdatesAvailable("Updates available")
+                updated.append(currentfile)
         else:
-            raise NoUpdatesAvailable("No updates available")
+            untouched.append(currentfile)
+
+    return allfiles
+
+
+

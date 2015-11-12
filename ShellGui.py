@@ -7,7 +7,6 @@ try:
     from SocialPlattformFunctions import *
     from EmailFunctions import *
     from GitConnect import *
-    from CustomExceptions import *
 
 except ImportError, error:
     import sys
@@ -555,20 +554,27 @@ def EmailSpammerMenu():
 def UpdateMenu():
 
     try:
+        print "Checking for updates..."
+        print
+
         currentpath = os.path.dirname(os.path.abspath(__file__))
         downloadlink = 'https://raw.githubusercontent.com/Qubasa/ultimate-spammer/master/'
         repolink = 'https://api.github.com/repos/Qubasa/ultimate-spammer/contents/'
         allowedfiles = ['py', 'md']
         files = GetFilesInDir(currentpath, allowedfiles)
 
-        PullRepo(files, repolink, downloadlink)
+        allfiles = PullRepo(files, repolink, downloadlink)
+
+        for updatedfile in allfiles[1]:
+            print "[+] Updated: " + updatedfile
+
+        print
+
+        if allfiles[0] <= 0:
+            print "[+] No updates available."
 
     except LookupError as er:
         print er
-
-    except NoUpdatesAvailable:
-        print "[+] No updates available."
-        print
 
     """
     except Exception as er:
