@@ -14,6 +14,7 @@ except ImportError as error:
     raw_input("Press any key to continue...")
     sys.exit(1)
 
+__author__ = 'Qubasa'
 
 # Error handling
 autoguipopup = ""
