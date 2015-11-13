@@ -1,10 +1,17 @@
 # -*- coding: utf-8 -*-
 import time
 import sys
-import requests
 
+# third party modules
+import requests
 import Skype4Py
-import pyautogui
+
+try:
+    import pyautogui
+
+except ImportError:
+    pass
+
 
 __author__ = 'Qubasa'
 

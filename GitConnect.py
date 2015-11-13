@@ -140,6 +140,3 @@ def PullRepo(files, shalink, downloadlink, applypatch=True, textfilename="saveSH
             untouched.append(currentfile)
 
     return allfiles
-
-
-

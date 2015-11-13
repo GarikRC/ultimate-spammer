@@ -1,23 +1,34 @@
 # -*- coding: utf-8 -*-
 try:
-    import os
-    import platform
-
-    from SkypeFunctions import *
-    from SocialPlattformFunctions import *
-    from EmailFunctions import *
-    from GitConnect import *
-
-except ImportError, error:
     import sys
+    import os
+    import time
+
+    from GitConnect import *
+    from EmailFunctions import *
+    from SocialPlattformFunctions import *
+    from SkypeFunctions import *
+
+except ImportError as error:
     print "[-] Import error: " + str(error)
     raw_input("Press any key to continue...")
     sys.exit(1)
 
-__author__ = 'Qubasa'
+
+# Error handling
+autoguipopup = ""
+
+try:
+    import pyautogui
+
+except ImportError:
+    print "[-] Import error: pyautogui"
+    autoguipopup = "  <<< [-]"
+    raw_input("Press any key to continue...")
 
 
-if platform.system() == 'Windows':
+# Get os specific terminal command
+if sys.platform.startswith('win'):
     clearCommand = 'cls'
 else:
     clearCommand = 'clear'
@@ -62,7 +73,7 @@ def MainMenu():
 
 1) Skype uploading text
 
-2) Skype automated typing
+2) Skype automated typing ''' + autoguipopup + '''
 
 3) Clear skype chat
 
@@ -84,14 +95,7 @@ def MainMenu():
 
     except KeyboardInterrupt:
         os.system(clearCommand)
-        if skype.Client.IsRunning:
-            choice = raw_input("Do you wan to close skype ?[y/n]")
-            if choice == "y":
-                DoExit(True)
-            else:
-                DoExit(False)
-        else:
-            DoExit(False)
+        DoExitMenu()
 
 
 def InitSkype():
@@ -209,6 +213,11 @@ def UploadTextMenu():
 
 def AutoTypeTextMenu():
 
+    if autoguipopup != "":
+        print "[-] Missing module: pyautogui"
+        raw_input("Press any key to continue...")
+        menu_actions['main_menu']()
+
     InitSkype()
 
     try:
@@ -274,6 +283,11 @@ def DoExitMenu():
                 DoExit(False)
         else:
             DoExit(False)
+
+    except KeyboardInterrupt:
+        print '[+] Aborted program'
+        raw_input("Press any key to continue...")
+        menu_actions['main_menu']()
 
     except Exception as er:
         print "[-] An unexpected error was raised: " + str(er)
