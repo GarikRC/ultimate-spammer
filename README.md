@@ -36,7 +36,9 @@ Linux needs the python-Xlib module installed.
 
 # How to install automatically
 1) Open the terminal and run the installer.py with administrator rights:
+
 Windows: python installer.py
+
 OSX and Linux: sudo python installer.py
 
 # How to manually install Python modules ?
