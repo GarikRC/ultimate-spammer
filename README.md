@@ -38,6 +38,7 @@ Linux needs the python-Xlib module installed.
 1) Open the terminal and run the installer.py with administrator rights:
 
 Windows: python installer.py
+(in windows you have to add python to your path or use C:\Python27\python.exe installer.py)
 
 OSX and Linux: sudo python installer.py
 
