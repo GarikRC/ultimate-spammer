@@ -4,6 +4,9 @@
 Setuptools bootstrapping installer.
 
 Run this script to install or upgrade setuptools.
+
+Creator and downloadlink: https://pypi.python.org/pypi/setuptools
+
 """
 
 import os
