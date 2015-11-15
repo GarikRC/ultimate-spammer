@@ -20,6 +20,7 @@ def install_module(package):
         # finally:
             # globals()[package] = importlib.import_module(package)
 
+
 def Main():
     print """
 
@@ -69,6 +70,17 @@ the ultimate spammer to work. Included is:
         print "[-] Installation of requests failed: " + str(er)
 
     try:
+        install_module("Pillow")
+
+        # OSX dependencies
+        if sys.platform.startswith("darwin"):
+            install_module("pyobjc-core")
+            install_module("pyobjc")
+
+        # Linux
+        if sys.platform.startswith("linux"):
+            install_module("python-Xlib")
+
         install_module('pyautogui')
 
     except Exception as er:

@@ -18,6 +18,7 @@ It has an easy to use terminal GUI and a feature to get the ip of your skype fri
 Also there is an update function you can call to get updates directly from github!
 
 # Required Modules
+Pillow,
 Skype4Py,
 selenium,
 requests,
