@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-import ez_setup
+
+from src import ez_setup
 
 
 # Install Modules
@@ -34,7 +35,14 @@ the ultimate spammer to work. Included is:
 2) selenium
 3) requests
 4) pyautogui
+5) pillow
 
+On OSX added are also:
+1) pyobjc-core
+2) pyobjc
+
+On Linux:
+1) python-Xlib
     """
 
     raw_input("Press enter to continue installation...")
@@ -86,7 +94,7 @@ the ultimate spammer to work. Included is:
     except Exception as er:
         print "[-] Installation of pyautogui failed: " + str(er)
 
-    raw_input("[+] Finished")
+    raw_input("[+] Finished, to start the programm run ShellGui.py")
 
 if __name__ == '__main__':
     Main()

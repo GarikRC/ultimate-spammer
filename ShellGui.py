@@ -4,10 +4,10 @@ try:
     import os
     import time
 
-    from GitConnect import *
-    from EmailFunctions import *
-    from SocialPlattformFunctions import *
-    from SkypeFunctions import *
+    from src.GitConnect import *
+    from src.EmailFunctions import *
+    from src.SocialPlattformFunctions import *
+    from src.SkypeFunctions import *
 
 except ImportError as error:
     print "[-] Import error: " + str(error)
@@ -41,20 +41,6 @@ def Empty(value):
 
 
 def MainMenu():
-
-    """
-    currentpath = os.path.dirname(os.path.abspath(__file__))
-    downloadlink = 'https://raw.githubusercontent.com/Qubasa/ultimate-spammer/master/'
-    repolink = 'https://api.github.com/repos/Qubasa/ultimate-spammer/contents/'
-    allowedfiles = ['py', 'md']
-    files = GetFilesInDir(currentpath, allowedfiles)
-    allfiles = PullRepo(files, repolink, downloadlink, applypatch=False)
-
-    if len(allfiles[1]) > 0:
-        popup = "   <<< New Version Available"
-    else:
-        popup = ""
-    """
 
     os.system(clearCommand)
 
@@ -591,16 +577,19 @@ def UpdateMenu():
         downloadlink = 'https://raw.githubusercontent.com/Qubasa/ultimate-spammer/master/'
         repolink = 'https://api.github.com/repos/Qubasa/ultimate-spammer/contents/'
         allowedfiles = ['py', 'md']
-        files = GetFilesInDir(currentpath, allowedfiles)
+        rootfiles = GetFilesInDir(currentpath, allowedfiles)
+        srcfiles = GetFilesInDir(os.path.join(currentpath + "src"), allowedfiles)
 
-        allfiles = PullRepo(files, repolink, downloadlink)
+        allrootfiles = PullRepo(rootfiles, repolink, downloadlink)
+        allsrcfiles = PullRepo(srcfiles, repolink + "src/", downloadlink)
 
-        for updatedfile in allfiles[1]:
+        for updatedfile in allrootfiles[1]:
             print "[+] Updated: " + updatedfile
 
-        print
+        for updatedfile in allsrcfiles[1]:
+            print "[+] Updated: " + updatedfile
 
-        if len(allfiles[1]) <= 0:
+        if len(allrootfiles[1]) <= 0 and len(allsrcfiles[1]) <= 0:
             print "[+] No updates available."
 
     except LookupError as er:
