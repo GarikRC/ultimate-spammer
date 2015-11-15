@@ -87,9 +87,8 @@ def UpdateFile(downloadlink, dirpath, filename, relativepath=""):
     r = requests.get(downloadlink + relativepath + filename)
 
     if r.status_code is requests.codes.ok:
-        pass
-        #f = open(os.path.join(dirpath, filename), "wb")
-        #f.write(r.text.encode("utf-8"))
+        f = open(os.path.join(dirpath, filename), "wb")
+        f.write(r.text.encode("utf-8"))
     else:
         raise LookupError("Cant connect to " + downloadlink + relativepath + filename + "\n Error: " + r.text)
 
