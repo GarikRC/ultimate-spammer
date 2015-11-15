@@ -601,14 +601,14 @@ def UpdateMenu():
 
     except KeyError as er:
         print er
-"""
+
     except Exception as er:
         print "[-] An unexpected error was raised: " + str(er)
 
     finally:
         raw_input("Press any key to continue...")
         menu_actions['main_menu']()
-"""
+
 
 menu_actions = {
     'main_menu': MainMenu,
