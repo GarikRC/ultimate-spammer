@@ -88,12 +88,12 @@ def MainMenu():
 def InitSkype():
 
     try:
-        # Starting Skype
-        if not skype.Client.IsRunning:  # Creates huge error if you catch the exception
-            skype.Client.Start(True)   # (Minimized=False, Nosplash=False)
-
         print "Please wait a moment..."
         print
+
+        # Starting Skype
+        if not skype.Client.IsRunning:  # Creates huge error if you catch the exception
+            skype.Client.Start()   # (Minimized=False, Nosplash=False)
 
         time.sleep(3)
 

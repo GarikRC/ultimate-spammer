@@ -23,7 +23,9 @@ Pillow,
 Skype4Py,
 selenium,
 requests,
-pyautogui
+pyautogui,
+pip,
+easy_install
 
 
 # Required Programms
@@ -40,7 +42,7 @@ Linux needs the python-Xlib module installed.
 
 
 # How to install automatically
-Open the cmd/terminal and run the installer.py with administrator rights:
+Open the cmd/terminal and run the installer.py:
 
 Windows: C:\Python27\python.exe installer.py
 
