@@ -21,32 +21,31 @@ def CreateFile(filename):
 
 
 # Index only permitted files in directory
-def GetFilesInDir(dirpath, allowedfiles, filterfiles=True):
+def GetFilesInDir(dirpath, allowedfiles):
 
     files = os.listdir(dirpath)
     excludefiles = []
 
-    if filterfiles:
-        # Exclude unallowed file endings
-        for currentfile in files:
+    # Exclude unallowed file endings
+    for currentfile in files:
 
-            if not currentfile.endswith(tuple(allowedfiles)):
-                excludefiles.append(currentfile)
+        if not currentfile.endswith(tuple(allowedfiles)):
+            excludefiles.append(currentfile)
 
-        for currentfile in excludefiles:
-            files.remove(currentfile)
+    for currentfile in excludefiles:
+        files.remove(currentfile)
 
     return files
 
 
 # Get date out of saved hashes
-def GetLastUpdate(textfilename):
+def GetLastUpdate(savesfile):
 
-    CreateFile(textfilename)
+    CreateFile(savesfile)
 
-    saveSHA = open(textfilename, 'rb')
+    saveSHA = open(savesfile, 'rb')
     try:
-        if os.path.getsize(textfilename) > 0:   # If file is not empty
+        if os.path.getsize(savesfile) > 0:   # If file is not empty
 
             lastupdate = saveSHA.readline().split("|")[0].split(":")[2]   # Get date of first entry
 
@@ -62,45 +61,45 @@ def GetLastUpdate(textfilename):
         saveSHA.close()
 
 
-# Get hash from Github
-def DownloadSHA(filename, shalink, textfilename="saveSHA.txt"):
+# Get hash from Github (relativepath = Relative to root directory ex. etc/)
+def DownloadSHA(filename, shalink, savesfile, relativepath=""):
 
-    CreateFile(textfilename)
+    CreateFile(savesfile)
     currentdate = time.strftime("%d/%m/%Y")
 
-    r = requests.get(shalink + filename)
+    r = requests.get(shalink + relativepath + filename)
     if r.status_code is requests.codes.ok:
 
         datalist = r.text.split(',')
         onlinechecksum = datalist[2].strip('"sha": "').strip('"')
-        saveSHA = open(textfilename, 'ab')
+        saveSHA = open(savesfile, 'ab')
         saveSHA.write(filename + ":" + onlinechecksum + ":" + currentdate + "|")
         saveSHA.close()
 
         return onlinechecksum
     else:
-        raise LookupError("Cant connect to " + shalink + "\n Error: " + r.text)
+        raise LookupError("Cant connect to " + shalink + relativepath + filename + "\n Error: " + r.text)
 
 
 # Download code and apply patch
-def UpdateFile(downloadlink, filename):
+def UpdateFile(downloadlink, dirpath, filename, relativepath=""):
 
-    r = requests.get(downloadlink + filename)
+    r = requests.get(downloadlink + relativepath + filename)
 
     if r.status_code is requests.codes.ok:
         pass
-        f = open(filename, "wb")
-        f.write(r.text.encode("utf-8"))
+        #f = open(os.path.join(dirpath, filename), "wb")
+        #f.write(r.text.encode("utf-8"))
     else:
-        raise LookupError("Cant connect to " + downloadlink + "\n Error: " + r.text)
+        raise LookupError("Cant connect to " + downloadlink + relativepath + filename + "\n Error: " + r.text)
 
 
 # Checks for updates with allowed files in dir return tuple-array (untouchedfiles, updatedfiles)
-def PullRepo(files, shalink, downloadlink, applypatch=True, textfilename="saveSHA.txt"):
+def PullRepo(dirpath, files, shalink, downloadlink, savesfile, relativepath="", applypatch=True):
 
     # Method variables
     currentdate = time.strftime("%d/%m/%Y")
-    lastupdate = GetLastUpdate(textfilename)
+    lastupdate = GetLastUpdate(savesfile)
     iterations = -1
     untouched = []
     updated = []
@@ -108,7 +107,7 @@ def PullRepo(files, shalink, downloadlink, applypatch=True, textfilename="saveSH
 
     # Delete old text entries in saveSHA
     if currentdate != lastupdate:
-        saveSHA = open(textfilename, 'wb')
+        saveSHA = open(savesfile, 'wb')
         saveSHA.close()
 
     # Browse all files
@@ -118,21 +117,21 @@ def PullRepo(files, shalink, downloadlink, applypatch=True, textfilename="saveSH
 
         # Get online hash from Github
         if currentdate != lastupdate:
-            onlinechecksum = DownloadSHA(currentfile, shalink)
+            onlinechecksum = DownloadSHA(currentfile, shalink, savesfile, relativepath=relativepath)
         else:
-            saveSHA = open(textfilename, 'rb')
+            saveSHA = open(savesfile, 'rb')
             onlinechecksum = saveSHA.readline().split("|")[iterations].split(":")[1]
             saveSHA.close()
 
         # Calculate SHA from file
-        f = open(currentfile, 'rb')
+        f = open(os.path.join(dirpath, currentfile), 'rb')
         localchecksum = GitHash(f.read())
         f.close()
 
         # Update if necessary
         if localchecksum != onlinechecksum:
             if applypatch:
-                UpdateFile(downloadlink, currentfile)
+                UpdateFile(downloadlink, dirpath, currentfile, relativepath)
                 updated.append(currentfile)
             else:
                 updated.append(currentfile)

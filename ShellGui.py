@@ -573,15 +573,22 @@ def UpdateMenu():
         print "Checking for updates..."
         print
 
-        currentpath = os.path.dirname(os.path.abspath(__file__))
+        # Required infos
         downloadlink = 'https://raw.githubusercontent.com/Qubasa/ultimate-spammer/master/'
         repolink = 'https://api.github.com/repos/Qubasa/ultimate-spammer/contents/'
         allowedfiles = ['py', 'md']
-        rootfiles = GetFilesInDir(currentpath, allowedfiles)
-        srcfiles = GetFilesInDir(os.path.join(currentpath + "src"), allowedfiles)
 
-        allrootfiles = PullRepo(rootfiles, repolink, downloadlink)
-        allsrcfiles = PullRepo(srcfiles, repolink + "src/", downloadlink)
+        # Get dir path
+        rootpath = os.path.dirname(os.path.abspath(__file__))
+        srcpath = os.path.join(rootpath, "src")
+
+        # List files in dir
+        rootfiles = GetFilesInDir(rootpath, allowedfiles)
+        srcfiles = GetFilesInDir(srcpath, allowedfiles)
+
+        # Arguments: dirpath, files, shalink, downloadlink, savesfile, relativepath="", applypatch=True
+        allrootfiles = PullRepo(rootpath, rootfiles, repolink, downloadlink, "rootChecksum.txt")
+        allsrcfiles = PullRepo(srcpath, srcfiles, repolink, downloadlink, "srcChecksum.txt", "src/")
 
         for updatedfile in allrootfiles[1]:
             print "[+] Updated: " + updatedfile
@@ -592,16 +599,16 @@ def UpdateMenu():
         if len(allrootfiles[1]) <= 0 and len(allsrcfiles[1]) <= 0:
             print "[+] No updates available."
 
-    except LookupError as er:
+    except KeyError as er:
         print er
-
+"""
     except Exception as er:
         print "[-] An unexpected error was raised: " + str(er)
 
     finally:
         raw_input("Press any key to continue...")
         menu_actions['main_menu']()
-
+"""
 
 menu_actions = {
     'main_menu': MainMenu,
