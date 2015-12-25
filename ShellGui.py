@@ -16,15 +16,16 @@ except ImportError as error:
 
 __author__ = 'Qubasa'
 
-# Error handling
+# Variable that appears in the main menu as "popup" message
 autoguipopup = ""
 
+# Sets the popup variable if the module is absent
 try:
     import pyautogui
 
 except ImportError:
-    print "[-] Import error: pyautogui"
-    autoguipopup = "  <<< [-]"
+    print "[-] Import error: pyautogui."
+    autoguipopup = "  <<< [-] Missing module"
     raw_input("Press any key to continue...")
 
 
@@ -35,11 +36,13 @@ else:
     clearCommand = 'clear'
 
 
+# Check if variable is empty
 def Empty(value):
     if value == "":
-        raise ValueError("The Variable is empty!")
+        raise ValueError("The Variable is empty.")
 
 
+# Main gui where the spam method gets selected
 def MainMenu():
 
     os.system(clearCommand)
@@ -72,10 +75,13 @@ def MainMenu():
 
 7) Email spammer
 
-8) Update
+8) Generic spammer ''' + autoguipopup + '''
+
+9) Update
 
 99) Quit
     '''
+
     try:
         choice = raw_input('>> ')
         Exec_Menu(choice)
@@ -85,102 +91,89 @@ def MainMenu():
         DoExitMenu()
 
 
-def InitSkype():
-
-    try:
-        print "Please wait a moment..."
-        print
-
-        # Starting Skype
-        if not skype.Client.IsRunning:  # Creates huge error if you catch the exception
-            skype.Client.Start()   # (Minimized=False, Nosplash=False)
-
-        time.sleep(3)
-
-        if skype.Client.IsRunning:
-            # Connects to Skype API
-            skype.Attach()
-            print '[+] Connected to Skype Account: ' + skype.CurrentUser.FullName
-            print
-
-    except Skype4Py.SkypeAPIError:
-        print "[-] Program couldn't connect to skype. Please whitelist this programm in skype!"
-        raw_input("Press any key to continue...")
-        menu_actions['main_menu']()
-
-    except Exception as er:
-        print "[-] An unexpected error was raised: " + str(er)
-        raw_input("Press any key to continue...")
-
-
 def GetIpAddress():
 
-    InitSkype()
-
     try:
+        # Start Skype and print the friendlist
+        InitSkype()
         friendlist = GetFriends()
         FriendMenu(friendlist)
 
+        # Get user input
+        while True:
+            try:
+                print 'Target number:'
+                target = raw_input('>> ')
+                target = int(target)
+                print
+
+                break
+
+            except ValueError:
+                print
+                print '[-] Invalid input please try again!'
+                print
+
+        # If private username is not given choose the public one
+        if friendlist[target][2] == '':
+            x = 0
+        else:
+            x = 2
+
+        # Request the target IP from the Website API
+        print "The IP of " + friendlist[target][x] + " is: " + GetIp(friendlist[target][0])
+
+    # EXCEPTION HANDLING -------------------------------------------------------------------
     except Skype4Py.SkypeError:
         print "[-] Skype raised an unexpected problem, please try again."
-        raw_input("Press any key to continue...")
-        menu_actions['main_menu']()
 
     except Skype4Py.SkypeAPIError:
         print "[-] Connection issues with skype. Is this programm whitelisted ?"
-        raw_input("Press any key to continue...")
-        menu_actions['main_menu']()
 
     except Exception as er:
         print "[-] An unexpected error was raised: " + str(er)
+
+    finally:
         raw_input("Press any key to continue...")
-
-    while True:
-        try:
-            print 'Target number:'
-            target = raw_input('>> ')
-            target = int(target)
-
-            if friendlist[target][2] == '':
-                x = 0
-            else:
-                x = 2
-
-            print "The IP of " + friendlist[target][x] + " is: " + GetIp(friendlist[target][0])
-            raw_input("Press any key to continue...")
-            menu_actions['main_menu']()
-
-        except ValueError:
-            print
-            print '[-] Invalid input please try again!'
-            print
-
-        except KeyError:
-            print
-            print "[-] This target doesnt exist!"
-            print
-
-        except KeyboardInterrupt:
-            print "[+] Aborted program"
-            raw_input("Press any key to continue...")
-            menu_actions['main_menu']()
-
-        except Exception as er:
-            print "[-] An unexpected error was raised: " + str(er)
-            raw_input("Press any key to continue...")
+        menu_actions['main_menu']()
 
 
 def UploadTextMenu():
 
-    InitSkype()
-
     try:
+        # Start Skype and print the friendlist
+        InitSkype()
         friendlist = GetFriends()
         FriendMenu(friendlist)
-        target, msg, quantity = InputForm()
+
+        # Get user input
+        while True:
+            try:
+                print 'Target number:'
+                target = raw_input('>> ')
+                target = int(target)
+
+                print 'Your message to deliver:'
+                msg = raw_input('>> ')
+                Empty(msg)
+
+                print 'How many times: '
+                quantity = raw_input('>> ')
+                quantity = int(quantity)
+                print
+
+                break
+
+            except ValueError:
+                print
+                print '[-] Invalid input please try again!'
+                print
+
+        # Execute the spam function
         UploadText(friendlist, target, msg, quantity)
         print "[+] Successfully send " + str(quantity) + " messages!"
 
+    # EXCEPTION HANDLING -------------------------------------------------------------------
     except Skype4Py.SkypeError:
         print "[-] Skype raised an unexpected problem, please try again."
 
@@ -188,7 +181,7 @@ def UploadTextMenu():
         print "[-] Connection issues with skype. Is this program whitelisted ?"
 
     except KeyboardInterrupt:
-        print "[+] Aborted program"
+        print "[+] Aborted program."
 
     except Exception as er:
         print "[-] An unexpected error was raised: " + str(er)
@@ -200,20 +193,57 @@ def UploadTextMenu():
 
 def AutoTypeTextMenu():
 
+    # If module pyautogui is not installed function exits
     if autoguipopup != "":
-        print "[-] Missing module: pyautogui"
+        print "[-] Missing module: pyautogui."
         raw_input("Press any key to continue...")
         menu_actions['main_menu']()
 
-    InitSkype()
+    print """
+        ##################################################
+        #                     NOTE:                      #
+        #                                                #
+        #    To abort the spammer move your cursor       #
+        #          to the upper left corner.             #
+        #                                                #
+        ##################################################
+
+        """
 
     try:
+        # Start Skype and print the friendlist
+        InitSkype()
         friendlist = GetFriends()
         FriendMenu(friendlist)
-        target, msg, quantity = InputForm()
+
+        # Get user input
+        while True:
+            try:
+                print 'Target number:'
+                target = raw_input('>> ')
+                target = int(target)
+
+                print 'Your message to deliver:'
+                msg = raw_input('>> ')
+                Empty(msg)
+
+                print 'How many times: '
+                quantity = raw_input('>> ')
+                quantity = int(quantity)
+                print
+
+                break
+
+            except ValueError:
+                print
+                print '[-] Invalid input please try again!'
+                print
+
+        # Execute the spam function
         AutoTypeText(friendlist, target, msg, quantity)
         print "[+] Successfully send " + str(quantity) + " messages!"
 
+    # EXCEPTION HANDLING -------------------------------------------------------------------
     except Skype4Py.SkypeError:
         print "[-] Skype raised an unexpected problem, please try again."
 
@@ -221,7 +251,10 @@ def AutoTypeTextMenu():
         print "[-] Connection issues with skype. Is this program whitelisted ?"
 
     except KeyboardInterrupt:
-        print "[+] Aborted program"
+        print "[+] Aborted program."
+
+    except pyautogui.FailSafeException:
+        print "[+] Aborted program."
 
     except Exception as er:
         print "[-] An unexpected error was raised: " + str(er)
@@ -233,19 +266,19 @@ def AutoTypeTextMenu():
 
 def ClearChatMenu():
 
-    InitSkype()
-
     try:
+        # Start Skype
+        InitSkype()
+
+        # Get user input
         choice = raw_input("Are you sure to delete ALL history ?[y/n]")
+
+        # Clear chat
         if choice == "y":
             ClearChat()
-            print "[+] Done!"
-            raw_input("Press any key to continue...")
-            menu_actions['main_menu']()
-        else:
-            raw_input("Press any key to continue...")
-            menu_actions['main_menu']()
+            print "[+] Done."
 
+    # EXCEPTION HANDLING -------------------------------------------------------------------
     except Skype4Py.SkypeError:
         print "[-] Skype raised an unexpected problem, please try again."
 
@@ -261,130 +294,108 @@ def ClearChatMenu():
 
 
 def DoExitMenu():
-    try:
-        if skype.Client.IsRunning:
-            choice = raw_input("Do you wan to close skype ?[y/n]")
-            if choice == "y":
-                DoExit(True)
-            else:
-                DoExit(False)
-        else:
-            DoExit(False)
 
+    try:
+        # If skype is running ask if to quit process
+        if skype.Client.IsRunning:
+
+            # Get user input
+            choice = raw_input("Do you wan to close skype ?[y/n]")
+
+            # Quit skype and programm
+            if choice == "y" or choice == "Y" or choice == "yes" or choice == "Yes":
+                skype.Client.Shutdown()
+
+        # WARNING: Do not use finally after an exit function
+        # because the exception, SystemExit, then doesnt have any impact on the programm
+        # and it doesnt quit.
+        sys.exit()
+
+    # EXCEPTION HANDLING -------------------------------------------------------------------
     except KeyboardInterrupt:
-        print '[+] Aborted program'
+        print '[+] Aborted program.'
         raw_input("Press any key to continue...")
         menu_actions['main_menu']()
 
     except Exception as er:
         print "[-] An unexpected error was raised: " + str(er)
         raw_input("Press any key to continue...")
+        menu_actions['main_menu']()
 
 
 def Exec_Menu(choice):
 
+    # Clear the console
     os.system(clearCommand)
+
+    # If empty input immediately go back to main menu
     if choice == '':
         menu_actions['main_menu']()
+
     else:
+
+        # Execute selected function out of dictionary
         try:
             menu_actions[choice]()
+
+        # If given input isnt in dictionary
         except KeyError:
             print '[-] Invalid selection, please try again.'
             time.sleep(1)
             menu_actions['main_menu']()
 
 
-def InputForm():
-    while True:
-        try:
-            print 'Target number:'
-            target = raw_input('>> ')
-            target = int(target)
-
-            print 'Your message to deliver:'
-            msg = raw_input('>> ')
-            Empty(msg)
-
-            print 'How many times: '
-            quantity = raw_input('>> ')
-            quantity = int(quantity)
-            print
-            return target, msg, quantity
-
-        except ValueError:
-            print
-            print '[-] Invalid input please try again!'
-            print
-
-        except KeyboardInterrupt:
-            print "[+] Aborted programm"
-            raw_input("Press any key to continue...")
-            menu_actions['main_menu']()
-
-        except Exception as er:
-            print "[-] An unexpected error was raised: " + str(er)
-            raw_input("Press any key to continue...")
-
-
 def FriendMenu(friendlist):
-    try:
-        for index in friendlist:
-            if friendlist[index][2] == '':
-                x = 0
-            else:
-                x = 2
-            print str(index) + ') ' + friendlist[index][x] + ' : ' + friendlist[index][1]
-        print
 
-    except Exception as er:
-        print "[-] An unexpected error was raised: " + str(er)
-        raw_input("Press any key to continue...")
+    # Print a list out of all skype friends
+    for index in friendlist:
+        if friendlist[index][2] == '':
+            x = 0
+        else:
+            x = 2
+        print str(index) + ') ' + friendlist[index][x] + ' : ' + friendlist[index][1]
+        print
 
 
 def WhatsAppSpammerMenu():
-    while True:
-        try:
-            print 'Target name:'
-            target = raw_input('>> ')
-            Empty(target)
-
-            print 'Your message to deliver:'
-            msg = raw_input('>> ')
-            Empty(msg)
-
-            print 'How many times: '
-            quantity = raw_input('>> ')
-            quantity = int(quantity)
-            print
-            break
-
-        except ValueError:
-            print
-            print '[-] Invalid input please try again!'
-            print
-
-        except KeyboardInterrupt:
-            print "[+] Aborted program"
-            raw_input("Press any key to continue...")
-            menu_actions['main_menu']()
-
-        except Exception as er:
-            print "[-] An unexpected error was raised: " + str(er)
-            raw_input("Press any key to continue...")
 
     try:
-        WhatsAppSpammer(target, msg, quantity)
-        print '[+] Sucessfully send ' + str(quantity) + " messages to " + target
+        # Get user input
+        while True:
+            try:
+                print 'Target name:'
+                target = raw_input('>> ')
+                Empty(target)
 
+                print 'Your message to deliver:'
+                msg = raw_input('>> ')
+                Empty(msg)
+
+                print 'How many times: '
+                quantity = raw_input('>> ')
+                quantity = int(quantity)
+                print
+
+                break
+
+            except ValueError:
+                print
+                print '[-] Invalid input please try again!'
+                print
+
+        # Execute spam function
+        WhatsAppSpammer(target, msg, quantity)
+        print '[+] Sucessfully send ' + str(quantity) + " messages to " + target + "."
+
+    # EXCEPTION HANDLING -------------------------------------------------------------------
     except TimeoutException:
-        print '[-] Timout error: Something took too long '
+        print '[-] Timout error: Something took too long.'
 
     except KeyboardInterrupt:
-        print '[+] Aborted program'
+        print '[+] Aborted program.'
 
     except NoSuchElementException:
-        print '[-] An element id is missing or has been changed'
+        print '[-] An element id is missing or has been changed.'
 
     except IndexError:
         print '[-] Wrong target name / Please chat with the target least once.'
@@ -398,56 +409,51 @@ def WhatsAppSpammerMenu():
 
 
 def FacebookSpammerMenu():
-    while True:
-        try:
-            print 'Your Email:'
-            email = raw_input('>> ')
-            Empty(email)
-
-            print 'Your Password'
-            password = raw_input('>> ')
-            Empty(password)
-
-            print 'Target name:'
-            target = raw_input('>> ')
-            Empty(target)
-
-            print 'Your message to deliver:'
-            msg = raw_input('>> ')
-            Empty(msg)
-
-            print 'How many times: '
-            quantity = raw_input('>> ')
-            quantity = int(quantity)
-            print
-            break
-
-        except ValueError:
-            print
-            print '[-] Invalid input please try again!'
-            print
-
-        except KeyboardInterrupt:
-            print "[+] Aborted program"
-            raw_input("Press any key to continue...")
-            menu_actions['main_menu']()
-
-        except Exception as er:
-            print "[-] An unexpected error was raised: " + str(er)
-            raw_input("Press any key to continue...")
 
     try:
-        FacebookSpammer(email, password, target, msg, quantity)
-        print '[+] Sucessfully send ' + str(quantity) + " messages to " + target
+        # Get user input
+        while True:
+            try:
+                print 'Your Email:'
+                email = raw_input('>> ')
+                Empty(email)
 
+                print 'Your Password'
+                password = raw_input('>> ')
+                Empty(password)
+
+                print 'Target name:'
+                target = raw_input('>> ')
+                Empty(target)
+
+                print 'Your message to deliver:'
+                msg = raw_input('>> ')
+                Empty(msg)
+
+                print 'How many times: '
+                quantity = raw_input('>> ')
+                quantity = int(quantity)
+                print
+                break
+
+            except ValueError:
+                print
+                print '[-] Invalid input please try again!'
+                print
+
+        # Execute spam function
+        FacebookSpammer(email, password, target, msg, quantity)
+        print '[+] Sucessfully send ' + str(quantity) + " messages to " + target + "."
+
+    # EXCEPTION HANDLING -------------------------------------------------------------------
     except TimeoutException:
-        print '[-] Timeout error: Something took too long '
+        print '[-] Timeout error: Something took too long.'
 
     except KeyboardInterrupt:
-        print '[+] Aborted program'
+        print '[+] Aborted program.'
 
     except NoSuchElementException:
-        print '[-] An element id is missing or has been changed'
+        print '[-] An element id is missing or has been changed.'
 
     except Exception as er:
         print "[-] An unexpected error was raised: " + str(er)
@@ -473,83 +479,78 @@ def EmailSpammerMenu():
     }
 
     try:
+        # Prints an enumbered list of all supported mail server
         for index in range(len(server_dictionary)):
             print str(index + 1) + ") " + server_dictionary[index + 1][0]
+        print
 
-    except Exception as er:
-        print "[-] An unexpected error was raised: " + str(er)
-        raw_input("Press any key to continue...")
+        # Get user input
+        while True:
+            try:
+                print "Choose server:"
+                choice = raw_input(">> ")
+                print
 
-    print
-    print "Choose server:"
+                choice = int(choice)
+                server = server_dictionary[choice][1]
+                port = server_dictionary[choice][2]
 
-    while True:
-        try:
-            choice = raw_input(">> ")
-            print
-            choice = int(choice)
-            server = server_dictionary[choice][1]
-            port = server_dictionary[choice][2]
-            break
-        except ValueError:
-            print
-            print '[-] Invalid input please try again!'
-            print
-        except KeyError:
-            print
-            print '[-] Invalid selection please try again!'
-            print
-        except Exception as er:
-            print "[-] An unexpected error was raised: " + str(er)
-            raw_input("Press any key to continue...")
+                break
 
-    while True:
-        try:
-            print 'Your Email:'
-            username = raw_input('>> ')
-            Empty(username)
+            except ValueError:
+                print
+                print '[-] Invalid input please try again!'
+                print
 
-            print 'Your Password:'
-            password = raw_input('>> ')
-            Empty(password)
+            except KeyError:
+                print
+                print '[-] Invalid selection please try again!'
+                print
 
-            print 'Target email:'
-            targetemail = raw_input('>> ')
-            Empty(targetemail)
+        # Get more user input
+        while True:
+            try:
+                print 'Your Email:'
+                username = raw_input('>> ')
+                Empty(username)
 
-            print 'Who send this email (From:) ?'
-            fromemail = raw_input('>> ')
-            Empty(fromemail)
+                print 'Your Password:'
+                password = raw_input('>> ')
+                Empty(password)
 
-            print 'Subject of this email:'
-            subject = raw_input('>> ')
-            Empty(subject)
+                print 'Target email:'
+                targetemail = raw_input('>> ')
+                Empty(targetemail)
 
-            print 'Your message to deliver:'
-            msg = raw_input('>> ')
-            Empty(msg)
+                print 'Who send this email (From:) ?'
+                fromemail = raw_input('>> ')
+                Empty(fromemail)
 
-            print 'How many times: '
-            quantity = raw_input('>> ')
-            quantity = int(quantity)
-            print
-            break
-        except ValueError:
-            print
-            print '[-] Invalid input please try again!'
-            print
-        except KeyboardInterrupt:
-            print "[+] Aborted program."
-            raw_input("Press any key to continue...")
-            menu_actions['main_menu']()
-        except Exception as er:
-            print "[-] An unexpected error was raised: " + str(er)
-            raw_input("Press any key to continue...")
+                print 'Subject of this email:'
+                subject = raw_input('>> ')
+                Empty(subject)
 
-    try:
+                print 'Your message to deliver:'
+                msg = raw_input('>> ')
+                Empty(msg)
+
+                print 'How many times: '
+                quantity = raw_input('>> ')
+                quantity = int(quantity)
+                print
+
+                break
+
+            except ValueError:
+                print
+                print '[-] Invalid input please try again!'
+                print
+
+        # Execute spamming function
         EmailSpammer(server, port, username, password, targetemail, fromemail, subject, msg, quantity)
-        print '[+] Sucessfully send ' + str(quantity) + " messages to " + targetemail
+        print '[+] Sucessfully send ' + str(quantity) + " messages to " + targetemail + "."
 
+    # EXCEPTION HANDLING -------------------------------------------------------------------
     except smtplib.SMTPAuthenticationError:
         print "[-] Log in credentials are wrong."
 
@@ -558,6 +559,79 @@ def EmailSpammerMenu():
 
     except smtplib.SMTPRecipientsRefused:
         print "[-] Target doesnt exist."
+
+    except Exception as er:
+        print "[-] An unexpected error was raised: " + str(er)
+
+    finally:
+        raw_input("Press any key to continue...")
+        menu_actions['main_menu']()
+
+
+def GenericSpammerMenu():
+
+    # If module pyautogui is not installed function exits
+    if autoguipopup != "":
+        print "[-] Missing module: pyautogui"
+        raw_input("Press any key to continue...")
+        menu_actions['main_menu']()
+
+    try:
+        # Get user input
+        while True:
+            try:
+
+                print 'Your message to deliver:'
+                msg = raw_input('>> ')
+                Empty(msg)
+
+                print 'How many times: '
+                quantity = raw_input('>> ')
+                quantity = int(quantity)
+                print
+
+                break
+
+            except ValueError:
+                print
+                print '[-] Invalid input please try again!'
+                print
+
+        print """
+        ##################################################
+        #                     NOTE:                      #
+        #                                                #
+        #    To abort the programm move your cursor      #
+        #          to the upper left corner.             #
+        #                                                #
+        ##################################################
+
+        """
+        print "Please focus your cursor in the targeted chat window"
+        raw_input("Press enter to start spamming in 5 seconds...")
+        print "Start in:"
+
+        print 5
+        time.sleep(1)
+        print 4
+        time.sleep(1)
+        print 3
+        time.sleep(1)
+        print 2
+        time.sleep(1)
+        print 1
+        time.sleep(1)
+
+        # Execute spam function
+        genericSpammer(quantity, msg)
+        print "[+] Succesfully send " + str(quantity) + " messages."
+
+    # EXCEPTION HANDLING -------------------------------------------------------------------
+    except pyautogui.FailSafeException:
+        print "[+] Aborted program."
+
+    except KeyboardInterrupt:
+        print "[+] Aborted program."
 
     except Exception as er:
         print "[-] An unexpected error was raised: " + str(er)
@@ -599,6 +673,7 @@ def UpdateMenu():
         if len(allrootfiles[1]) <= 0 and len(allsrcfiles[1]) <= 0:
             print "[+] No updates available."
 
+    # EXCEPTION HANDLING -------------------------------------------------------------------
     except KeyError as er:
         print er
 
@@ -609,7 +684,7 @@ def UpdateMenu():
         raw_input("Press any key to continue...")
         menu_actions['main_menu']()
 
-
+# Dictionary of menu entrys
 menu_actions = {
     'main_menu': MainMenu,
     '1': UploadTextMenu,
@@ -619,9 +694,11 @@ menu_actions = {
     '5': WhatsAppSpammerMenu,
     '6': FacebookSpammerMenu,
     '7': EmailSpammerMenu,
-    '8': UpdateMenu,
+    '8': GenericSpammerMenu,
+    '9': UpdateMenu,
     '99': DoExitMenu,
 }
 
+# Display main menu if file gets executed
 if __name__ == '__main__':
     menu_actions['main_menu']()

@@ -55,6 +55,8 @@ def UploadText(friendlist, target, msg, quantity):
 
 
 def AutoTypeText(friendlist, target, msg, quantity):
+    try:
+        pyautogui.FAILSAFE = True
 
         skype.Client.Start()
         skype.Client.Focus()
@@ -64,10 +66,42 @@ def AutoTypeText(friendlist, target, msg, quantity):
             pyautogui.press('enter')
             time.sleep(0.1)
 
+    except pyautogui.FailSafeException as e:
+        raise e
 
-def DoExit(closeskype):
-    if closeskype is True:
-        skype.Client.Shutdown()
-        sys.exit()
-    else:
-        sys.exit()
+
+def genericSpammer(quantity, msg):
+    try:
+        pyautogui.FAILSAFE = True
+
+        for i in range(quantity):
+            pyautogui.typewrite(msg, interval=0.01)
+            pyautogui.press('enter')
+            time.sleep(0.05)
+
+    except pyautogui.FailSafeException as e:
+        raise e
+
+
+def InitSkype():
+
+    try:
+
+        # Starting Skype
+        if not skype.Client.IsRunning:  # Creates huge error if you catch the exception
+            skype.Client.Start()   # (Minimized=False, Nosplash=False)
+
+        while not skype.Client.IsRunning:
+            # Connects to Skype API
+            skype.Attach()
+
+        return skype.CurrentUser.FullName
+
+    except Skype4Py.SkypeAPIError as er:
+        raise er
+
+    except IOError as er:
+        raise er
+
+    except Exception as er:
+        raise er

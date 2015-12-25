@@ -108,4 +108,3 @@ def FacebookSpammer(email, password, target, msg, quantity, browserSession=None)
     except (WebDriverException, KeyboardInterrupt) as error:
         browser.close()
         raise error
-
