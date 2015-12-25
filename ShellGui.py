@@ -79,7 +79,7 @@ def MainMenu():
 
 9) Update
 
-99) Quit
+10) Quit
     '''
 
     try:
@@ -696,7 +696,7 @@ menu_actions = {
     '7': EmailSpammerMenu,
     '8': GenericSpammerMenu,
     '9': UpdateMenu,
-    '99': DoExitMenu,
+    '10': DoExitMenu,
 }
 
 # Display main menu if file gets executed
