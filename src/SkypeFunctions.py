@@ -75,9 +75,8 @@ def genericSpammer(quantity, msg):
         pyautogui.FAILSAFE = True
 
         for i in range(quantity):
-            pyautogui.typewrite(msg, interval=0.01)
+            pyautogui.typewrite(msg, interval=0.001)
             pyautogui.press('enter')
-            time.sleep(0.05)
 
     except pyautogui.FailSafeException as e:
         raise e
