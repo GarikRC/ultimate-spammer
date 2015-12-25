@@ -41,7 +41,7 @@ On OSX added are also:
 1) pyobjc-core
 2) pyobjc
 
-On Linux:
+On Linux added are also:
 1) python-Xlib
     """
 

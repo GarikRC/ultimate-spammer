@@ -13,7 +13,7 @@
 -------------------------------
 
 # Description
-A spammer written in Python 2.7 for Whatsapp, Skype, Facebook and Email.
+A spammer written in Python 2.7 for Whatsapp, Skype, Facebook and Email and pretty much every other chat forum.
 It has an easy to use terminal GUI and a feature to get the ip of your skype friends.
 Also there is an update function you can call to get updates directly from github!
 
